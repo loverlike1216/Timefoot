@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 39, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 30, in main
+    assert 'TEST_PASS' in txt and 'Fatal:' not in txt and 'ERROR:' not in txt, f'Case failed: {case}'
+AssertionError: Case failed: E:\Codex_project\Timefoot\v1\verification\evidence\unit02\tb_scheduler_s1

@@ -6,3 +6,16 @@ contract, not a claim that arbitrary asynchronous SYNC edges or unmeasured physi
 Membership changes use quiesce/abort, a fresh session, staged future epoch, common marker,
 verification and explicit RUN. No old session resumes automatically after clock recovery.
 Packet PHY remains an adapter boundary. Testbench channel faults are labeled digital models.
+
+2026-11-01: RTL baseline9754725 includes synchronous RAM-enable guards, explicit map validation,
+sticky fault, qualified preparation, monitor MMCM reset and true source timestamp capture.
+Canonical current runs:signoff_system/signoff_repeat/signoff_unit/signoff_node; pin regression final_pin.
+Prior sys09/impl04/final_* remain historical attempts, not automatically current acceptance.
+Do not conflate internal positive STA with complete-node I/O STA, or CDC with RDC.
+
+Review snapshot supersedes that in-progress validation note: RTL46f88bc; canonical
+closure_system/closure_repeat/closure_node/closure_framework complete; signoff_unit and
+final_pin remain valid for unchanged instantiated dependencies (hashes checked).
+Read v1/reports and DELIVERY_AUDIT. StageREVISE solely cannot be promoted while full-node
+interface setup/hold fails. All protected history still matches. No physical precision or
+external independent ChatGPT review is claimed.

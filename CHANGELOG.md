@@ -1,0 +1,3 @@
+# Change log
+
+2026-11-01 — formal v1 startup authorized for TIMEFOOT, unique user repository/root verified. Historical study audited read-only; formal RTL/TB/interfaces/candidate constraints/scripts/reference/verification/docs/shared structure added. Single-owner reset and coherent FIFO removed critical CDC, synchronous RAM guards removed REQP-1839, reset branches recovered internal STA, reference-registered outputs closed the historical3-port regression at unchanged2ns budget. Full-node OOC interface timing remains REVISE and is submitted as P-20261101-001 for independent review. Canonical results and commits are in shared/HANDOFF.md and the GPT stage review. No Merge, v2, hardware design or deployment.

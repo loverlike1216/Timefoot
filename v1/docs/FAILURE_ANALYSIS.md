@@ -16,6 +16,9 @@ All run directories are additive. No failed test, threshold, historical output o
 | sys07 | Before initialization/config, work_error sampled unknown decoder status | Error aggregation enabled only after coherent configuration; sticky until session flush |
 | sys08 | Source trace monitor interpreted sample counter reset during fault propagation as a new sample | Record increments only; reset decreases update monitor state. Positive timestamp equality assertion retained |
 | impl04 | Internal setup/hold pass, but complete OOC interface setup/hold still fails | Retain failures. No delay relaxation, broad false path or port deletion. Final reports decide current gate |
+| final_system | Invalid-mask stimulus was sent before manager reset deasserted, so the write was correctly ignored | TB waits for synchronized manager reset release before register traffic |
+| final_node | REQP-1839 found async-reset signals in RAM enable/write cones | Synchronous guards now own RAM enable. signoff_node removed all20 such warnings |
+| signoff_node Z010 | Guard fix changed placement; one150MHz synchronous reset distribution path failed setup by0.146ns | Four local synchronous reset branches reduce fanout. closure_node is the authoritative rerun; no frequency or output-budget relaxation |
 
 Startup FIFO reset is held for 63 write clocks to survive GSR/model initialization and ensure one uninterrupted reset episode. Independent flush requests must be held >=8 cycles of the slower endpoint. Data is inhibited until local busy and the 31-cycle release guard clear. A stopped endpoint cannot resume an old session: system recovery asserts the session owner, then requires fresh preparation/epoch/RUN.
 

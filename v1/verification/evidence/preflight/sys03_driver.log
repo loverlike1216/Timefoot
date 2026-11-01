@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 39, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 19, in main
+    command([BIN/'xvlog.bat','--sv',*sources],work,out/'compile.log')
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 9, in command
+    if p.returncode:raise RuntimeError(f'{path}: exit{p.returncode}\n{p.stdout[-2500:].decode(errors="replace")}')
+RuntimeError: E:\Codex_project\Timefoot\v1\verification\evidence\sys03\compile.log: exit1
+The system cannot find the path specified.
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_async_fifo.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tf_async_fifo
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_bit_sync.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tf_bit_sync
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_cdc_bridge.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tf_cdc_bridge
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_reset_sync.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tf_reset_sync
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/clock/tf_clock_manager.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tf_clock_manager
+
+ERROR: [VRFC 10-2938] 'mmcm_reset' is already implicitly declared on line 16 [E:/Codex_project/Timefoot/v1/rtl/clock/tf_clock_manager.sv:22]
+
+ERROR: [VRFC 10-8530] module 'tf_clock_manager' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/rtl/clock/tf_clock_manager.sv:2]
+
+

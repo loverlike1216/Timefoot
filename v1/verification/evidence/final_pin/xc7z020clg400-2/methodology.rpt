@@ -1,0 +1,56 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 11:37:08 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_methodology -file E:/Codex_project/Timefoot/v1/verification/evidence/final_pin/xc7z020clg400-2/methodology.rpt
+| Design       : tf_pin_timing_top
+| Device       : xc7z020clg400-2
+| Speed File   : -2
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: tf_pin_timing_top
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 3
++--------+----------+------------------------------------------+--------+
+| Rule   | Severity | Description                              | Checks |
++--------+----------+------------------------------------------+--------+
+| XDCH-2 | Warning  | Same min and max delay values on IO port | 3      |
++--------+----------+------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'q[0]' relative to clock reference50 for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock reference50 2.000 [get_ports q*]
+E:/Codex_project/Timefoot/v1/constraints/pin_z020_candidate.xdc (Line: 7)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'q[1]' relative to clock reference50 for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock reference50 2.000 [get_ports q*]
+E:/Codex_project/Timefoot/v1/constraints/pin_z020_candidate.xdc (Line: 7)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same output delay of 2.000 ns has been defined on port 'q[2]' relative to clock reference50 for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock reference50 2.000 [get_ports q*]
+E:/Codex_project/Timefoot/v1/constraints/pin_z020_candidate.xdc (Line: 7)
+Related violations: <none>
+
+

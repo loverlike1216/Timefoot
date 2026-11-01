@@ -1,0 +1,108 @@
+[
+  {
+    "nodes": 1,
+    "periods": [
+      {
+        "node": 0,
+        "period_min_ps": 20000,
+        "period_max_ps": 20000,
+        "edges": 250
+      }
+    ],
+    "first_event_offsets_ps": [
+      0
+    ],
+    "event_skew_ps": 0,
+    "status": "PASS"
+  },
+  {
+    "nodes": 2,
+    "periods": [
+      {
+        "node": 0,
+        "period_min_ps": 20000,
+        "period_max_ps": 20000,
+        "edges": 250
+      },
+      {
+        "node": 1,
+        "period_min_ps": 10000,
+        "period_max_ps": 10000,
+        "edges": 500
+      }
+    ],
+    "first_event_offsets_ps": [
+      0,
+      600
+    ],
+    "event_skew_ps": 600,
+    "status": "PASS"
+  },
+  {
+    "nodes": 3,
+    "periods": [
+      {
+        "node": 0,
+        "period_min_ps": 20000,
+        "period_max_ps": 20000,
+        "edges": 250
+      },
+      {
+        "node": 1,
+        "period_min_ps": 10000,
+        "period_max_ps": 10000,
+        "edges": 500
+      },
+      {
+        "node": 2,
+        "period_min_ps": 6666,
+        "period_max_ps": 6667,
+        "edges": 750
+      }
+    ],
+    "first_event_offsets_ps": [
+      0,
+      600,
+      1200
+    ],
+    "event_skew_ps": 1200,
+    "status": "PASS"
+  },
+  {
+    "nodes": 4,
+    "periods": [
+      {
+        "node": 0,
+        "period_min_ps": 20000,
+        "period_max_ps": 20000,
+        "edges": 250
+      },
+      {
+        "node": 1,
+        "period_min_ps": 10000,
+        "period_max_ps": 10000,
+        "edges": 500
+      },
+      {
+        "node": 2,
+        "period_min_ps": 6666,
+        "period_max_ps": 6667,
+        "edges": 750
+      },
+      {
+        "node": 3,
+        "period_min_ps": 20000,
+        "period_max_ps": 20000,
+        "edges": 250
+      }
+    ],
+    "first_event_offsets_ps": [
+      0,
+      600,
+      1200,
+      1800
+    ],
+    "event_skew_ps": 1800,
+    "status": "PASS"
+  }
+]

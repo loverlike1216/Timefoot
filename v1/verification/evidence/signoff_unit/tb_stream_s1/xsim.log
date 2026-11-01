@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Nov  1 11:38:44 2026
+# Process ID         : 44656
+# Current directory  : E:/Codex_project/Timefoot/v1/work/signoff_unit
+# Command line       : xsim.exe -log E:/Codex_project/Timefoot/v1/verification/evidence/signoff_unit/tb_stream_s1/xsim.log -mode tcl -source {xsim.dir/tb_stream/xsim_script.tcl}
+# Log file           : E:/Codex_project/Timefoot/v1/verification/evidence/signoff_unit/tb_stream_s1/xsim.log
+# Journal file       : E:/Codex_project/Timefoot/v1/work/signoff_unit\xsim.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 30064 MB
+# Total Virtual      : 46839 MB
+# Available Virtual  : 14941 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_stream/xsim_script.tcl
+# xsim {tb_stream} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/signoff_unit/tb_stream_s1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/signoff_unit/tb_stream_s1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/signoff_unit/tb_stream_s1/wave.vcd}
+## log_vcd /tb_stream/*
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_stream.dut.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_stream/dut/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_47  Scope: tb_stream.dut.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_stream/dut/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_147  Scope: tb_stream.dut.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+PASS stream_crc_order_backpressure
+PASS crc_corruption_rejected
+PASS old_session_sequence_and_length_rejected
+TEST_PASS tb_stream
+$finish called at time : 79519500 ps : File "E:/Codex_project/Timefoot/v1/tb/tb_stream.sv" Line 38
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 11:38:46 2026...

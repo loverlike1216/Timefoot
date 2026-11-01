@@ -1,0 +1,41 @@
+The system cannot find the path specified.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_async_fifo.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_bit_sync.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_bit_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_cdc_bridge.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_cdc_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_reset_sync.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_reset_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/clock/tf_clock_manager.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_clock_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/control/tf_control_interface.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_control_interface
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/scheduler/tf_event_scheduler.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_event_scheduler
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/stream/tf_crc_engine.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_crc_engine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/stream/tf_data_source.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_data_source
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_stream_link
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_tx.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_stream_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/stream/tf_task_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_task_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/sync/tf_sync_controller.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_sync_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/timebase/tf_timebase.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_timebase
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/top/tf_node_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_node_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/top/tf_node_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_node_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/top/tf_pin_timing_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_pin_timing_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/tb/tb_fifo.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/tb/tb_scheduler.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_scheduler
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/2025.2/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl

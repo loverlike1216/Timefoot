@@ -1,0 +1,2 @@
+v1/tb\tf_sim_channel.sv:2:// SIMULATION ONLY physical-adapter model: finite storage, variable latency,
+v1/rtl\top\tf_system_top.sv:34: // sources is a configuration fault; disabled slots are never auto-remapped.

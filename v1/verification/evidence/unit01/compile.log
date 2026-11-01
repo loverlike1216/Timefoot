@@ -1,0 +1,24 @@
+The system cannot find the path specified.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_async_fifo.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_bit_sync.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_bit_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_cdc_bridge.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_cdc_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/cdc/tf_reset_sync.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_reset_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/clock/tf_clock_manager.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_clock_manager
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/control/tf_control_interface.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_control_interface
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/scheduler/tf_event_scheduler.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_event_scheduler
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/stream/tf_crc_engine.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_crc_engine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/stream/tf_data_source.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_data_source
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv" into library work
+INFO: [VRFC 10-311] analyzing module tf_stream_link
+ERROR: [VRFC 10-4982] syntax error near 'checker' [E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv:18]
+ERROR: [VRFC 10-8549] SystemVerilog keyword 'checker' used in incorrect context [E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv:18]
+ERROR: [VRFC 10-8530] module 'tf_stream_link' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv:2]

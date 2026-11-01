@@ -1,0 +1,529 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 11:40:09 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing -from [all_registers] -to [all_registers] -max_paths 10 -delay_type min -file E:/Codex_project/Timefoot/v1/verification/evidence/signoff_node/xc7z010clg400-1/internal_hold.rpt
+| Design       : tf_node_top
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 core/tasks/d_reg[1][54]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[2][54]/D
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (wraw rise@0.000ns - wraw rise@0.000ns)
+  Data Path Delay:        0.321ns  (logic 0.128ns (39.822%)  route 0.193ns (60.178%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.265ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.291ns
+    Source Clock Delay      (SCD):    0.996ns
+    Clock Pessimism Removal (CPR):    0.030ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.542     0.978    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.050    -0.072 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.482     0.410    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.436 r  clocks/bw/O
+                         net (fo=2373, routed)        0.560     0.996    core/tasks/work_clk
+    SLICE_X23Y10         FDRE                                         r  core/tasks/d_reg[1][54]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y10         FDRE (Prop_fdre_C_Q)         0.128     1.124 r  core/tasks/d_reg[1][54]/Q
+                         net (fo=2, routed)           0.193     1.317    core/tasks/d_reg_n_0_[1][54]
+    SLICE_X20Y10         FDRE                                         r  core/tasks/d_reg[2][54]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.809     1.270    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.366    -0.096 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.528     0.432    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     0.461 r  clocks/bw/O
+                         net (fo=2373, routed)        0.830     1.291    core/tasks/work_clk
+    SLICE_X20Y10         FDRE                                         r  core/tasks/d_reg[2][54]/C
+                         clock pessimism             -0.030     1.261    
+    SLICE_X20Y10         FDRE (Hold_fdre_C_D)         0.006     1.267    core/tasks/d_reg[2][54]
+  -------------------------------------------------------------------
+                         required time                         -1.267    
+                         arrival time                           1.317    
+  -------------------------------------------------------------------
+                         slack                                  0.050    
+
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 core/source_encoder/enc/out_body_reg[136]/C
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/DIADI[24]
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (reference50 rise@0.000ns - reference50 rise@0.000ns)
+  Data Path Delay:        0.353ns  (logic 0.128ns (36.277%)  route 0.225ns (63.723%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.059ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.329ns
+    Source Clock Delay      (SCD):    0.993ns
+    Clock Pessimism Removal (CPR):    0.277ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock reference50 rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.557     0.993    core/source_encoder/enc/ref_clk
+    SLICE_X27Y19         FDRE                                         r  core/source_encoder/enc/out_body_reg[136]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X27Y19         FDRE (Prop_fdre_C_Q)         0.128     1.121 r  core/source_encoder/enc/out_body_reg[136]/Q
+                         net (fo=1, routed)           0.225     1.346    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[168]
+    RAMB36_X1Y3          RAMB36E1                                     r  core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/DIADI[24]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.868     1.329    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clka
+    RAMB36_X1Y3          RAMB36E1                                     r  core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/CLKBWRCLK
+                         clock pessimism             -0.277     1.052    
+    RAMB36_X1Y3          RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_DIADI[24])
+                                                      0.243     1.295    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2
+  -------------------------------------------------------------------
+                         required time                         -1.295    
+                         arrival time                           1.346    
+  -------------------------------------------------------------------
+                         slack                                  0.050    
+
+Slack (MET) :             0.051ns  (arrival time - required time)
+  Source:                 core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][1]/D
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (wraw rise@0.000ns - wraw rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.856%)  route 0.242ns (63.144%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.261ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.279ns
+    Source Clock Delay      (SCD):    0.988ns
+    Clock Pessimism Removal (CPR):    0.030ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.542     0.978    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.050    -0.072 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.482     0.410    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.436 r  clocks/bw/O
+                         net (fo=2373, routed)        0.552     0.988    core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clkb
+    SLICE_X22Y28         FDRE                                         r  core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y28         FDRE (Prop_fdre_C_Q)         0.141     1.129 r  core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[1]/Q
+                         net (fo=1, routed)           0.242     1.370    core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_nc_narrow_pipe.doutb_reg_reg[1]
+    SLICE_X18Y26         FDRE                                         r  core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.809     1.270    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.366    -0.096 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.528     0.432    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     0.461 r  clocks/bw/O
+                         net (fo=2373, routed)        0.818     1.279    core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clkb
+    SLICE_X18Y26         FDRE                                         r  core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][1]/C
+                         clock pessimism             -0.030     1.249    
+    SLICE_X18Y26         FDRE (Hold_fdre_C_D)         0.070     1.319    core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stage.doutb_pipe_reg[0][1]
+  -------------------------------------------------------------------
+                         required time                         -1.319    
+                         arrival time                           1.370    
+  -------------------------------------------------------------------
+                         slack                                  0.051    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 core/tasks/d_reg[1][61]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[2][13]/D
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (wraw rise@0.000ns - wraw rise@0.000ns)
+  Data Path Delay:        0.450ns  (logic 0.275ns (61.045%)  route 0.175ns (38.955%))
+  Logic Levels:           2  (CARRY4=1 LUT3=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.289ns
+    Source Clock Delay      (SCD):    0.995ns
+    Clock Pessimism Removal (CPR):    0.030ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.542     0.978    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.050    -0.072 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.482     0.410    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.436 r  clocks/bw/O
+                         net (fo=2373, routed)        0.559     0.995    core/tasks/work_clk
+    SLICE_X24Y12         FDRE                                         r  core/tasks/d_reg[1][61]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X24Y12         FDRE (Prop_fdre_C_Q)         0.164     1.159 r  core/tasks/d_reg[1][61]/Q
+                         net (fo=2, routed)           0.175     1.334    core/tasks/d_reg_n_0_[1][61]
+    SLICE_X20Y12         LUT3 (Prop_lut3_I1_O)        0.045     1.379 r  core/tasks/d[2][15]_i_4/O
+                         net (fo=1, routed)           0.000     1.379    core/tasks/d[2][15]_i_4_n_0
+    SLICE_X20Y12         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.066     1.445 r  core/tasks/d_reg[2][15]_i_1/O[1]
+                         net (fo=1, routed)           0.000     1.445    core/tasks/p_1_out[13]
+    SLICE_X20Y12         FDRE                                         r  core/tasks/d_reg[2][13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.809     1.270    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.366    -0.096 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.528     0.432    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     0.461 r  clocks/bw/O
+                         net (fo=2373, routed)        0.828     1.289    core/tasks/work_clk
+    SLICE_X20Y12         FDRE                                         r  core/tasks/d_reg[2][13]/C
+                         clock pessimism             -0.030     1.259    
+    SLICE_X20Y12         FDRE (Hold_fdre_C_D)         0.134     1.393    core/tasks/d_reg[2][13]
+  -------------------------------------------------------------------
+                         required time                         -1.393    
+                         arrival time                           1.445    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 core/source_encoder/enc/out_body_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/DIBDI[4]
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (reference50 rise@0.000ns - reference50 rise@0.000ns)
+  Data Path Delay:        0.377ns  (logic 0.148ns (39.291%)  route 0.229ns (60.709%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.079ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.337ns
+    Source Clock Delay      (SCD):    1.000ns
+    Clock Pessimism Removal (CPR):    0.258ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock reference50 rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.564     1.000    core/source_encoder/enc/ref_clk
+    SLICE_X8Y13          FDRE                                         r  core/source_encoder/enc/out_body_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y13          FDRE (Prop_fdre_C_Q)         0.148     1.148 r  core/source_encoder/enc/out_body_reg[4]/Q
+                         net (fo=1, routed)           0.229     1.376    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[36]
+    RAMB36_X0Y2          RAMB36E1                                     r  core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/DIBDI[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.876     1.337    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clka
+    RAMB36_X0Y2          RAMB36E1                                     r  core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/CLKBWRCLK
+                         clock pessimism             -0.258     1.079    
+    RAMB36_X0Y2          RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_DIBDI[4])
+                                                      0.242     1.321    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0
+  -------------------------------------------------------------------
+                         required time                         -1.321    
+                         arrival time                           1.376    
+  -------------------------------------------------------------------
+                         slack                                  0.055    
+
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 core/source_encoder/enc/out_body_reg[152]/C
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/DIBDI[8]
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (reference50 rise@0.000ns - reference50 rise@0.000ns)
+  Data Path Delay:        0.358ns  (logic 0.128ns (35.765%)  route 0.230ns (64.235%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.059ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.329ns
+    Source Clock Delay      (SCD):    0.993ns
+    Clock Pessimism Removal (CPR):    0.277ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock reference50 rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.557     0.993    core/source_encoder/enc/ref_clk
+    SLICE_X27Y19         FDRE                                         r  core/source_encoder/enc/out_body_reg[152]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X27Y19         FDRE (Prop_fdre_C_Q)         0.128     1.121 r  core/source_encoder/enc/out_body_reg[152]/Q
+                         net (fo=1, routed)           0.230     1.351    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[184]
+    RAMB36_X1Y3          RAMB36E1                                     r  core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/DIBDI[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.868     1.329    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clka
+    RAMB36_X1Y3          RAMB36E1                                     r  core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/CLKBWRCLK
+                         clock pessimism             -0.277     1.052    
+    RAMB36_X1Y3          RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_DIBDI[8])
+                                                      0.243     1.295    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2
+  -------------------------------------------------------------------
+                         required time                         -1.295    
+                         arrival time                           1.351    
+  -------------------------------------------------------------------
+                         slack                                  0.055    
+
+Slack (MET) :             0.057ns  (arrival time - required time)
+  Source:                 core/source_encoder/enc/out_body_reg[151]/C
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/DIBDI[7]
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (reference50 rise@0.000ns - reference50 rise@0.000ns)
+  Data Path Delay:        0.362ns  (logic 0.128ns (35.377%)  route 0.234ns (64.623%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.061ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.329ns
+    Source Clock Delay      (SCD):    0.991ns
+    Clock Pessimism Removal (CPR):    0.277ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock reference50 rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.555     0.991    core/source_encoder/enc/ref_clk
+    SLICE_X26Y21         FDRE                                         r  core/source_encoder/enc/out_body_reg[151]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X26Y21         FDRE (Prop_fdre_C_Q)         0.128     1.119 r  core/source_encoder/enc/out_body_reg[151]/Q
+                         net (fo=1, routed)           0.234     1.353    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[183]
+    RAMB36_X1Y3          RAMB36E1                                     r  core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/DIBDI[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.868     1.329    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clka
+    RAMB36_X1Y3          RAMB36E1                                     r  core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/CLKBWRCLK
+                         clock pessimism             -0.277     1.052    
+    RAMB36_X1Y3          RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_DIBDI[7])
+                                                      0.243     1.295    core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2
+  -------------------------------------------------------------------
+                         required time                         -1.295    
+                         arrival time                           1.353    
+  -------------------------------------------------------------------
+                         slack                                  0.057    
+
+Slack (MET) :             0.058ns  (arrival time - required time)
+  Source:                 core/tasks/d_reg[1][55]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[2][7]/D
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (wraw rise@0.000ns - wraw rise@0.000ns)
+  Data Path Delay:        0.457ns  (logic 0.290ns (63.457%)  route 0.167ns (36.543%))
+  Logic Levels:           2  (CARRY4=1 LUT3=1)
+  Clock Path Skew:        0.265ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.291ns
+    Source Clock Delay      (SCD):    0.996ns
+    Clock Pessimism Removal (CPR):    0.030ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.542     0.978    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.050    -0.072 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.482     0.410    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.436 r  clocks/bw/O
+                         net (fo=2373, routed)        0.560     0.996    core/tasks/work_clk
+    SLICE_X23Y10         FDRE                                         r  core/tasks/d_reg[1][55]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y10         FDRE (Prop_fdre_C_Q)         0.128     1.124 r  core/tasks/d_reg[1][55]/Q
+                         net (fo=2, routed)           0.167     1.291    core/tasks/d_reg_n_0_[1][55]
+    SLICE_X20Y10         LUT3 (Prop_lut3_I1_O)        0.098     1.389 r  core/tasks/d[2][7]_i_2/O
+                         net (fo=1, routed)           0.000     1.389    core/tasks/d[2][7]_i_2_n_0
+    SLICE_X20Y10         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.064     1.453 r  core/tasks/d_reg[2][7]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.453    core/tasks/p_1_out[7]
+    SLICE_X20Y10         FDRE                                         r  core/tasks/d_reg[2][7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.809     1.270    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.366    -0.096 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.528     0.432    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     0.461 r  clocks/bw/O
+                         net (fo=2373, routed)        0.830     1.291    core/tasks/work_clk
+    SLICE_X20Y10         FDRE                                         r  core/tasks/d_reg[2][7]/C
+                         clock pessimism             -0.030     1.261    
+    SLICE_X20Y10         FDRE (Hold_fdre_C_D)         0.134     1.395    core/tasks/d_reg[2][7]
+  -------------------------------------------------------------------
+                         required time                         -1.395    
+                         arrival time                           1.453    
+  -------------------------------------------------------------------
+                         slack                                  0.058    
+
+Slack (MET) :             0.061ns  (arrival time - required time)
+  Source:                 core/tasks/d_reg[0][60]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[1][60]/D
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (wraw rise@0.000ns - wraw rise@0.000ns)
+  Data Path Delay:        0.347ns  (logic 0.128ns (36.860%)  route 0.219ns (63.140%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.262ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.289ns
+    Source Clock Delay      (SCD):    0.997ns
+    Clock Pessimism Removal (CPR):    0.030ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.542     0.978    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.050    -0.072 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.482     0.410    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.436 r  clocks/bw/O
+                         net (fo=2373, routed)        0.561     0.997    core/tasks/work_clk
+    SLICE_X21Y9          FDRE                                         r  core/tasks/d_reg[0][60]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y9          FDRE (Prop_fdre_C_Q)         0.128     1.125 r  core/tasks/d_reg[0][60]/Q
+                         net (fo=1, routed)           0.219     1.344    core/tasks/d_reg[0]_23[60]
+    SLICE_X23Y10         FDRE                                         r  core/tasks/d_reg[1][60]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.809     1.270    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.366    -0.096 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.528     0.432    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     0.461 r  clocks/bw/O
+                         net (fo=2373, routed)        0.828     1.289    core/tasks/work_clk
+    SLICE_X23Y10         FDRE                                         r  core/tasks/d_reg[1][60]/C
+                         clock pessimism             -0.030     1.259    
+    SLICE_X23Y10         FDRE (Hold_fdre_C_D)         0.024     1.283    core/tasks/d_reg[1][60]
+  -------------------------------------------------------------------
+                         required time                         -1.283    
+                         arrival time                           1.344    
+  -------------------------------------------------------------------
+                         slack                                  0.061    
+
+Slack (MET) :             0.061ns  (arrival time - required time)
+  Source:                 core/tasks/d_reg[0][74]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[1][74]/D
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (wraw rise@0.000ns - wraw rise@0.000ns)
+  Data Path Delay:        0.385ns  (logic 0.141ns (36.586%)  route 0.244ns (63.414%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.260ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.287ns
+    Source Clock Delay      (SCD):    0.997ns
+    Clock Pessimism Removal (CPR):    0.030ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.410     0.410    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026     0.436 r  br/O
+                         net (fo=1965, routed)        0.542     0.978    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.050    -0.072 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.482     0.410    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.436 r  clocks/bw/O
+                         net (fo=2373, routed)        0.561     0.997    core/tasks/work_clk
+    SLICE_X17Y15         FDRE                                         r  core/tasks/d_reg[0][74]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y15         FDRE (Prop_fdre_C_Q)         0.141     1.138 r  core/tasks/d_reg[0][74]/Q
+                         net (fo=1, routed)           0.244     1.382    core/tasks/d_reg[0]_23[74]
+    SLICE_X24Y12         FDRE                                         r  core/tasks/d_reg[1][74]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       0.000     0.000 r  
+                                                      0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.432     0.432    ref_in
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.461 r  br/O
+                         net (fo=1965, routed)        0.809     1.270    clocks/ref_clk
+    MMCME2_ADV_X0Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.366    -0.096 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.528     0.432    clocks/wraw
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     0.461 r  clocks/bw/O
+                         net (fo=2373, routed)        0.826     1.287    core/tasks/work_clk
+    SLICE_X24Y12         FDRE                                         r  core/tasks/d_reg[1][74]/C
+                         clock pessimism             -0.030     1.257    
+    SLICE_X24Y12         FDRE (Hold_fdre_C_D)         0.064     1.321    core/tasks/d_reg[1][74]
+  -------------------------------------------------------------------
+                         required time                         -1.321    
+                         arrival time                           1.382    
+  -------------------------------------------------------------------
+                         slack                                  0.061    
+
+
+
+

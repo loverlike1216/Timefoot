@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Nov  1 11:28:09 2026
+# Process ID         : 70536
+# Current directory  : E:/Codex_project/Timefoot/v1/work/sys09
+# Command line       : xsim.exe -log E:/Codex_project/Timefoot/v1/verification/evidence/sys09/tb_system_2_s2026/xsim.log -mode tcl -source {xsim.dir/tb_system_2/xsim_script.tcl}
+# Log file           : E:/Codex_project/Timefoot/v1/verification/evidence/sys09/tb_system_2_s2026/xsim.log
+# Journal file       : E:/Codex_project/Timefoot/v1/work/sys09\xsim.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 30064 MB
+# Total Virtual      : 46839 MB
+# Available Virtual  : 20525 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_system_2/xsim_script.tcl
+# xsim {tb_system_2} -testplusarg SEED2026 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/sys09/tb_system_2_s2026/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/sys09/tb_system_2_s2026/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/sys09/tb_system_2_s2026/wave.vcd}
+## log_vcd /tb_system_2/t/*
+INFO: HDL object /tb_system_2/t/event_time is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_2.t.dut.slot[0].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[0].present.node/core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_192  Scope: tb_system_2.t.dut.slot[0].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[0].present.node/core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_292  Scope: tb_system_2.t.dut.slot[0].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_2.t.dut.slot[0].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[0].present.node/core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_353  Scope: tb_system_2.t.dut.slot[0].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[0].present.node/core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_447  Scope: tb_system_2.t.dut.slot[0].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_2.t.dut.slot[0].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[0].present.node/core/external_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_353  Scope: tb_system_2.t.dut.slot[0].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[0].present.node/core/external_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_447  Scope: tb_system_2.t.dut.slot[0].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_2.t.dut.slot[1].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[1].present.node/core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_192  Scope: tb_system_2.t.dut.slot[1].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[1].present.node/core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_292  Scope: tb_system_2.t.dut.slot[1].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_2.t.dut.slot[1].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[1].present.node/core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_353  Scope: tb_system_2.t.dut.slot[1].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[1].present.node/core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_447  Scope: tb_system_2.t.dut.slot[1].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_2.t.dut.slot[1].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[1].present.node/core/external_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_353  Scope: tb_system_2.t.dut.slot[1].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_2/t/dut/slot[1].present.node/core/external_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_447  Scope: tb_system_2.t.dut.slot[1].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+PASS phase=0 nodes=2 session=1 frames=40 stalls=13741 max_fifo=17
+Warning: [Unisim MMCME2_ADV-21] Input CLKIN1 is stopped at time            248336990. Reset is required when input clock returns. Instance tb_system_2.t.dut.slot[1].present.node.clocks.mmcm.mmcm_adv_1 
+PASS phase=1 nodes=2 session=2 frames=40 stalls=27401 max_fifo=17
+PASS phase=2 nodes=2 session=3 frames=40 stalls=41017 max_fifo=17
+PASS phase=3 nodes=2 session=4 frames=40 stalls=54687 max_fifo=17
+PASS phase=4 nodes=2 session=5 frames=40 stalls=68338 max_fifo=17
+PASS phase=5 nodes=2 session=7 frames=40 stalls=82011 max_fifo=17
+TEST_PASS tb_system nodes=2 seed=2026 outputs=240 recoveries=4 max_fifo=17
+$finish called at time : 1500600 ns : File "E:/Codex_project/Timefoot/v1/tb/tb_system.sv" Line 116
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:26 . Memory (MB): peak = 207.660 ; gain = 0.023
+## close_vcd
+## quit
+INFO: xsimkernel Simulation Memory Usage: 19204 KB (Peak: 19204 KB), Simulation CPU Usage: 25093 ms
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 11:28:36 2026...
