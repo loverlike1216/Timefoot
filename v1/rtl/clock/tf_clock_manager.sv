@@ -7,7 +7,10 @@ module tf_clock_manager #(parameter integer WORK_DIV=6,MON_TIMEOUT=96)(
  reg [4:0] hb_count=0;reg heartbeat=0;reg mmcm_reset=1;
  wire hb_rst;
  tf_reset_sync hr(.clk(ref_clk),.arst(arst),.rst(hb_rst));
- always @(posedge ref_clk) if(hb_rst)begin hb_count<=0;heartbeat<=0;end
+ // A session/local reset may arrive one reference cycle after a toggle.
+ // Preserve the heartbeat phase during reset so XPM never sees a shortened
+ // pulse. FPGA INIT establishes the initial phase; reset restarts only count.
+ always @(posedge ref_clk) if(hb_rst)begin hb_count<=0;end
  else if(hb_count==15)begin hb_count<=0;heartbeat<=~heartbeat;end
  else hb_count<=hb_count+1'b1;
  MMCME2_BASE #(.CLKIN1_PERIOD(20.0),.DIVCLK_DIVIDE(1),.CLKFBOUT_MULT_F(18.0),
