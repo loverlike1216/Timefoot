@@ -1,0 +1,11 @@
+# CANDIDATE_INTERFACE_TIMING. No physical receiver/PHY timing is asserted.
+set wc [get_clocks -of_objects [get_pins clocks/bw/O]]
+set rc [get_clocks reference50]
+set_input_delay 2.0 -clock $rc [get_ports {abort_session prepare_valid prepare_session[*] prepare_epoch[*] prepare_stage_mask[*] prepare_source sync_marker marker_qualified run_enable event_id[*] event_session[*] event_target[*] event_valid cancel_all cancel_valid cancel_id[*]}]
+set_input_delay 2.0 -clock rx100 [get_ports {rx_frame[*] rx_valid}]
+set_input_delay 2.0 -clock $wc [get_ports tx_ready]
+set_input_delay 2.0 -clock monitor50 [get_ports arst]
+set_output_delay 2.0 -clock $rc [get_ports {timestamp[*] session_id[*] prepared applied time_valid event_execute node_fault clock_ready event_ready executed_id[*] executed_timestamp[*] sample_count[*]}]
+set_output_delay 2.0 -clock monitor50 [get_ports reference_fault]
+set_output_delay 2.0 -clock rx100 [get_ports rx_ready]
+set_output_delay 2.0 -clock $wc [get_ports {tx_frame[*] tx_valid fifo_full fifo_level[*] delivered_count[*]}]

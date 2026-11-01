@@ -13,3 +13,14 @@ preproject_feasibility/research/source_extracts/
 *.vcd
 *.backup.log
 *.backup.jou
+vivado.log
+vivado.jou
+preproject_feasibility/evidence/**/xsim.dir/
+preproject_feasibility/evidence/**/.Xil/
+preproject_feasibility/evidence/**/*.exe
+preproject_feasibility/evidence/**/*.obj
+preproject_feasibility/evidence/**/*.dll
+preproject_feasibility/evidence/**/*.sdb
+preproject_feasibility/evidence/**/*.xdbg
+preproject_feasibility/evidence/**/*.rtti
+preproject_feasibility/evidence/**/*.pb
