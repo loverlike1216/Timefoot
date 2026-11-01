@@ -1,0 +1,62 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 14:47:53 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_drc -file E:/Codex_project/Timefoot/v1/verification/evidence/adapter02/xc7z010clg400-1/drc.rpt
+| Design       : tf_physical_node_top
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: tf_physical_node_top
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 2
++-----------+----------+--------------------+--------+
+| Rule      | Severity | Description        | Checks |
++-----------+----------+--------------------+--------+
+| RTSTAT-10 | Warning  | No routable loads  | 1      |
+| ZPS7-1    | Warning  | PS7 block required | 1      |
++-----------+----------+--------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+RTSTAT-10#1 Warning
+No routable loads  
+62 net(s) have no routable loads. The problem bus(es) and/or net(s) are core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
+core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_data_count[4:0],
+core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/underflow,
+core/external_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
+core/external_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/underflow,
+core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
+management/commands/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
+management/commands/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_data_count[4:0],
+management/commands/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/underflow,
+management/replies/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
+management/replies/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_data_count[4:0],
+management/replies/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/underflow,
+transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
+transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_data_count[4:0],
+transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/underflow
+ (the first 15 of 22 listed nets/buses).
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

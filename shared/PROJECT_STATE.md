@@ -1,7 +1,9 @@
-# TIMEFOOT current state
+# Current TIMEFOOT state
 
-PROJECT_ID:TIMEFOOT; repository:https://github.com/loverlike1216/Timefoot.git; project root:E:/Codex_project/Timefoot; branch:codex/v1-rtl-core; version:v1 ACTIVE; stage:RTL_CORE_AND_SYSTEM_FRAMEWORK; status:REVIEW_READY_REVISE.
+Updated 2026-11-01T07:41:46.060265+00:00. v1 ACTIVE / INTERFACE_TIMING_CLOSURE_AND_PRE_PCB_READINESS.
 
-Validated core RTL:46f88bcd553a13a9fda55b2599c6740acf6681d0. Code implemented and simulated; both Parts synthesized/placed/routed.5unit cases,12system configurations,2640independent packet checks,4seed replay hashes pass. Critical CDC0; RAM async-control DRC fixed; internal STA positive. Full-node external STA FAIL is the blocker. Historical3723files hash-match. Exact source/evidence commits are recorded in manifests and HANDOFF; no self-referential claim that a checkpoint contains its own future commit hash.
+PCB_PRE_DESIGN_READY_WITH_LIMITATIONS. Validated source 45aa523ddb4151157672df1ee3c5bb483be3edb0. Repo/branch unchanged; Draft PR#1 OPEN, not merged. Digital Blocking=0, known Critical RTL=0 in executed scope; independent ChatGPT gate PENDING. Hardware phase qualification/board revision/SI/BOM freeze HOLD. No CAD/PCB/hardware operation authorized.
 
-Read guide -> VERSION_STATE -> CONTEXT_CHECKPOINT -> CURRENT_PLAN -> DECISIONS/BLOCKERS/ACCEPTANCE -> current source and evidence. Continue current v1. No Merge/v2/hardware design/physical deployment. External ChatGPT Decision pending; use the persisted review package and Problem hash.
+Original5units +6extensions +physical64packets;12legacy+12SDR cases at3Seeds;2640packets independently checked per matrix;4 three-CSV hash replays;8bit4node240packets;6phase stress cases. Four full routed profiles positive STA, CriticalCDC0; vendor/methodology/PS7 warnings classified explicitly, no dedicated RDC signoff claim. Remote clean checkout5units+4node240packets,25RTL byte hashes and3CSV hashes MATCH. Historical3723files unchanged.
+
+Recover through guide.md, CONTEXT_CHECKPOINT, CURRENT_PLAN and actual evidence/prepcb_analysis/stage_audit.json. P-001 approved adapter implementation complete pending independent confirmation; original problem bytes preserved. P-002 OPEN for hardware phase qualification. Current single-file handoff: v1/docs/pre_pcb_readiness/GPT_CHAT_FINAL_REVIEW.md.

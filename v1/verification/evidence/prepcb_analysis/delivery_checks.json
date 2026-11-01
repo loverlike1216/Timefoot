@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "source_hash_match": true,
+  "credential_pattern_matches": 0,
+  "scanned_files": 46,
+  "rtl_placeholder_candidate_locations": [
+    {
+      "path": "v1/rtl/top/tf_system_top.sv",
+      "line": 34
+    }
+  ],
+  "artifacts": 110,
+  "artifact_bytes": 1264267191,
+  "new_version_created": false,
+  "hardware": "NOT_HARDWARE_VERIFIED",
+  "rtl_placeholder_classification": "Only hit tf_system_top.sv:34 is explanatory comment: disabled slots are never auto-remapped; functional configuration validation, not skipped logic",
+  "unresolved_fake_implementations": 0
+}

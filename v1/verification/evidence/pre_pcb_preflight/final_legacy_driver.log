@@ -1,0 +1,18 @@
+PASS tb_system_1_s1
+PASS tb_system_1_s17
+PASS tb_system_1_s2026
+PASS tb_system_2_s1
+PASS tb_system_2_s17
+PASS tb_system_2_s2026
+PASS tb_system_3_s1
+PASS tb_system_3_s17
+PASS tb_system_3_s2026
+PASS tb_system_4_s1
+PASS tb_system_4_s17
+PASS tb_system_4_s2026
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 52, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 50, in main
+    assert before['source_sha256']==after['source_sha256'], 'SOURCE_CHANGED_DURING_RUN'
+AssertionError: SOURCE_CHANGED_DURING_RUN

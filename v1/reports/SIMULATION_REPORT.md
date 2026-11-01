@@ -1,3 +1,5 @@
+> Current-stage update2026-11-01: complete4/8bit physical-node profiles close setup/hold/pulse on both Parts, with expanded functional/golden/replay/clean-checkout evidence. Current verdict PCB_PRE_DESIGN_READY_WITH_LIMITATIONS; hardware freeze and independent Review remain gated. See ../docs/pre_pcb_readiness/PRE_PCB_READINESS_REPORT.md and VALIDATION_AND_REPRODUCTION.md. The body below is the preserved previous-stage report, including its genuine full-wide-node FAIL.
+
 # Simulation and validation report
 
 Additional clean replay:independent shallow GitHub checkout03eeddcd0520b110649c226245989eba04a21b77, same installed XSIM toolchain,5units+4node seed1systemPASS;18RTL source hashes and unit/packet/source/event trace hashes match canonical runs. Actual results/source manifests/raw logs are copied under evidence/clean_checkout. The discovered ignored-work-directory initialization bug was fixed and the original failed log retained. No RTL was changed by that fix.

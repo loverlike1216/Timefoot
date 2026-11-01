@@ -1,0 +1,1597 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 15:19:39 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing -delay_type max -max_paths 20 -file E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_impl4_03/xc7z020clg400-2/setup_paths.rpt
+| Design       : tf_physical_node_top
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.925ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][168]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.495ns  (logic 1.806ns (32.866%)  route 3.689ns (67.134%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.578ns = ( 11.244 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.377ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         1.158    10.476    core/tasks/d[0]
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][168]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.344    11.244    core/tasks/work_clk
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][168]/C
+                         clock pessimism              0.377    11.621    
+                         clock uncertainty           -0.084    11.537    
+    SLICE_X100Y84        FDRE (Setup_fdre_C_CE)      -0.136    11.401    core/tasks/d_reg[0][168]
+  -------------------------------------------------------------------
+                         required time                         11.401    
+                         arrival time                         -10.476    
+  -------------------------------------------------------------------
+                         slack                                  0.925    
+
+Slack (MET) :             0.925ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][169]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.495ns  (logic 1.806ns (32.866%)  route 3.689ns (67.134%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.578ns = ( 11.244 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.377ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         1.158    10.476    core/tasks/d[0]
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][169]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.344    11.244    core/tasks/work_clk
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][169]/C
+                         clock pessimism              0.377    11.621    
+                         clock uncertainty           -0.084    11.537    
+    SLICE_X100Y84        FDRE (Setup_fdre_C_CE)      -0.136    11.401    core/tasks/d_reg[0][169]
+  -------------------------------------------------------------------
+                         required time                         11.401    
+                         arrival time                         -10.476    
+  -------------------------------------------------------------------
+                         slack                                  0.925    
+
+Slack (MET) :             0.925ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][172]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.495ns  (logic 1.806ns (32.866%)  route 3.689ns (67.134%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.578ns = ( 11.244 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.377ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         1.158    10.476    core/tasks/d[0]
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][172]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.344    11.244    core/tasks/work_clk
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][172]/C
+                         clock pessimism              0.377    11.621    
+                         clock uncertainty           -0.084    11.537    
+    SLICE_X100Y84        FDRE (Setup_fdre_C_CE)      -0.136    11.401    core/tasks/d_reg[0][172]
+  -------------------------------------------------------------------
+                         required time                         11.401    
+                         arrival time                         -10.476    
+  -------------------------------------------------------------------
+                         slack                                  0.925    
+
+Slack (MET) :             0.925ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][173]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.495ns  (logic 1.806ns (32.866%)  route 3.689ns (67.134%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.578ns = ( 11.244 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.377ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         1.158    10.476    core/tasks/d[0]
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][173]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.344    11.244    core/tasks/work_clk
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][173]/C
+                         clock pessimism              0.377    11.621    
+                         clock uncertainty           -0.084    11.537    
+    SLICE_X100Y84        FDRE (Setup_fdre_C_CE)      -0.136    11.401    core/tasks/d_reg[0][173]
+  -------------------------------------------------------------------
+                         required time                         11.401    
+                         arrival time                         -10.476    
+  -------------------------------------------------------------------
+                         slack                                  0.925    
+
+Slack (MET) :             0.925ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][174]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.495ns  (logic 1.806ns (32.866%)  route 3.689ns (67.134%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.578ns = ( 11.244 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.377ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         1.158    10.476    core/tasks/d[0]
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][174]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.344    11.244    core/tasks/work_clk
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][174]/C
+                         clock pessimism              0.377    11.621    
+                         clock uncertainty           -0.084    11.537    
+    SLICE_X100Y84        FDRE (Setup_fdre_C_CE)      -0.136    11.401    core/tasks/d_reg[0][174]
+  -------------------------------------------------------------------
+                         required time                         11.401    
+                         arrival time                         -10.476    
+  -------------------------------------------------------------------
+                         slack                                  0.925    
+
+Slack (MET) :             0.925ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][175]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.495ns  (logic 1.806ns (32.866%)  route 3.689ns (67.134%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.578ns = ( 11.244 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.377ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         1.158    10.476    core/tasks/d[0]
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][175]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.344    11.244    core/tasks/work_clk
+    SLICE_X100Y84        FDRE                                         r  core/tasks/d_reg[0][175]/C
+                         clock pessimism              0.377    11.621    
+                         clock uncertainty           -0.084    11.537    
+    SLICE_X100Y84        FDRE (Setup_fdre_C_CE)      -0.136    11.401    core/tasks/d_reg[0][175]
+  -------------------------------------------------------------------
+                         required time                         11.401    
+                         arrival time                         -10.476    
+  -------------------------------------------------------------------
+                         slack                                  0.925    
+
+Slack (MET) :             1.023ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][148]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.327ns  (logic 1.806ns (33.904%)  route 3.521ns (66.096%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.574ns = ( 11.240 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.989    10.307    core/tasks/d[0]
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][148]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.340    11.240    core/tasks/work_clk
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][148]/C
+                         clock pessimism              0.343    11.583    
+                         clock uncertainty           -0.084    11.499    
+    SLICE_X97Y81         FDRE (Setup_fdre_C_CE)      -0.168    11.331    core/tasks/d_reg[0][148]
+  -------------------------------------------------------------------
+                         required time                         11.331    
+                         arrival time                         -10.307    
+  -------------------------------------------------------------------
+                         slack                                  1.023    
+
+Slack (MET) :             1.023ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][149]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.327ns  (logic 1.806ns (33.904%)  route 3.521ns (66.096%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.574ns = ( 11.240 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.989    10.307    core/tasks/d[0]
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][149]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.340    11.240    core/tasks/work_clk
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][149]/C
+                         clock pessimism              0.343    11.583    
+                         clock uncertainty           -0.084    11.499    
+    SLICE_X97Y81         FDRE (Setup_fdre_C_CE)      -0.168    11.331    core/tasks/d_reg[0][149]
+  -------------------------------------------------------------------
+                         required time                         11.331    
+                         arrival time                         -10.307    
+  -------------------------------------------------------------------
+                         slack                                  1.023    
+
+Slack (MET) :             1.023ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][158]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.327ns  (logic 1.806ns (33.904%)  route 3.521ns (66.096%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.574ns = ( 11.240 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.989    10.307    core/tasks/d[0]
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][158]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.340    11.240    core/tasks/work_clk
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][158]/C
+                         clock pessimism              0.343    11.583    
+                         clock uncertainty           -0.084    11.499    
+    SLICE_X97Y81         FDRE (Setup_fdre_C_CE)      -0.168    11.331    core/tasks/d_reg[0][158]
+  -------------------------------------------------------------------
+                         required time                         11.331    
+                         arrival time                         -10.307    
+  -------------------------------------------------------------------
+                         slack                                  1.023    
+
+Slack (MET) :             1.023ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][159]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.327ns  (logic 1.806ns (33.904%)  route 3.521ns (66.096%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.574ns = ( 11.240 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.989    10.307    core/tasks/d[0]
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][159]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.340    11.240    core/tasks/work_clk
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][159]/C
+                         clock pessimism              0.343    11.583    
+                         clock uncertainty           -0.084    11.499    
+    SLICE_X97Y81         FDRE (Setup_fdre_C_CE)      -0.168    11.331    core/tasks/d_reg[0][159]
+  -------------------------------------------------------------------
+                         required time                         11.331    
+                         arrival time                         -10.307    
+  -------------------------------------------------------------------
+                         slack                                  1.023    
+
+Slack (MET) :             1.023ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][160]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.327ns  (logic 1.806ns (33.904%)  route 3.521ns (66.096%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.574ns = ( 11.240 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.989    10.307    core/tasks/d[0]
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][160]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.340    11.240    core/tasks/work_clk
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][160]/C
+                         clock pessimism              0.343    11.583    
+                         clock uncertainty           -0.084    11.499    
+    SLICE_X97Y81         FDRE (Setup_fdre_C_CE)      -0.168    11.331    core/tasks/d_reg[0][160]
+  -------------------------------------------------------------------
+                         required time                         11.331    
+                         arrival time                         -10.307    
+  -------------------------------------------------------------------
+                         slack                                  1.023    
+
+Slack (MET) :             1.023ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][161]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.327ns  (logic 1.806ns (33.904%)  route 3.521ns (66.096%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.574ns = ( 11.240 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.989    10.307    core/tasks/d[0]
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][161]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.340    11.240    core/tasks/work_clk
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][161]/C
+                         clock pessimism              0.343    11.583    
+                         clock uncertainty           -0.084    11.499    
+    SLICE_X97Y81         FDRE (Setup_fdre_C_CE)      -0.168    11.331    core/tasks/d_reg[0][161]
+  -------------------------------------------------------------------
+                         required time                         11.331    
+                         arrival time                         -10.307    
+  -------------------------------------------------------------------
+                         slack                                  1.023    
+
+Slack (MET) :             1.023ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][162]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.327ns  (logic 1.806ns (33.904%)  route 3.521ns (66.096%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.574ns = ( 11.240 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.989    10.307    core/tasks/d[0]
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][162]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.340    11.240    core/tasks/work_clk
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][162]/C
+                         clock pessimism              0.343    11.583    
+                         clock uncertainty           -0.084    11.499    
+    SLICE_X97Y81         FDRE (Setup_fdre_C_CE)      -0.168    11.331    core/tasks/d_reg[0][162]
+  -------------------------------------------------------------------
+                         required time                         11.331    
+                         arrival time                         -10.307    
+  -------------------------------------------------------------------
+                         slack                                  1.023    
+
+Slack (MET) :             1.023ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][163]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.327ns  (logic 1.806ns (33.904%)  route 3.521ns (66.096%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.574ns = ( 11.240 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.989    10.307    core/tasks/d[0]
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][163]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.340    11.240    core/tasks/work_clk
+    SLICE_X97Y81         FDRE                                         r  core/tasks/d_reg[0][163]/C
+                         clock pessimism              0.343    11.583    
+                         clock uncertainty           -0.084    11.499    
+    SLICE_X97Y81         FDRE (Setup_fdre_C_CE)      -0.168    11.331    core/tasks/d_reg[0][163]
+  -------------------------------------------------------------------
+                         required time                         11.331    
+                         arrival time                         -10.307    
+  -------------------------------------------------------------------
+                         slack                                  1.023    
+
+Slack (MET) :             1.071ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][32]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.282ns  (logic 1.806ns (34.195%)  route 3.476ns (65.805%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.576ns = ( 11.242 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.944    10.262    core/tasks/d[0]
+    SLICE_X91Y64         FDRE                                         r  core/tasks/d_reg[0][32]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.342    11.242    core/tasks/work_clk
+    SLICE_X91Y64         FDRE                                         r  core/tasks/d_reg[0][32]/C
+                         clock pessimism              0.343    11.585    
+                         clock uncertainty           -0.084    11.501    
+    SLICE_X91Y64         FDRE (Setup_fdre_C_CE)      -0.168    11.333    core/tasks/d_reg[0][32]
+  -------------------------------------------------------------------
+                         required time                         11.333    
+                         arrival time                         -10.262    
+  -------------------------------------------------------------------
+                         slack                                  1.071    
+
+Slack (MET) :             1.071ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][33]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.282ns  (logic 1.806ns (34.195%)  route 3.476ns (65.805%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.576ns = ( 11.242 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.944    10.262    core/tasks/d[0]
+    SLICE_X91Y64         FDRE                                         r  core/tasks/d_reg[0][33]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.342    11.242    core/tasks/work_clk
+    SLICE_X91Y64         FDRE                                         r  core/tasks/d_reg[0][33]/C
+                         clock pessimism              0.343    11.585    
+                         clock uncertainty           -0.084    11.501    
+    SLICE_X91Y64         FDRE (Setup_fdre_C_CE)      -0.168    11.333    core/tasks/d_reg[0][33]
+  -------------------------------------------------------------------
+                         required time                         11.333    
+                         arrival time                         -10.262    
+  -------------------------------------------------------------------
+                         slack                                  1.071    
+
+Slack (MET) :             1.071ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][34]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.282ns  (logic 1.806ns (34.195%)  route 3.476ns (65.805%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.576ns = ( 11.242 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.944    10.262    core/tasks/d[0]
+    SLICE_X91Y64         FDRE                                         r  core/tasks/d_reg[0][34]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.342    11.242    core/tasks/work_clk
+    SLICE_X91Y64         FDRE                                         r  core/tasks/d_reg[0][34]/C
+                         clock pessimism              0.343    11.585    
+                         clock uncertainty           -0.084    11.501    
+    SLICE_X91Y64         FDRE (Setup_fdre_C_CE)      -0.168    11.333    core/tasks/d_reg[0][34]
+  -------------------------------------------------------------------
+                         required time                         11.333    
+                         arrival time                         -10.262    
+  -------------------------------------------------------------------
+                         slack                                  1.071    
+
+Slack (MET) :             1.071ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][35]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.282ns  (logic 1.806ns (34.195%)  route 3.476ns (65.805%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.576ns = ( 11.242 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.343ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.944    10.262    core/tasks/d[0]
+    SLICE_X91Y64         FDRE                                         r  core/tasks/d_reg[0][35]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.342    11.242    core/tasks/work_clk
+    SLICE_X91Y64         FDRE                                         r  core/tasks/d_reg[0][35]/C
+                         clock pessimism              0.343    11.585    
+                         clock uncertainty           -0.084    11.501    
+    SLICE_X91Y64         FDRE (Setup_fdre_C_CE)      -0.168    11.333    core/tasks/d_reg[0][35]
+  -------------------------------------------------------------------
+                         required time                         11.333    
+                         arrival time                         -10.262    
+  -------------------------------------------------------------------
+                         slack                                  1.071    
+
+Slack (MET) :             1.085ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][126]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.332ns  (logic 1.806ns (33.870%)  route 3.526ns (66.130%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.575ns = ( 11.241 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.377ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.995    10.313    core/tasks/d[0]
+    SLICE_X98Y80         FDRE                                         r  core/tasks/d_reg[0][126]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.341    11.241    core/tasks/work_clk
+    SLICE_X98Y80         FDRE                                         r  core/tasks/d_reg[0][126]/C
+                         clock pessimism              0.377    11.618    
+                         clock uncertainty           -0.084    11.534    
+    SLICE_X98Y80         FDRE (Setup_fdre_C_CE)      -0.136    11.398    core/tasks/d_reg[0][126]
+  -------------------------------------------------------------------
+                         required time                         11.398    
+                         arrival time                         -10.313    
+  -------------------------------------------------------------------
+                         slack                                  1.085    
+
+Slack (MET) :             1.085ns  (required time - arrival time)
+  Source:                 core/work_session_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            core/tasks/d_reg[0][127]/CE
+                            (rising edge-triggered cell FDRE clocked by wraw  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             wraw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (wraw rise@6.667ns - wraw rise@0.000ns)
+  Data Path Delay:        5.332ns  (logic 1.806ns (33.870%)  route 3.526ns (66.130%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.575ns = ( 11.241 - 6.667 ) 
+    Source Clock Delay      (SCD):    4.981ns
+    Clock Pessimism Removal (CPR):    0.377ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.153ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock wraw rise edge)       0.000     0.000 r  
+    U14                                               0.000     0.000 r  ref_in (IN)
+                         net (fo=0)                   0.000     0.000    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.521     1.521 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.873     3.394    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     3.479 r  br/O
+                         net (fo=3628, routed)        1.552     5.031    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232     1.799 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.597     3.396    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     3.481 r  clocks/bw/O
+                         net (fo=2946, routed)        1.500     4.981    core/work_clk
+    SLICE_X98Y84         FDRE                                         r  core/work_session_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X98Y84         FDRE (Prop_fdre_C_Q)         0.398     5.379 r  core/work_session_reg[2]/Q
+                         net (fo=4, routed)           0.905     6.284    core/source_link/crc_validator/error_code_reg[2]_i_2_0[2]
+    SLICE_X100Y81        LUT6 (Prop_lut6_I1_O)        0.232     6.516 r  core/source_link/crc_validator/accepted_count[0]_i_47/O
+                         net (fo=1, routed)           0.000     6.516    core/source_link/crc_validator/accepted_count[0]_i_47_n_0
+    SLICE_X100Y81        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.423     6.939 r  core/source_link/crc_validator/accepted_count_reg[0]_i_30/CO[3]
+                         net (fo=1, routed)           0.000     6.939    core/source_link/crc_validator/accepted_count_reg[0]_i_30_n_0
+    SLICE_X100Y82        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100     7.039 r  core/source_link/crc_validator/accepted_count_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     7.039    core/source_link/crc_validator/accepted_count_reg[0]_i_15_n_0
+    SLICE_X100Y83        CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.191     7.230 r  core/source_link/crc_validator/accepted_count_reg[0]_i_7/CO[2]
+                         net (fo=1, routed)           0.816     8.046    core/source_link/crc_validator/good3
+    SLICE_X94Y74         LUT6 (Prop_lut6_I2_O)        0.252     8.298 f  core/source_link/crc_validator/accepted_count[0]_i_4/O
+                         net (fo=4, routed)           0.361     8.659    core/external_link/crc_validator/d_reg[0][0]
+    SLICE_X93Y74         LUT6 (Prop_lut6_I4_O)        0.105     8.764 r  core/external_link/crc_validator/v[0]_i_2/O
+                         net (fo=2, routed)           0.449     9.213    core/tasks/in_valid0
+    SLICE_X89Y74         LUT6 (Prop_lut6_I5_O)        0.105     9.318 r  core/tasks/d[0][175]_i_1/O
+                         net (fo=176, routed)         0.995    10.313    core/tasks/d[0]
+    SLICE_X98Y80         FDRE                                         r  core/tasks/d_reg[0][127]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock wraw rise edge)       6.667     6.667 r  
+    U14                                               0.000     6.667 r  ref_in (IN)
+                         net (fo=0)                   0.000     6.667    ref_in
+    U14                  IBUF (Prop_ibuf_I_O)         1.454     8.120 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.701     9.821    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     9.898 r  br/O
+                         net (fo=3628, routed)        1.386    11.284    clocks/ref_clk
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     8.369 r  clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           1.454     9.823    clocks/wraw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     9.900 r  clocks/bw/O
+                         net (fo=2946, routed)        1.341    11.241    core/tasks/work_clk
+    SLICE_X98Y80         FDRE                                         r  core/tasks/d_reg[0][127]/C
+                         clock pessimism              0.377    11.618    
+                         clock uncertainty           -0.084    11.534    
+    SLICE_X98Y80         FDRE (Setup_fdre_C_CE)      -0.136    11.398    core/tasks/d_reg[0][127]
+  -------------------------------------------------------------------
+                         required time                         11.398    
+                         arrival time                         -10.313    
+  -------------------------------------------------------------------
+                         slack                                  1.085    
+
+
+
+

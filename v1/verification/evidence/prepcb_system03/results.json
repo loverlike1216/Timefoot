@@ -1,0 +1,122 @@
+[
+  {
+    "case": "tb_sdr_system_1_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "sdr.csv": "92d2dc8da8ea64b140eed0c14d0e39d7962a328fb0ce697815a4085bc5f52935",
+      "sdr_events.csv": "3377bde93de57ff8d4977f949434635b8d955f90993a7710e15140c4b89161c6",
+      "sdr_source.csv": "50de105aaca220a3c8c2058bfe5088d78b1cd27ce9672d43c0a17d84269c6d5e"
+    }
+  },
+  {
+    "case": "tb_sdr_system_1_s17",
+    "status": "PASS",
+    "seed": 17,
+    "trace_sha256": {
+      "sdr.csv": "fc58c396d8ff382c5f1928d7df2e73abd761bf37aa4d457e77a6292348ec3e4f",
+      "sdr_events.csv": "3377bde93de57ff8d4977f949434635b8d955f90993a7710e15140c4b89161c6",
+      "sdr_source.csv": "610e0914dc4ef84d860a5801228bab3650d68b38864e3148e5a2dd9f9e833eec"
+    }
+  },
+  {
+    "case": "tb_sdr_system_1_s2026",
+    "status": "PASS",
+    "seed": 2026,
+    "trace_sha256": {
+      "sdr.csv": "81002cf95924f566242b2e39b48597319d40d95c76a165d7d74f767e3faca810",
+      "sdr_events.csv": "3377bde93de57ff8d4977f949434635b8d955f90993a7710e15140c4b89161c6",
+      "sdr_source.csv": "8918735c8c945c306c60084e83d07214e2ca18414b05e959080af9eeaaab4e55"
+    }
+  },
+  {
+    "case": "tb_sdr_system_2_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "sdr.csv": "f8bfa7015b478ef02d913eaf5a477fe8b9108040a667c756d0ebf258e2a40b41",
+      "sdr_events.csv": "d12368c7899410304be0dacbd98b36552dbe8183264f3c65cd12b3c89f66eaeb",
+      "sdr_source.csv": "de14195229f1710b4cb4d031f5e19a0f0c009a9fe5742b74bc84b131199a189f"
+    }
+  },
+  {
+    "case": "tb_sdr_system_2_s17",
+    "status": "PASS",
+    "seed": 17,
+    "trace_sha256": {
+      "sdr.csv": "d84a899b255335be583b8046b64783d95e1ca72f7b9b445bf4d3564e2be37ec5",
+      "sdr_events.csv": "eae08e22a6e076fa6a36e0101cce086db5ec6fddd7eae8f94995207e480acf3d",
+      "sdr_source.csv": "d6b3b8320e07d4f7f322f72a906dfc85971d14214acc86e257d9dbc27ea632c9"
+    }
+  },
+  {
+    "case": "tb_sdr_system_2_s2026",
+    "status": "PASS",
+    "seed": 2026,
+    "trace_sha256": {
+      "sdr.csv": "fa8769ed2ba12a67d4af9ec4147955fdabb6207aa665342277a73b30ea027269",
+      "sdr_events.csv": "80656c6c565a5adb1f05e44704db270cc0ce6163d19c283f4081447b70692537",
+      "sdr_source.csv": "e849bc5ac41466dfa05e551af13aa2f5e95812ead344059ca33a0128d845a264"
+    }
+  },
+  {
+    "case": "tb_sdr_system_3_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "sdr.csv": "6b7597f28de9a1d1620af076236d2ba2efec4ee59c9418a098565f8b8fec4ee8",
+      "sdr_events.csv": "d3ac8178e15ca9a38049597550a543b0c22b2de165c08480139301f87f2660f2",
+      "sdr_source.csv": "de14195229f1710b4cb4d031f5e19a0f0c009a9fe5742b74bc84b131199a189f"
+    }
+  },
+  {
+    "case": "tb_sdr_system_3_s17",
+    "status": "PASS",
+    "seed": 17,
+    "trace_sha256": {
+      "sdr.csv": "79cc9a6aca165d048fd37429156ce257a1f85f93005567ad3e8ba231967951aa",
+      "sdr_events.csv": "9b20ed4b6d19ed966996401e3e65ce108040a7f54a6d07940d1a93622fbe2e45",
+      "sdr_source.csv": "d6b3b8320e07d4f7f322f72a906dfc85971d14214acc86e257d9dbc27ea632c9"
+    }
+  },
+  {
+    "case": "tb_sdr_system_3_s2026",
+    "status": "PASS",
+    "seed": 2026,
+    "trace_sha256": {
+      "sdr.csv": "ff22c47a79b68790a5ac6736b4427a56fb7f2bd332744118e3442ef117759828",
+      "sdr_events.csv": "72f64edd576c78a7f2bc221f97579ee5575ad32971bf2a1fc2e505e8f5d7992d",
+      "sdr_source.csv": "e849bc5ac41466dfa05e551af13aa2f5e95812ead344059ca33a0128d845a264"
+    }
+  },
+  {
+    "case": "tb_sdr_system_4_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "sdr.csv": "e9d96f10e6fac77120d7439a6b1b13b3fd2afce48ef6284e4b24e736b0a5cca4",
+      "sdr_events.csv": "67bf3799b1fb01c2e10d4eb836bba9050309d17220040896e23f06ed3f186a2d",
+      "sdr_source.csv": "c81cebca52fab8a944530b0bf433a6adb1ea6eb40db8b8b104046cffbffa18c3"
+    }
+  },
+  {
+    "case": "tb_sdr_system_4_s17",
+    "status": "PASS",
+    "seed": 17,
+    "trace_sha256": {
+      "sdr.csv": "a170d197e2562bee196f96b483e52047882f5589cac80835de03005835edf18a",
+      "sdr_events.csv": "b6ec3faf0c268cf84bf2aeaf2e6c9a325c1e5c41dfe4b1c87d2d7d7115f77b51",
+      "sdr_source.csv": "53880151805af2d061a486b49dbd7c0196ba4e7e7c615d97af6148b775e4191a"
+    }
+  },
+  {
+    "case": "tb_sdr_system_4_s2026",
+    "status": "PASS",
+    "seed": 2026,
+    "trace_sha256": {
+      "sdr.csv": "6ea5aa386160089615356997b79f82b4a43869e4316d06f96e26176d3b7197e8",
+      "sdr_events.csv": "3d8e1a783b37a537e691b76c787990ae0e89b5de36aa9c78c3a4d46c77613842",
+      "sdr_source.csv": "5fcf081b358d93f324d3941d907481dc1997a9ef98520ce46f6e76802fb52307"
+    }
+  }
+]

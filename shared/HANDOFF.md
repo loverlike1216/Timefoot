@@ -1,19 +1,15 @@
-# Stage handoff
+# TIMEFOOT v1 final pre-PCB checkpoint
 
-Goal:TIMEFOOT v1 digital synchronization core and multi-node framework. Repository/root/branch/source identity is in PROJECT_STATE; the final delivery/PR commit is observable through Git and PR metadata, while validated RTL baseline is46f88bcd553a13a9fda55b2599c6740acf6681d0.
+Checkpoint TF-CP-20261101-PREPCB-FINAL / 2026-11-01T07:41:46.060265+00:00. Repository/branch/root unchanged. Validated source and observed pre-delivery HEAD 45aa523ddb4151157672df1ee3c5bb483be3edb0. The containing docs/evidence commit is found through Git; its hash is not fabricated inside itself.
 
-Inputs reviewed:full authorized startup instruction, historical board/pin/research/decision materials, actual legacy RTL/TB/reports and780sealed/3723total-file startup audit. Historical source/output bytes were not modified.
+Status PCB_PRE_DESIGN_READY_WITH_LIMITATIONS, v1 ACTIVE. Architecture B/50MHz/1–4nodes,208bit core plus4/8bit frame-credit SDR and serial coherent control. Current stage digital work complete; independentReviewPENDING, hardware freeze HOLD. Exact reports/commits/metrics are in GPT_CHAT_FINAL_REVIEW and stage_audit.json. Historical3723HashMATCH, clean remote25RTL/3traceHashMATCH.
 
-Changes:coherent XPM config/packet crossings; single-owner reset plus synchronous RAM guards and local reset branches; qualified future epoch; queued reference events/cancellation; CRC/session/sequence/length validation; explicit1–4node pipeline maps; actual synthetic acquisition/timestamp/processing/flow control; optional generic management; candidate XDC and reproducible scripts.
+Next: submit actual independentReview, resolve P-002 CLOCK/SYNC phase qualification/actual board/SI/BOM conditions. No hardware action until separate user authorization. No ongoing long-running signoff work. No model-switch event or complete external-chat import is invented.
 
-Verification:5units,12system cases with3seeds,2640Python-checked final packets,4trace-hash replays, VCD clocks50/100/150/50MHz and0/600/1200/1800ps modeled output offsets; two-Part node and pin implementations; whole one-node manager/framework synth; all3723history hashes unchanged. Raw evidence and ignored binary hashes are linked from v1/verification/EVIDENCE_INDEX.md.
+Do Not Change: historical bytes, v1 identity, B architecture, accepted numeric/session/time contracts, acceptance thresholds; no v2/Merge/forcepush/CAD/manufacturing/procurement/deployment. Invariants: qualified marker, newSessionafterfault, CRC/session/sequence, reserved whole-frame credit, coherent state, controlled jointflush.
 
-Failures:full node OOC WNS/WHS remain negative. Internal setup/hold is+0.218/+0.050ns(Z010),+1.056/+0.071ns(Z020); old3-pin failure closed at same2ns budget. Current gate REVISE. P-20261101-001 is OPEN; no fabricated ChatGPT Decision. Dedicated physical/RDC/board signoff is not claimed.
+Known limits: dedicatedRDC/secondsimulator notrun; board/electrical/physical24h notverified; PS7 integration pending; vendor/methodology warnings classified; linkCSVnavigation issue not used as evidence. P-001 originalHash preserved and approved implementation verified; P-002 actual open problem.
 
-Resume:read guide.md and shared/CONTEXT_CHECKPOINT.*, then the actual open Problem, review package and full-node critical_paths/timing/clock interaction/constraints. Complete interface timing work within v1 after real review, preserving previous evidence. Guide is semantic history; current code/reports override old comments. No observed model/thread-switch event is invented. The final audit validates files currently on disk; it does not assert a before/after platform model-switch hash comparison.
+Resume: guide→PROJECT_STATE/VERSION_STATE→thischeckpoint→CURRENT_PLAN/DECISIONS/BLOCKERS/ACCEPTANCE→stage_audit, actualGitHEAD/status. Compare any later commits with the frozen source hashes; docs/evidence-only commits do not imply RTL was retested. Source of truth is repository+rawtools, not this prose.
 
-## Observed Git/PR and clean replay
-
-Evidence delivery9071b564387a8c67d88dadb61007e34502136a74 was pushed and verified remotely. Fresh-checkout orchestration fix03eeddcd0520b110649c226245989eba04a21b77 was pushed next. Draft PR:https://github.com/loverlike1216/Timefoot/pull/1, base main, head codex/v1-rtl-core, OPEN/DRAFT, mergedAt=null; no CI status runs were returned. The GitHub connector returned403 for PR creation; authenticated gh CLI succeeded without changing tokens/security settings.
-
-A separate shallow remote clone below v1/work/clean_checkout at03eeddc reran5units and the complete4node seed1system case. All passed;18RTL file hashes, all unit trace hashes and packet/source/event CSV hashes match the canonical checkout. It uses the same installed Vivado toolchain, not a second simulator. Evidence:verification/evidence/clean_checkout/result.json. The initial missing-parent work-directory failure and corrected rerun logs are preserved. Later bookkeeping commits only add evidence/state/scripts for sealing; validated RTL remains46f88bc.
+Single-file user/ChatGPT handoff: v1/docs/pre_pcb_readiness/GPT_CHAT_FINAL_REVIEW.md. Full14-file package: v1/docs/pre_pcb_readiness/.

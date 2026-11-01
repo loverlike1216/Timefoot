@@ -1,7 +1,15 @@
 # Current execution position
 
-TIMEFOOT/v1/RTL_CORE_AND_SYSTEM_FRAMEWORK. Formal code and digital verification have been delivered for independent review; stage gate remains REVISE.
+TIMEFOOT / v1 ACTIVE / INTERFACE_TIMING_CLOSURE_AND_PRE_PCB_READINESS.
 
-Completed: repository/root/branch/source reconciliation; protected historical audit; actual core/framework/interface authoring; Critical CDC fixes; RAM-enable/reset DRC fixes; internal STA recovery; same-budget retained-pin regression;5unit/12system/4replay checks; independent2640packet calculation and actual VCD period/event measurement; two-Part node implementation and one-node framework synthesis; reports and evidence navigation.
+Completed: XPM1000ns root-cause controlled experiment; read clocks before synthesis; full4/8bit frame-credit SDR adapters, physical top and serial coherent management; manager wrap/lateACK and heartbeat reset fixes; original/new functional matrices, golden checks, phase tests and hash repeat;4two-Part routed STA/CDC/DRC/bus-skew profiles; remote clean replay;14pre-design docs; historical preservation audit.
 
-Next, in v1: read P-20261101-001 and GPT_CHAT_STAGE_REVIEW.md; obtain real independent review; define a concrete digital source-synchronous boundary/receiver timing contract; close full-node setup/hold on both Parts; rerun affected tests and route/CDC/RDC/constraint gates. Keep current FAIL profile and all history. Do not silently change scope or thresholds. Board/PHY/electrical/calibration work is not authorized in this stage. No v2 or Merge.
+Current status PCB_PRE_DESIGN_READY_WITH_LIMITATIONS. Digital Blocking0/Critical0 in tested scope. IndependentReview PENDING; hardware freeze HOLD.
+
+Next in v1:
+1. Give v1/docs/pre_pcb_readiness/GPT_CHAT_FINAL_REVIEW.md to actual ChatGPT reviewer.
+2. Persist real review/Decision with source and Problem hash; ordinary authorized digital revisions can proceed without repeated permission.
+3. Resolve P-20261101-002 CLOCK/SYNC phase qualification and actual board/SI conditions before hardware freeze.
+4. User must separately authorize schematic/PCB/physical operation/procurement/deployment. Do not infer authorization from this ready-with-limitations report.
+
+Preserve preproject_feasibility and every failed profile/log. No v2, Merge, force push, acceptance relaxation or external output directories. No ongoing signoff processes remain. Evidence artifacts and hashes are indexed locally; ignored VCD/DCP can be regenerated but are not all on GitHub.

@@ -1,0 +1,5 @@
+PASS tb_link_s1
+PASS tb_link8_s1
+PASS tb_link25_s1
+PASS tb_sync_controller_s1
+TOTAL_PASS 4

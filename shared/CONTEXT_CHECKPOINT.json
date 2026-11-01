@@ -1,54 +1,84 @@
 {
-  "checkpoint_id": "TF-CP-PREPCB-WIP",
+  "checkpoint_id": "TF-CP-20261101-PREPCB-FINAL",
   "project_id": "TIMEFOOT",
+  "project_name": "Timefoot",
   "repository": "https://github.com/loverlike1216/Timefoot.git",
   "workspace": "E:/Codex_project/Timefoot",
   "branch": "codex/v1-rtl-core",
-  "base_commit": "31005c49b65349fb0aa26f27d728b70f6d83d3fd",
-  "head_commit": "31005c49b65349fb0aa26f27d728b70f6d83d3fd",
+  "base_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+  "head_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+  "head_commit_context": "Observed validated pre-delivery HEAD; containing documentation/evidence commit is resolved via Git, not a self-referential hash",
   "active_version": "v1",
   "version_status": "ACTIVE",
   "current_stage": "INTERFACE_TIMING_CLOSURE_AND_PRE_PCB_READINESS",
-  "checkpoint_reason": "Substantial new stage RTL and actual XPM probe completed; preserve recovery state",
-  "status": "IN_PROGRESS",
+  "created_at": "2026-11-01T07:41:46.060265+00:00",
+  "checkpoint_reason": "Completed major digital pre-PCB stage and clean replay",
+  "status": "VALID_WITH_LIMITATIONS",
   "completed": [
-    "User instruction/problem hash/identity reconciled",
-    "Late/early XPM synthesis experiment and early route/bus-skew completed",
-    "Narrow link/RX/TX and management/control/physical-node RTL authored",
-    "Initial4/8bit and25MHz units passed before latest credit IOB adjustment",
-    "Manager64bitwrap/lateACK/fault test PASS"
+    "Full frame-credit adapter and serial coherent management",
+    "XPM order root-cause and corrected constraints",
+    "4 complete physical routed profiles positive STA/CDC/DRC classified",
+    "Functional/golden/repeat/phase and clean remote replay",
+    "14 docs and single-file independent review package",
+    "3723 historical file hashes unchanged"
+  ],
+  "next_actions": [
+    "Actual independent GPT Review",
+    "Resolve P-002 phase/board/SI qualification before separately authorized hardware stage"
+  ],
+  "active_decisions": [
+    "D-TF-005",
+    "D-TF-006",
+    "D-TF-007"
+  ],
+  "blockers": [],
+  "critical_issues": [],
+  "hardware_gates": [
+    "HW-PHASE-001",
+    "HW-REV-001",
+    "HW-SI-001",
+    "BOM freeze"
   ],
   "latest_validation": [
-    "link05 running",
-    "sdr02 running",
-    "adapter03 running",
-    "p0_order_early routed and p0_order_late comparison"
+    "v1/verification/evidence/prepcb_analysis/stage_audit.json",
+    "v1/verification/evidence/prepcb_clean/result.json"
   ],
-  "blockers": [
-    "Full new profile and system validation incomplete",
-    "EBAZ original DATA schematic/connector mapping missing; conditional pin candidates only"
+  "known_limitations": [
+    "Dedicated RDC/second RTL simulator not run",
+    "No board/electrical/24h hardware evidence",
+    "PS7 startup not integrated",
+    "Vendor warnings and trace-navigation limits documented"
   ],
   "do_not_change": [
-    "historical preproject files",
-    "v1 identity/scope",
-    "no Merge/v2/PCB/hardware/purchase/deploy"
+    "preproject_feasibility bytes/history",
+    "v1 identity and B architecture",
+    "Acceptance/physical evidence boundary",
+    "No v2/Merge/CAD/procurement/deploy"
   ],
   "invariants": [
-    "reference-synchronous qualified marker required",
-    "no old-session execution after recovery",
-    "explicit CRC/session/sequence/flow control"
-  ],
-  "resume_from": "Read new guide and execution contract; inspect actual running/logged tests, finish all pre-PCB deliverables; no source changes during final frozen validation",
-  "evidence_refs": [
-    "v1/verification/EVIDENCE_INDEX.md",
-    "v1/verification/evidence/DELIVERY_AUDIT.json",
-    "v1/reports/SIMULATION_REPORT.md",
-    "v1/reports/IMPLEMENTATION_REPORT.md",
-    "v1/verification/evidence/clean_checkout/result.json"
+    "Marker qualified only with valid clock/phase/session",
+    "No old-session execution after recovery",
+    "CRC/session/sequence and explicit flow control",
+    "Generated logs stay in PROJECT_ROOT"
   ],
   "open_ai_problems": [
-    "P-20261101-001"
+    "P-20261101-002"
   ],
-  "created_at": "2026-11-01T06:53:51.683896+00:00",
-  "pull_request": "https://github.com/loverlike1216/Timefoot/pull/1"
+  "resume_from": "Read guide/shared then GPT_CHAT_FINAL_REVIEW and stage_audit; no source optimization loop unless reviewer finds new issue",
+  "evidence_refs": [
+    "v1/verification/EVIDENCE_INDEX.md",
+    "v1/docs/pre_pcb_readiness/GPT_CHAT_FINAL_REVIEW.md"
+  ],
+  "independent_review": "PENDING",
+  "stage_readiness": "PCB_PRE_DESIGN_READY_WITH_LIMITATIONS",
+  "architecture_ref": "v1/docs/pre_pcb_readiness/SYSTEM_ARCHITECTURE.md",
+  "current_plan_position": "Digital stage done; independent review and hardware qualification conditions next",
+  "chat_source_name": "USER_PROVIDED_PRE_PCB_INSTRUCTION",
+  "provenance": [
+    "actual source commit45aa523",
+    "stage_audit.json",
+    "prepcb_clean/result.json",
+    "actual user attachment/Decision",
+    "raw routed reports and XSIM logs"
+  ]
 }

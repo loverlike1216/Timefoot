@@ -1,0 +1,28 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  1 15:12:49 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_link25/xsim_script.tcl
+# xsim {tb_link25} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_link02/tb_link25_s1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_link02/tb_link25_s1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_link02/tb_link25_s1/wave.vcd}
+## log_vcd /tb_link25/*
+WARNING: [Simtcl 6-216] No such HDL Object /tb_link25/*
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_link25.t.tx.frames.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_link25/t/tx/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_79  Scope: tb_link25.t.tx.frames.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_link25/t/tx/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_179  Scope: tb_link25.t.tx.frames.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+PASS link4_full_stall_frames64 max=17 physical_beats=3328
+TEST_PASS tb_link LANES=4 HALF=20 accepted=96 sent=88 aborted=8
+$finish called at time : 278061100 ps : File "E:/Codex_project/Timefoot/v1/tb/tb_link.sv" Line 60
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 15:12:52 2026...

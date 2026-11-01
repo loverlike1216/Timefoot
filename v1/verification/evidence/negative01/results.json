@@ -1,0 +1,8 @@
+[
+  {
+    "case": "tb_link_negative_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {}
+  }
+]

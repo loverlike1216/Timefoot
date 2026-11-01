@@ -1,0 +1,37 @@
+[
+  {
+    "name": "lmk00304",
+    "url": "https://www.ti.com/lit/ds/symlink/lmk00304.pdf",
+    "sha256": "0e8ba3d15a7f8248b906d715bef07c70ffddbeb9e6de03d40b91b8a2fdc27666",
+    "pages": 41,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "sn65lvds105",
+    "url": "https://www.ti.com/lit/ds/symlink/sn65lvds105.pdf",
+    "sha256": "4f692df78fe69a729977727dd6232bb9f1418d726061f70b1bceb9824ebc0478",
+    "pages": 42,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "sn65lvdt2",
+    "url": "https://www.ti.com/lit/ds/symlink/sn65lvdt2.pdf",
+    "sha256": "2830b1f2b732d16f46bd45a1626e1aa25b308bb4220a5f476d780deff15d4dce",
+    "pages": 44,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "lmk1c1104",
+    "url": "https://www.ti.com/lit/ds/symlink/lmk1c1104.pdf",
+    "sha256": "4403ce872cf979483288c8194b5036dd0369a55ed9b8a40614fc22c29467b0fd",
+    "pages": 27,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "ebaz_community",
+    "url": "https://raw.githubusercontent.com/xjtuecho/EBAZ4205/master/HW/ebaz4205/EBAZ4205-SCH.pdf",
+    "sha256": "b41903a171b84f6d7869e1f43f74e6ca21ca1ccf0acaf54f8b3f9cd4c880c304",
+    "pages": 1,
+    "status": "READ_TEXT"
+  }
+]

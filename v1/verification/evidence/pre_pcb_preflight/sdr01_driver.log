@@ -1,0 +1,67 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 49, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 22, in main
+    command([BIN/'xvlog.bat','--sv',*sources],work,out/'compile.log')
+  File "E:\Codex_project\Timefoot\v1\scripts\run_sim.py", line 10, in command
+    if p.returncode:raise RuntimeError(f'{path}: exit{p.returncode}\n{p.stdout[-2500:].decode(errors="replace")}')
+RuntimeError: E:\Codex_project\Timefoot\v1\verification\evidence\sdr01\compile.log: exit1
+dex_project/Timefoot/v1/rtl/top/tf_pin_timing_top.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tf_pin_timing_top
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/rtl/top/tf_system_top.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tf_system_top
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/tb/tb_control.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tb_control
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/tb/tb_fifo.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tb_fifo
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/tb/tb_link.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tb_link_base
+
+INFO: [VRFC 10-311] analyzing module tb_link
+
+INFO: [VRFC 10-311] analyzing module tb_link8
+
+INFO: [VRFC 10-311] analyzing module tb_link25
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/tb/tb_scheduler.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tb_scheduler
+
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/v1/tb/tb_sdr_system.sv" into library work
+
+INFO: [VRFC 10-311] analyzing module tb_sdr_system
+
+ERROR: [VRFC 10-3380] identifier 'running' is used before its declaration [E:/Codex_project/Timefoot/v1/tb/tb_sdr_system.sv:7]
+
+ERROR: [VRFC 10-8530] module 'tb_sdr_system' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/tb/tb_sdr_system.sv:2]
+
+INFO: [VRFC 10-311] analyzing module tb_sdr_system_1
+
+ERROR: [VRFC 10-8530] module 'tb_sdr_system_1' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/tb/tb_sdr_system.sv:157]
+
+INFO: [VRFC 10-311] analyzing module tb_sdr_system_2
+
+ERROR: [VRFC 10-8530] module 'tb_sdr_system_2' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/tb/tb_sdr_system.sv:158]
+
+INFO: [VRFC 10-311] analyzing module tb_sdr_system_3
+
+ERROR: [VRFC 10-8530] module 'tb_sdr_system_3' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/tb/tb_sdr_system.sv:159]
+
+INFO: [VRFC 10-311] analyzing module tb_sdr_system_4
+
+ERROR: [VRFC 10-8530] module 'tb_sdr_system_4' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/tb/tb_sdr_system.sv:160]
+
+INFO: [VRFC 10-311] analyzing module tb_sdr_system_4x8
+
+ERROR: [VRFC 10-8530] module 'tb_sdr_system_4x8' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/tb/tb_sdr_system.sv:161]
+
+

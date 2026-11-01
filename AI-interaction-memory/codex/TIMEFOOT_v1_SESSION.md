@@ -46,3 +46,15 @@ not a claim of complete platform export. Subsequent stage outcomes are linked in
 ## Outcome record (RECONSTRUCTED_SUMMARY, not verbatim transcript)
 
 Current RTL46f88bc,5units/12system/4replay and independent checks are persisted with actual source manifests. Historical3723hashes match. Internal timing and pin regression pass; full-node OOC I/O STA fails, so stage recommendation REVISE and Problem P-20261101-001 are produced. No outside ChatGPT Decision or hidden chain-of-thought is recorded. Final Git/PR/clean-checkout outcome is linked from shared/HANDOFF and evidence. Thread/session/message IDs are UNKNOWN where not exposed; record coverage remains PARTIAL.
+
+## Current user instruction / source
+
+Actual next-stage full user attachment saved verbatim to cross-agent/TIMEFOOT_v1_PRE_PCB_USER_INSTRUCTION.md. Source original attachment d997b3b0-c245-4111-9511-3f668c6e7ce5, SHA d108a8031ea2a7321010fed4a324c2709dcdf0e85a6d389597b656b696b277a7. This is user authorization, not a claimed external ChatGPT transcript. User requires14pre-PCB docs, real4/8bit digital closure, preservation, final independent Review and no CAD/PCB/Merge/v2.
+
+## Selected actual Codex progress, verbatim
+
+多 Seed 回归发现了一个此前未触发的复位边界问题：本地复位可能截短时钟监测心跳的脉冲，触发 XPM 的真实采样检查。我已定位并修复为“复位只重启分频计数、保持心跳相位”，没有关闭断言。失败日志已保留，最终回归将以包含该修复的冻结提交重新运行。
+
+## Outcome record (engineering summary, not a complete transcript)
+
+Validated source45aa523, new4/8bit physical profiles routed on bothParts positive setup/hold/pulse, real SDR chain12cases and2640goldenpackets, old12cases regression,4replay3CSVHashmatches,5units/6extensions/physical64/8bit240/6phasePASS. Clean authenticated GitHub clone45aa523 reran5units+4node240packets,25RTL byte and3CSVHashMATCH. Historical3723Hashunchanged.14docs plus single-file GPT review. P-002 OPEN hardware phase/board/SI gate. PCB_PRE_DESIGN_READY_WITH_LIMITATIONS; actual independentReviewPENDING. Thread/message IDs unavailable; record coverage PARTIAL, no hidden reasoning captured.

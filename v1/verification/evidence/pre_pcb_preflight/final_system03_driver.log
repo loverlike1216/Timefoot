@@ -1,0 +1,13 @@
+PASS tb_sdr_system_1_s1
+PASS tb_sdr_system_1_s17
+PASS tb_sdr_system_1_s2026
+PASS tb_sdr_system_2_s1
+PASS tb_sdr_system_2_s17
+PASS tb_sdr_system_2_s2026
+PASS tb_sdr_system_3_s1
+PASS tb_sdr_system_3_s17
+PASS tb_sdr_system_3_s2026
+PASS tb_sdr_system_4_s1
+PASS tb_sdr_system_4_s17
+PASS tb_sdr_system_4_s2026
+TOTAL_PASS 12

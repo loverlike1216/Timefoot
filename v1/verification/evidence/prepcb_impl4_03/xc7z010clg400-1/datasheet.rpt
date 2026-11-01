@@ -1,0 +1,115 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 15:17:07 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_datasheet -file E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_impl4_03/xc7z010clg400-1/datasheet.rpt
+| Design       : tf_physical_node_top
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Data Sheet Report
+
+Input Ports Setup/Hold
+
+------------+------------------+-----------+-------+---------------+---------+---------------+---------+----------+
+Reference   | Input            | IO Reg    | Delay |     Setup(ns) | Process |      Hold(ns) | Process | Internal |
+Clock       | Port             | Type      | Type  | to Clk (Edge) | Corner  | to Clk (Edge) | Corner  | Clock    |
+------------+------------------+-----------+-------+---------------+---------+---------------+---------+----------+
+control25   | arst             | FDPE      | -     |     0.212 (r) | FAST    |     1.866 (r) | SLOW    |          |
+control25   | control_cs_n     | FDRE      | -     |     3.204 (r) | SLOW    |     3.075 (r) | SLOW    |          |
+control25   | control_mosi     | FDRE      | -     |     0.242 (r) | FAST    |     2.336 (r) | SLOW    |          |
+monitor50   | arst             | FDPE      | -     |     1.946 (r) | SLOW    |    -0.384 (r) | FAST    |          |
+reference50 | arst             | FDPE      | -     |     1.660 (r) | SLOW    |     0.416 (r) | SLOW    |          |
+reference50 | marker_qualified | FDCE      | -     |     4.373 (r) | SLOW    |     1.211 (r) | SLOW    |          |
+reference50 | sync_marker      | FDCE      | -     |     1.867 (r) | SLOW    |     1.847 (r) | SLOW    |          |
+reference50 | tx_ready         | FDRE      | -     |    10.317 (r) | SLOW    |    -2.978 (r) | FAST    |          |
+reference50 | arst             | FDPE      | -     |     2.655 (r) | SLOW    |    -0.600 (r) | FAST    | wraw     |
+rx50        | arst             | FDPE      | -     |     1.092 (r) | FAST    |     0.427 (r) | SLOW    |          |
+rx50        | rx_data[0]       | FDRE (IO) | ZHOLD |     2.506 (r) | SLOW    |    -0.049 (r) | FAST    |          |
+rx50        | rx_data[1]       | FDRE (IO) | ZHOLD |     2.504 (r) | SLOW    |    -0.047 (r) | FAST    |          |
+rx50        | rx_data[2]       | FDRE (IO) | ZHOLD |     2.529 (r) | SLOW    |    -0.072 (r) | FAST    |          |
+rx50        | rx_data[3]       | FDRE (IO) | ZHOLD |     2.539 (r) | SLOW    |    -0.081 (r) | FAST    |          |
+rx50        | rx_sof           | FDRE      | ZHOLD |     6.095 (r) | SLOW    |     0.000 (r) | FAST    |          |
+rx50        | rx_valid         | FDRE (IO) | ZHOLD |     2.456 (r) | SLOW    |     2.481 (r) | SLOW    |          |
+------------+------------------+-----------+-------+---------------+---------+---------------+---------+----------+
+
+
+Output Ports Clock-to-out
+
+------------+---------------+-----------+-------+----------------+---------+----------------+---------+----------+
+Reference   | Output        | IO Reg    | Delay | Max Clk (Edge) | Process | Min Clk (Edge) | Process | Internal |
+Clock       | Port          | Type      | Type  |    to port(ns) | Corner  |    to port(ns) | Corner  | Clock    |
+------------+---------------+-----------+-------+----------------+---------+----------------+---------+----------+
+control25   | control_miso  | FDRE (IO) | -     |      9.467 (r) | SLOW    |      2.864 (r) | FAST    |          |
+control25   | control_ready | FDRE (IO) | -     |      9.469 (r) | SLOW    |      2.866 (r) | FAST    |          |
+reference50 | event_out     | FDCE (IO) | -     |      9.434 (r) | SLOW    |      2.836 (r) | FAST    |          |
+reference50 | fault_out     | FDPE (IO) | -     |      9.437 (r) | SLOW    |      2.839 (r) | FAST    |          |
+reference50 | tx_clock      | ODDR (IO) | -     |      9.390 (r) | SLOW    |      2.817 (r) | FAST    |          |
+reference50 | tx_clock      | ODDR (IO) | -     |      9.390 (f) | SLOW    |      2.817 (f) | FAST    |          |
+reference50 | tx_data[0]    | FDRE (IO) | -     |      9.413 (r) | SLOW    |      2.816 (r) | FAST    |          |
+reference50 | tx_data[1]    | FDRE (IO) | -     |      9.413 (r) | SLOW    |      2.816 (r) | FAST    |          |
+reference50 | tx_data[2]    | FDRE (IO) | -     |      9.419 (r) | SLOW    |      2.818 (r) | FAST    |          |
+reference50 | tx_data[3]    | FDRE (IO) | -     |      9.422 (r) | SLOW    |      2.821 (r) | FAST    |          |
+reference50 | tx_sof        | FDRE (IO) | -     |      9.440 (r) | SLOW    |      2.836 (r) | FAST    |          |
+reference50 | tx_valid      | FDRE (IO) | -     |      9.443 (r) | SLOW    |      2.839 (r) | FAST    |          |
+rx50        | rx_ready      | FDRE (IO) | -     |      9.452 (r) | SLOW    |      2.857 (r) | FAST    |          |
+------------+---------------+-----------+-------+----------------+---------+----------------+---------+----------+
+
+
+Setup between Clocks
+
+------------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+Source      | Destination |  Src:Rise     | Process |  Src:Rise     | Process |  Src:Fall     | Process |  Src:Fall     | Process |
+Clock       | Clock       | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  |
+------------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+control25   | control25   |         6.327 | SLOW    |               |         |               |         |               |         |
+reference50 | control25   |         2.489 | SLOW    |               |         |               |         |               |         |
+monitor50   | monitor50   |         3.655 | SLOW    |               |         |               |         |               |         |
+reference50 | monitor50   |         1.510 | SLOW    |               |         |               |         |               |         |
+control25   | reference50 |         2.396 | SLOW    |               |         |               |         |               |         |
+monitor50   | reference50 |         2.029 | SLOW    |               |         |               |         |               |         |
+reference50 | reference50 |        12.761 | SLOW    |               |         |               |         |               |         |
+rx50        | reference50 |         2.114 | SLOW    |               |         |               |         |               |         |
+reference50 | rx50        |         6.795 | SLOW    |               |         |               |         |               |         |
+rx50        | rx50        |         9.716 | SLOW    |               |         |               |         |               |         |
+------------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+
+
+Setup / Hold times for input bus
+Clocked by: rx50
+Worst Case Data Window: 2.492 ns
+Ideal Clock Offset to Actual Clock: -1.293 ns
+-------------------+-------------+---------+------------+---------+-----------+-----------+---------------+
+                   |             | Process |            | Process | Setup     |  Hold     | Source Offset |
+Source             |   Setup(ns) | Corner  |   Hold(ns) | Corner  | Slack(ns) | Slack(ns) | to Center(ns) |
+-------------------+-------------+---------+------------+---------+-----------+-----------+---------------+
+rx_data[0]         |   2.506 (r) | SLOW    | -0.049 (r) | FAST    |     4.494 |     8.049 |         8.223 |
+rx_data[1]         |   2.504 (r) | SLOW    | -0.047 (r) | FAST    |     4.496 |     8.047 |         8.224 |
+rx_data[2]         |   2.529 (r) | SLOW    | -0.072 (r) | FAST    |     4.471 |     8.072 |         8.200 |
+rx_data[3]         |   2.539 (r) | SLOW    | -0.081 (r) | FAST    |     4.461 |     8.081 |         8.190 |
+-------------------+-------------+---------+------------+---------+-----------+-----------+---------------+
+Worst Case Summary |   2.539 (r) | SLOW    | -0.047 (r) | FAST    |     4.461 |     8.047 |             - |
+-------------------+-------------+---------+------------+---------+-----------+-----------+---------------+
+
+
+
+Max / Min delays for output bus
+Clocked by: reference50
+Bus Skew: 0.009 ns
+-------------------+-------------+---------+-------------+---------+----------+
+                   |     Max     | Process |     Min     | Process | Edge     |
+Pad                |   Delay(ns) | Corner  |   Delay(ns) | Corner  | Skew(ns) |
+-------------------+-------------+---------+-------------+---------+----------+
+tx_data[0]         |   9.413 (r) | SLOW    |   2.816 (r) | FAST    |    0.000 |
+tx_data[1]         |   9.413 (r) | SLOW    |   2.816 (r) | FAST    |    0.000 |
+tx_data[2]         |   9.419 (r) | SLOW    |   2.818 (r) | FAST    |    0.006 |
+tx_data[3]         |   9.422 (r) | SLOW    |   2.821 (r) | FAST    |    0.009 |
+-------------------+-------------+---------+-------------+---------+----------+
+Worst Case Summary |   9.422 (r) | SLOW    |   2.816 (r) | FAST    |    0.009 |
+-------------------+-------------+---------+-------------+---------+----------+
+
+
+

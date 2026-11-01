@@ -1,0 +1,22 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  1 15:12:28 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_sync_window/xsim_script.tcl
+# xsim {tb_sync_window} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_unit02/tb_sync_window_s1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_unit02/tb_sync_window_s1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_unit02/tb_sync_window_s1/wave.vcd}
+## log_vcd /tb_sync_window/*
+## run all
+TEST_PASS tb_sync_window delays_ns=0.2,8.5,9.5,10.5 setup_contract_ns=1
+$finish called at time : 491 ns : File "E:/Codex_project/Timefoot/v1/tb/tb_sync_window.sv" Line 19
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 15:12:30 2026...

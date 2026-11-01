@@ -64,3 +64,7 @@ acknowledgement through XPM, eliminating that combinational timing dependency st
 - [AMD XPM_CDC_GRAY](https://docs.amd.com/r/en-US/pg382-xpm-cdc-generator/XPM_CDC_GRAY)
 - [AMD UG949 asynchronous relationships](https://docs.amd.com/r/2023.2-English/ug949-vivado-design-methodology/Asynchronous)
 - Installed2025.2 XPM Tcl/HDL read-only and actual late/early tool output are the version-specific evidence.
+
+## Final frozen-source closure
+
+Source45aa523. Four full physical-node profiles, final prepcb_impl4_03/prepcb_impl8_03, completed. Effective Gray max/skew values6.667/20/40ns;40ns belongs to25MHz management. Routed max skew1.274/1.113/1.279/1.180ns, minimum slack5.568/5.765/5.519/5.734ns. CriticalCDC0, no REQP-1839. check_timing generated tx_clock only no_output_delayLOW; ignored exception is one vendor first-stage Non-existent path entry, not an active Gray-path override. Native vendor scoped waivers/falsepaths remain; no new manual broad waiver. Full classifications and actual IO/profile are in pre_pcb_readiness/TIMING_CONSTRAINT_SPEC.md, not an unrestricted board acceptance.

@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Nov  1 15:09:15 2026
+# Process ID         : 67160
+# Current directory  : E:/Codex_project/Timefoot/v1/work/prepcb_unit
+# Command line       : xsim.exe -log E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_unit/tb_sync_window_s1/xsim.log -mode tcl -source {xsim.dir/tb_sync_window/xsim_script.tcl}
+# Log file           : E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_unit/tb_sync_window_s1/xsim.log
+# Journal file       : E:/Codex_project/Timefoot/v1/work/prepcb_unit\xsim.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 30064 MB
+# Total Virtual      : 46839 MB
+# Available Virtual  : 17377 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_sync_window/xsim_script.tcl
+# xsim {tb_sync_window} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_unit/tb_sync_window_s1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_unit/tb_sync_window_s1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/prepcb_unit/tb_sync_window_s1/wave.vcd}
+## log_vcd /tb_sync_window/*
+## run all
+TEST_PASS tb_sync_window delays_ns=0.2,8.5,9.5,10.5 setup_contract_ns=1
+$finish called at time : 491 ns : File "E:/Codex_project/Timefoot/v1/tb/tb_sync_window.sv" Line 19
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 15:09:17 2026...

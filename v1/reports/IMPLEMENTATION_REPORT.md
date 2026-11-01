@@ -1,3 +1,5 @@
+> Current-stage update2026-11-01: complete4/8bit physical-node profiles close setup/hold/pulse on both Parts, with expanded functional/golden/replay/clean-checkout evidence. Current verdict PCB_PRE_DESIGN_READY_WITH_LIMITATIONS; hardware freeze and independent Review remain gated. See ../docs/pre_pcb_readiness/PRE_PCB_READINESS_REPORT.md and VALIDATION_AND_REPRODUCTION.md. The body below is the preserved previous-stage report, including its genuine full-wide-node FAIL.
+
 # Implementation and timing report
 
 TIMEFOOT/v1; node RTL commit `46f88bcd553a13a9fda55b2599c6740acf6681d0`; branch codex/v1-rtl-core; Vivado2025.2 Build6299465. Both node Parts completed synth/opt/place/phys_opt/route. Pin regression is a full implementation of the retained3-output test; node is OOC digital-core implementation. Actual AX7020 Part and board electrical conditions are unverified.

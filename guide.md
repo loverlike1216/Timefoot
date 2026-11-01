@@ -33,3 +33,6 @@ P0已实际对照证明1000ns来自XPM在综合时无时钟的fallback；提前r
 异步安全mask先进入同步input_slot再到FIFO写使能。统计使用coherent handshake快照，不关闭XPM检查。
 物理node新增48bit串行管理、工作/RX状态原子快照、事件/错误计数读取；正在验证，不能从文件存在推断PASS。
 当前实现/仿真原型日志见pre_pcb_preflight，最终签核必须对冻结Commit重跑。实时状态以最新Checkpoint/真实日志为准。
+
+2026-11-01 FINAL pre-PCB checkpoint（取代前段仍在运行的状态）：冻结源码45aa523，4/8bit完整节点Z010/Z020正setup/hold/pulse、CriticalCDC0、route0、Gray6.667/20/40ns；12SDR+12legacy及各2640Golden帧、4三CSVHash重跑、原5units/6extensions/physical64/8bit240/6phase均PASS。远端干净检出25RTL字节Hash+3CSVHash一致。3723历史Hash匹配。14预设计资料齐备，单文件GPT_CHAT_FINAL_REVIEW。
+当前PCB_PRE_DESIGN_READY_WITH_LIMITATIONS；硬件CLOCK/SYNC器差不能直接保证0.5..3ns资格窗口，P-002 OPEN；实板版本/VCCO/SI/BER、BOM/相位冻结HOLD，独立ReviewPENDING。保持v1，用户另行决定是否授权CAD/PCB/实物/采购；本包不是该授权。不得把旧宽top失败/旧交付状态当当前窄适配Profile。恢复以shared与原日志为准，guide来源仍PARTIAL。

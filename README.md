@@ -2,7 +2,11 @@
 
 共享50MHz参考时钟的多FPGA时序同步RTL核心与数字系统框架。
 
-正式身份：TIMEFOOT / v1 / RTL_CORE_AND_SYSTEM_FRAMEWORK；仓库由用户指定为本仓库，正式根目录 `E:\Codex_project\Timefoot`。当前开发分支 `codex/v1-rtl-core`，主分支未合并。**当前Stage建议：REVISE，完整节点OOC接口STA尚未闭合。** 这不是项目最终验收或上板完成声明。
+正式身份：TIMEFOOT / v1 / INTERFACE_TIMING_CLOSURE_AND_PRE_PCB_READINESS；仓库由用户指定为本仓库，正式根目录 `E:\Codex_project\Timefoot`。当前开发分支 `codex/v1-rtl-core`，主分支未合并。**当前Stage：PCB_PRE_DESIGN_READY_WITH_LIMITATIONS；4/8bit完整功能数字节点在Z010/Z020均正setup/hold/pulse余量，硬件冻结与独立Review仍有门禁。** 不代表实板验收或PCB授权。
+
+- [当前单文件GPT-chat审查包](v1/docs/pre_pcb_readiness/GPT_CHAT_FINAL_REVIEW.md)：集中事实、阻塞条件、下一阶段预期。
+- [PCB前准备报告与14项输入](v1/docs/pre_pcb_readiness/PRE_PCB_READINESS_REPORT.md)、[当前机器审计](v1/verification/evidence/prepcb_analysis/stage_audit.json)。
+- 以下为上一Stage历史文档入口；旧宽接口负STA保留，当前窄接口Profile不覆盖其原记录。
 
 - [独立Review入口](v1/docs/GPT_CHAT_STAGE_REVIEW.md)：真实RTL Commit、验证矩阵、时序和未闭环问题。
 - [仿真报告](v1/reports/SIMULATION_REPORT.md)、[实现与STA报告](v1/reports/IMPLEMENTATION_REPORT.md)、[数据预算](v1/reports/PERFORMANCE_BUDGET.md)。
