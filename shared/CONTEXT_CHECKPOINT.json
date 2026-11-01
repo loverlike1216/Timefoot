@@ -6,8 +6,8 @@
   "workspace": "E:/Codex_project/Timefoot",
   "branch": "codex/v1-rtl-core",
   "base_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
-  "head_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
-  "head_commit_context": "Observed validated pre-delivery HEAD; containing documentation/evidence commit is resolved via Git, not a self-referential hash",
+  "head_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
+  "head_commit_context": "Observed pushed evidence HEAD before this final documentation/sync record; validated source remains45aa523",
   "active_version": "v1",
   "version_status": "ACTIVE",
   "current_stage": "INTERFACE_TIMING_CLOSURE_AND_PRE_PCB_READINESS",
@@ -47,7 +47,8 @@
     "Dedicated RDC/second RTL simulator not run",
     "No board/electrical/24h hardware evidence",
     "PS7 startup not integrated",
-    "Vendor warnings and trace-navigation limits documented"
+    "Vendor warnings and trace-navigation limits documented",
+    "Reference-stopped CSR waits for reference recovery; host reads async fault_out and enforces timeout"
   ],
   "do_not_change": [
     "preproject_feasibility bytes/history",
@@ -80,5 +81,7 @@
     "prepcb_clean/result.json",
     "actual user attachment/Decision",
     "raw routed reports and XSIM logs"
-  ]
+  ],
+  "remote_delivery_verified_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
+  "final_sync_time": "2026-11-01T07:51:19.289890+00:00"
 }

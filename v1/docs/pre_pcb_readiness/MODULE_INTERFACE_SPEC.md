@@ -54,3 +54,7 @@ top=`tf_physical_node_top`，LANES=4或8，WORK_DIV=6默认150MHz。ref_in=50MHz
 prepare Session必须相对上次已准备Session前进，模32bit差值在(0,2^31)；失锁不会清此防重放记录。全局arst才清生命周期。RUN要求prepared、applied、time_valid、无fault、marker_qualified。失锁/资格丢失清run_request；重新RUN必须新Session+Epoch握手。故障命令不会自动进入新Epoch。
 
 manager的现有CSR布局仍由`tf_control_interface.sv`管理，不能把本节点串行CSR地址直接当作manager地址。跨板管理设备/驱动必须分别实现二者；本阶段提供真实RTL及TB主机，不提供已上板固件。
+
+## 参考完全停转时的管理边界
+
+串行前端仍可在control_clock运行时缓冲命令，但CSR后端使用reference域；参考完全停转期间不能承诺即时返回新CSR结果。外部控制器应直接读取异步置安全态的fault_out、设置命令超时并停止任务，等待参考恢复后再读取CSR/新Session重同步。physical管理测试覆盖的是访问期间撤销qualification（reference仍运行），不能宣称已经覆盖停钟期间的即时CSR读回。

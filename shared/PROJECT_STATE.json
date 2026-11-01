@@ -16,12 +16,12 @@
   "next_action": "Submit GPT_CHAT_FINAL_REVIEW for independent review; resolve hardware phase qualification before any separately authorized CAD/hardware stage",
   "stage_status": "PCB_PRE_DESIGN_READY_WITH_LIMITATIONS",
   "validated_rtl_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
-  "checkpoint_base_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+  "checkpoint_base_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
   "blocking_issues": [],
   "latest_context_checkpoint": "shared/CONTEXT_CHECKPOINT.json",
   "evidence_index": "v1/verification/EVIDENCE_INDEX.md",
-  "updated_at": "2026-11-01T07:41:46.060265+00:00",
-  "delivery_evidence_commit": "RESOLVE_CONTAINING_GIT_COMMIT",
+  "updated_at": "2026-11-01T07:51:19.289890+00:00",
+  "delivery_evidence_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
   "clean_checkout_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
   "clean_checkout_status": "PASS_25_RTL_BYTE_HASHES_3_SDR_TRACE_HASHES",
   "pull_request": "https://github.com/loverlike1216/Timefoot/pull/1",
@@ -29,5 +29,10 @@
   "critical_issues": [],
   "hardware_freeze_status": "HOLD_PHASE_BOARD_SI",
   "independent_review": "PENDING",
-  "review_file": "v1/docs/pre_pcb_readiness/GPT_CHAT_FINAL_REVIEW.md"
+  "review_file": "v1/docs/pre_pcb_readiness/GPT_CHAT_FINAL_REVIEW.md",
+  "checkpoint_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
+  "remote_delivery_verified_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
+  "pull_request_title": "feat(v1): implement multi-node timing core and verified SDR node interfaces",
+  "pr_description_update": "PASS_REST_READBACK",
+  "final_bookkeeping_note": "The containing final sync commit may follow the evidence commit without changing frozen RTL"
 }

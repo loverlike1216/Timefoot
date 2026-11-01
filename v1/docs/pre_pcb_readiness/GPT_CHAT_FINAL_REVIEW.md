@@ -107,6 +107,8 @@ AX J10/J11电源针2=5V、39/40=3.3V，GND1/37/38；EBAZ社区DATA的2/4为电�
 
 其它明确限制：PL-only验证top缺PS7启动集成；无独立RDC工具；无自动单包重传/单端复位恢复，raw framer截断帧依赖上层timeout/flush；部分BOM供应/机械配合未锁定；外部jitter/温度/24h硬件未验。完整逐项Issue表见OPEN_ISSUES_AND_RISKS。已执行数字范围内Blocking=0、已知Critical RTL Bug=0，不把硬件门禁写成已通过。
 
+管理访问中故障的physical测试是撤销qualification，reference仍运行。若reference完全停止，reference域CSR不能即时回复，host需直接监控异步断言的fault_out并设置命令超时，待参考恢复后读状态/新Session重同步。不能把这个测试扩大解释为停钟期间完整CSR仍可读；若需要该能力，应在下一接口决策中明确。
+
 ## 9. 长期时间模型能证明什么
 
 整数ps独立模型枚举16个有效clock/SYNC条件，每例5000edge、含64bit wrap，全部trace一致；负例11ns真实触发Apply晚1周期。1秒/1小时/24h/30d是解析公共边沿计数，不是长时RTL或实板运行；共同源且无漏边沿时相对tick drift0，±50ppm绝对频差24h可达±4.32秒。真实PAD偏差、温漂、噪声、亚稳态概率仍未测。

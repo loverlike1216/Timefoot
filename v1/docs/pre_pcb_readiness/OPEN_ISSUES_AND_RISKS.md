@@ -12,6 +12,7 @@
 | RDC-TOOL-001 / MEDIUM evidence limit | 使用Vivado CDC/DRC、reset结构、XPM仿真、flush/失锁负例；无独立RDC signoff工具 | TIMING_CONSTRAINT_SPEC、原rpt | 工具覆盖有限；不能冒充专用RDC穷尽检查 | 独立Review复核reset tree、异步安全边界；如另行指定工具可补查 |
 | PHY-SUPERVISION-001 / MEDIUM protocol limit | raw RX不提供独立partial-frame timeout；两端flush由Session owner协调 | LINK_PROTOCOL_SPEC | 不保证单端硬复位或断线自主恢复；现有fault/CRC/manager监督覆盖限定场景 | 外部管理器实现断线/两端reset监督后再允许新Session；无核心Scope扩展批准 |
 | TRACE-NAV-001 / LOW tooling limit | link8/25 CSV文件名匹配及negative case stale CSV不作为证据；未删除原运行物 | VALIDATION_AND_REPRODUCTION | 不影响log/VCD/phase sweep证据；不声称该CSV逐case完整 | 后续小工具改进可选，不重新启动RTL优化循环 |
+| CTRL-CLOCK-001 / MEDIUM interface condition | 管理CSR后端在reference域，参考完全停止时命令只能排队；fault_out可异步断言安全态 | MODULE_INTERFACE_SPEC、physical top/reset结构 | 不承诺停钟期间即时CSR响应；测试访问中qualification故障并非停止CSR时钟 | host监控fault_out并设置超时，等参考恢复后读CSR/新Session；如要求停钟可读完整CSR需另行接口决策 |
 | REVIEW-001 / QUALITY GATE | 可观察用户指令已存档；无外部ChatGPT历史/Review工具 | GPT_CHAT_FINAL_REVIEW | 独立Review尚未实际收到；Codex不能替ChatGPT签最终ACCEPT | 将单文件交ChatGPT；用户另行决定是否允许硬件Stage |
 
 历史P-20261101-001原问题Hash不变，来源用户明确批准的adapter Decision已执行；旧宽节点STA仍保持FAIL对照，新的完整功能profile通过不是“把旧top改名后删端口”。P-001可由独立Reviewer确认数字关闭，不伪造其最终Decision。早期原型失败、心跳Seed17报错、资源压力引起XSIM崩溃/中止日志全部保留，与最终冻结证据分开使用。
