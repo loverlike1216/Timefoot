@@ -17,11 +17,11 @@ foreach {part pin} {xc7z010clg400-1 H16 xc7z020clg400-2 U14} {
  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
  read_verilog -sv $files
  if {$mode eq "pin"} {
-  synth_design -top tf_pin_timing_top -part $part
   if {$pin eq "H16"} {read_xdc "$root/v1/constraints/pin_z010_candidate.xdc"} else {read_xdc "$root/v1/constraints/pin_z020_candidate.xdc"}
+  synth_design -top tf_pin_timing_top -part $part
  } else {
-  synth_design -top tf_node_top -part $part -mode out_of_context
   read_xdc "$root/v1/constraints/common_clocks.xdc"
+  synth_design -top tf_node_top -part $part -mode out_of_context
   read_xdc "$root/v1/constraints/logical_interfaces.xdc"
   read_xdc "$root/v1/constraints/cdc_policy.xdc"
   # Only vendor-scoped XPM constraints are used for asynchronous crossings.
@@ -40,6 +40,7 @@ foreach {part pin} {xc7z010clg400-1 H16 xc7z020clg400-2 U14} {
  report_cdc -details -file "$od/cdc.rpt"
  report_drc -file "$od/drc.rpt"
  report_clock_interaction -file "$od/clock_interaction.rpt"
+ report_bus_skew -file "$od/bus_skew.rpt"
  report_methodology -file "$od/methodology.rpt"
  report_utilization -file "$od/utilization.rpt"
  report_route_status -file "$od/route.rpt"

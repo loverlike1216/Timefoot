@@ -23,14 +23,19 @@ def main():
     if a.suite=='unit':cases=[('tb_scheduler',1),('tb_fifo',1),('tb_stream',1),('tb_control',1),('tb_sync_window',1)]
     elif a.suite=='system':cases=[(f'tb_system_{n}',s) for n in range(1,5) for s in [1,17,2026]]
     elif a.suite=='repeat':cases=[(f'tb_system_{n}',1) for n in range(1,5)]
+    elif a.suite=='prepcb':cases=[(f'tb_sdr_system_{n}',s) for n in range(1,5) for s in [1,17,2026]]
+    elif a.suite=='prepcb_repeat':cases=[(f'tb_sdr_system_{n}',1) for n in range(1,5)]
+    elif a.suite=='link':cases=[(tb,1) for tb in ['tb_link','tb_link8','tb_link25','tb_sync_controller','tb_link_negative','tb_status_snapshot']]
     else:cases=[(a.suite,1)]
     results=[];elab=set()
     for tb,seed in cases:
         if tb not in elab:
             command([BIN/'xelab.bat',tb,'glbl','-L','unisims_ver','-L','xpm','--snapshot',tb,'--debug','typical','--mt','2'],work,out/(tb+'_elab.log'));elab.add(tb)
         case=out/f'{tb}_s{seed}';case.mkdir()
-        scope=f'/{tb}/t/*' if tb.startswith('tb_system_') else f'/{tb}/*'
-        tcl=case/'run.tcl';tcl.write_text(f'open_vcd {{{(case/"wave.vcd").as_posix()}}}\nlog_vcd {scope}\nrun all\nclose_vcd\nquit\n')
+        if tb.startswith(('tb_system_','tb_sdr_system_')):
+            logs='\n'.join(f'log_vcd /{tb}/t/{s}' for s in ['mc','marker','execute','wclk','rxclk','running','state','ref_on','mq'])
+        else:logs=f'log_vcd /{tb}/*'
+        tcl=case/'run.tcl';tcl.write_text(f'open_vcd {{{(case/"wave.vcd").as_posix()}}}\n{logs}\nrun all\nclose_vcd\nquit\n')
         txt=command([BIN/'xsim.bat',tb,'-tclbatch',tcl,'-testplusarg',f'SEED{seed}','-log',case/'xsim.log'],work,case/'launcher.log')
         assert 'TEST_PASS' in txt and not re.search(r'(?im)^(fatal|error):',txt), f'Case failed: {case}'
         hashes={}
@@ -40,5 +45,8 @@ def main():
         results.append({'case':case.name,'status':'PASS','seed':seed,'trace_sha256':hashes})
         print('PASS',case.name,flush=True)
     (out/'results.json').write_text(json.dumps(results,indent=2))
+    after=capture(out/'source_manifest_end.json')
+    before=json.loads((out/'source_manifest.json').read_text())
+    assert before['source_sha256']==after['source_sha256'], 'SOURCE_CHANGED_DURING_RUN'
     print('TOTAL_PASS',len(results))
 if __name__=='__main__':main()

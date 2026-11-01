@@ -1,40 +1,34 @@
-# Context checkpoint TF-CP-20261101-REVIEW
+# PRE-PCB WIP checkpoint
 
 {
-  "checkpoint_id": "TF-CP-20261101-REVIEW",
+  "checkpoint_id": "TF-CP-PREPCB-WIP",
   "project_id": "TIMEFOOT",
   "repository": "https://github.com/loverlike1216/Timefoot.git",
   "workspace": "E:/Codex_project/Timefoot",
   "branch": "codex/v1-rtl-core",
-  "base_commit": "03eeddcd0520b110649c226245989eba04a21b77",
-  "head_commit": "03eeddcd0520b110649c226245989eba04a21b77",
+  "base_commit": "31005c49b65349fb0aa26f27d728b70f6d83d3fd",
+  "head_commit": "31005c49b65349fb0aa26f27d728b70f6d83d3fd",
   "active_version": "v1",
   "version_status": "ACTIVE",
-  "current_stage": "RTL_CORE_AND_SYSTEM_FRAMEWORK",
-  "checkpoint_reason": "Canonical validation finished; stage review delivery",
-  "status": "REVIEW_READY_REVISE",
+  "current_stage": "INTERFACE_TIMING_CLOSURE_AND_PRE_PCB_READINESS",
+  "checkpoint_reason": "Substantial new stage RTL and actual XPM probe completed; preserve recovery state",
+  "status": "IN_PROGRESS",
   "completed": [
-    "Repository/identity/source reconciliation",
-    "Formal parameterized RTL and logical1-4node framework",
-    "5unit cases and12system configurations PASS",
-    "2640output packets independently checked",
-    "4seed replay CSV hashes MATCH",
-    "Two-Part node/pin routed; manager/framework synthesized",
-    "Critical CDC0 and RAM async-control DRC0",
-    "3723historical file hashes MATCH",
-    "Clean remote checkout5units+4node systemPASS withRTL/CSVhashesMATCH",
-    "Draft PR1OPEN, not merged"
+    "User instruction/problem hash/identity reconciled",
+    "Late/early XPM synthesis experiment and early route/bus-skew completed",
+    "Narrow link/RX/TX and management/control/physical-node RTL authored",
+    "Initial4/8bit and25MHz units passed before latest credit IOB adjustment",
+    "Manager64bitwrap/lateACK/fault test PASS"
   ],
   "latest_validation": [
-    "closure_system/results.json",
-    "closure_repeat/results.json",
-    "signoff_unit/results.json",
-    "closure_node and final_pin timing/CDC/DRC reports",
-    "DELIVERY_AUDIT.json"
+    "link05 running",
+    "sdr02 running",
+    "adapter03 running",
+    "p0_order_early routed and p0_order_late comparison"
   ],
   "blockers": [
-    "B-TF-001:complete-node OOC interface STA FAIL",
-    "Independent ChatGPT review pending"
+    "Full new profile and system validation incomplete",
+    "EBAZ original DATA schematic/connector mapping missing; conditional pin candidates only"
   ],
   "do_not_change": [
     "historical preproject files",
@@ -46,7 +40,7 @@
     "no old-session execution after recovery",
     "explicit CRC/session/sequence/flow control"
   ],
-  "resume_from": "Read GPT_CHAT_STAGE_REVIEW and P-20261101-001; review interface timing and continue v1 without weakening gate",
+  "resume_from": "Read new guide and execution contract; inspect actual running/logged tests, finish all pre-PCB deliverables; no source changes during final frozen validation",
   "evidence_refs": [
     "v1/verification/EVIDENCE_INDEX.md",
     "v1/verification/evidence/DELIVERY_AUDIT.json",
@@ -57,8 +51,6 @@
   "open_ai_problems": [
     "P-20261101-001"
   ],
-  "created_at": "2026-11-01T04:05:16.494791+00:00",
+  "created_at": "2026-11-01T06:53:51.683896+00:00",
   "pull_request": "https://github.com/loverlike1216/Timefoot/pull/1"
 }
-
-Recorded HEAD is the verified code/evidence base before this bookkeeping commit; consult actual Git/PR head for final delivery hash. ValidatedRTL46f88bc. StageREVISE, external independent review pending. No version upgrade or Merge.

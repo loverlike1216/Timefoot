@@ -12,7 +12,9 @@ module tf_node_core #(parameter integer NODE_ID=0,PAYLOAD_W=32,FIFO_DEPTH=16,FRA
  output wire prepared,applied,time_valid,event_execute,output wire [31:0] executed_id,
  output wire [63:0] executed_timestamp,output wire node_fault,
  output wire fifo_full,output wire [$clog2(FIFO_DEPTH):0] fifo_level,
- output wire [31:0] sample_count,output reg [31:0] delivered_count);
+ output wire [31:0] sample_count,output reg [31:0] delivered_count,
+ output wire scheduler_done,scheduler_error,output wire [3:0] scheduler_code,stream_code,
+ output wire [31:0] scheduler_executed,scheduler_aborted,scheduler_rejected);
  localparam B=144+PAYLOAD_W,F=B+32;
  wire tb_prepared,tb_error;reg link_hold=1,cfg_pending=0,source_ref=0;
  reg [35:0] config_ref;wire [35:0] config_work;wire cfg_ready,cfg_valid;
@@ -51,6 +53,8 @@ module tf_node_core #(parameter integer NODE_ID=0,PAYLOAD_W=32,FIFO_DEPTH=16,FRA
  .prepare_session(prepare_session),.prepare_epoch(prepare_epoch),.sync_marker(sync_marker),.marker_qualified(marker_qualified),.run_enable(run_enable),
  .timestamp(timestamp),.session_id(session_id),.prepared(tb_prepared),.applied(applied),.time_valid(time_valid),.protocol_error(tb_error));
  wire edone,eerror;wire [3:0] ecode;wire [31:0] exc,abc,rjc;wire [3:0] qlevel;
+ assign scheduler_done=edone;assign scheduler_error=eerror;assign scheduler_code=ecode;
+ assign scheduler_executed=exc;assign scheduler_aborted=abc;assign scheduler_rejected=rjc;
  tf_event_scheduler scheduler(.clk(ref_clk),.rst(ref_rst),.enabled(run_enable),.time_valid(time_valid),
  .timestamp(timestamp),.session_id(session_id),.event_id(event_id),.event_session(event_session),
  .target_timestamp(event_target),.event_valid(event_valid),.event_ready(event_ready),
@@ -96,4 +100,5 @@ module tf_node_core #(parameter integer NODE_ID=0,PAYLOAD_W=32,FIFO_DEPTH=16,FRA
  else if(accept_prepare)fault_ref<=0;
  else if(tb_prepared||run_enable)fault_ref<=fault_ref|work_error_ref|tb_error|aov;
  assign node_fault=fault_ref;
+ assign stream_code=work_source?sec:eec;
 endmodule

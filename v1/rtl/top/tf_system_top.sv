@@ -1,9 +1,9 @@
 `timescale 1ns/1ps
 // Multi-FPGA logical assembly. External packet PHY adapters connect rx/tx ports.
 // All control ports use the forwarded reference timing contract, not async GPIO.
-module tf_system_top #(parameter integer NODES=4,PAYLOAD_W=32,FRAMES=64,
+module tf_system_top #(parameter integer NODES=4,PAYLOAD_W=32,FRAMES=64,EXTERNAL_FAULT_ENABLE=0,
  parameter integer DIV0=18,DIV1=9,DIV2=6,DIV3=18)(
- input wire manager_clk,monitor_clk,arst,input wire [3:0] ref_clocks,node_reset,
+ input wire manager_clk,monitor_clk,arst,input wire [3:0] ref_clocks,node_reset,adapter_fault,
  input wire [3:0] rx_clocks,input wire [3:0][175+PAYLOAD_W:0] rx_frames,
  input wire [3:0] rx_valid,output wire [3:0] rx_ready,
  output wire [3:0][175+PAYLOAD_W:0] tx_frames,output wire [3:0] tx_valid,input wire [3:0] tx_ready,
@@ -67,7 +67,9 @@ module tf_system_top #(parameter integer NODES=4,PAYLOAD_W=32,FRAMES=64,
    tf_bit_sync a(.src_clk(ref_clocks[i]),.src_bit(clock_ready[i]),.dst_clk(manager_clk),.dst_bit(ready_m[i]));
    tf_bit_sync b(.src_clk(ref_clocks[i]),.src_bit(prepared[i]),.dst_clk(manager_clk),.dst_bit(prepared_m[i]));
    tf_bit_sync c(.src_clk(ref_clocks[i]),.src_bit(applied[i]),.dst_clk(manager_clk),.dst_bit(applied_m[i]));
-   tf_bit_sync d(.src_clk(ref_clocks[i]),.src_bit(faults[i]),.dst_clk(manager_clk),.dst_bit(fault_m[i]));
+   reg combined_fault=0;
+   always @(posedge ref_clocks[i])combined_fault<=faults[i]|(EXTERNAL_FAULT_ENABLE?adapter_fault[i]:1'b0);
+   tf_bit_sync d(.src_clk(ref_clocks[i]),.src_bit(combined_fault),.dst_clk(manager_clk),.dst_bit(fault_m[i]));
   end else begin:absent
    assign tx_frames[i]=0;assign tx_valid[i]=0;assign rx_ready[i]=0;assign work_clocks[i]=0;
    assign event_execute[i]=0;assign timestamps[i]=0;assign node_sessions[i]=0;assign executed_ids[i]=0;assign executed_timestamps[i]=0;

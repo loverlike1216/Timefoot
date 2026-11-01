@@ -12,18 +12,19 @@ def crc32_bzip2(data):
     for b in data:c=((c<<8)&0xffffffff)^table[(c>>24)^b]
     return c^0xffffffff
 assert crc32_bzip2(b'123456789')==0xfc891918
-def check(tag):
+def check(tag,prefix='system',expected_cases=12):
     base=ROOT/'v1/verification/evidence'/tag
     results=[]
-    for case in sorted(base.glob('tb_system_*_s*')):
+    pattern='tb_sdr_system_*_s*' if prefix=='sdr' else 'tb_system_*_s*'
+    for case in sorted(base.glob(pattern)):
         inputs={}
-        for phase,t,body in csv.reader((case/'system_source.csv').open()):
+        for phase,t,body in csv.reader((case/f'{prefix}_source.csv').open()):
             raw=bytes.fromhex(body.zfill(44));s,q,ts,length=struct.unpack('>IIQH',raw[:18]);p=int.from_bytes(raw[18:],'big')
             assert p==(q*17+3)&0xffffffff and length==4
             assert (s,q) not in inputs
             inputs[s,q]=(ts,p,int(t))
         perphase={};latencies=[];times={};packets=0
-        for phase,t,s,q,frame in csv.reader((case/'system.csv').open()):
+        for phase,t,s,q,frame in csv.reader((case/f'{prefix}.csv').open()):
             raw=bytes.fromhex(frame.zfill(52));session,seq,stamp,length=struct.unpack('>IIQH',raw[:18])
             assert session==int(s) and seq==int(q) and length==4
             assert int.from_bytes(raw[-4:],'big')==crc32_bzip2(raw[:-4])
@@ -36,11 +37,12 @@ def check(tag):
         result={'case':case.name,'status':'PASS','packets':packets,'phases':perphase,
                 'min_latency_ns':min(latencies),'max_latency_ns':max(latencies),
                 'phase_drain_fps':{p:round(39e9/(v[-1]-v[0]),2) for p,v in times.items()},
-                'trace_sha256':hashlib.sha256((case/'system.csv').read_bytes()).hexdigest()}
+                'trace_sha256':hashlib.sha256((case/f'{prefix}.csv').read_bytes()).hexdigest()}
         results.append(result)
-    assert len(results)==12, f'Expected 12 system cases, found {len(results)}'
+    assert len(results)==expected_cases, f'Expected {expected_cases} system cases, found {len(results)}'
     (base/'python_crosscheck.json').write_text(json.dumps(results,indent=2))
     print('PYTHON_CROSSCHECK_PASS',len(results),'packets',sum(r['packets'] for r in results))
     return results
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('tag');check(p.parse_args().tag)
+    p=argparse.ArgumentParser();p.add_argument('tag');p.add_argument('--prefix',choices=['system','sdr'],default='system');p.add_argument('--expected-cases',type=int,default=12)
+    a=p.parse_args();check(a.tag,a.prefix,a.expected_cases)
