@@ -17,16 +17,18 @@ foreach part {xc7z010clg400-1 xc7z020clg400-2} {
  read_xdc "$root/v1/constraints/adapter_interfaces.xdc"
  if {$part eq "xc7z010clg400-1"} {set refpin H16;set monpin N18;set rxpin J18;set ctlpin K17} else {set refpin U14;set monpin U18;set rxpin H16;set ctlpin J18}
  foreach {port ball} [list ref_in $refpin monitor_in $monpin rx_clock $rxpin control_clock $ctlpin] {set_property PACKAGE_PIN $ball [get_ports $port]}
- foreach {port ball} {tx_clock F17 tx_valid F16 tx_sof G15 tx_ready G17 rx_valid H20 rx_sof J20 rx_ready G18 control_cs_n M18 control_mosi M17 control_miso D20 control_ready D19 sync_marker H15 marker_qualified J14 arst K14 event_out K19 fault_out J19} {
+ # Connector-feasible conditional map: EBAZ community DATA1/2/3 schematic
+ # cross-checked against its XDC, plus AX7020 original J10/J11 tables.
+ foreach {port ball} {tx_clock H17 tx_valid A20 tx_sof B19 tx_ready B20 rx_valid H20 rx_sof J20 rx_ready K18 control_cs_n M18 control_mosi M17 control_miso D20 control_ready D19 sync_marker H18 marker_qualified E19 arst C20 event_out K19 fault_out J19} {
   set_property PACKAGE_PIN $ball [get_ports $port]
  }
- set txpins {F20 F19 G20 G19 H18 K18 L17 L16}
- set rxpins {L20 L19 M20 M19 Y17 Y16 W15 V15}
+ set txpins {F20 F19 G20 G19 L17 L16 N17 P18}
+ if {$part eq "xc7z010clg400-1"} {set rxpins {L20 L19 M20 M19 N20 P20 R18 R19}} else {set rxpins {L20 L19 M20 M19 W19 W18 R14 P14}}
  for {set i 0} {$i<$lanes} {incr i} {
   set_property PACKAGE_PIN [lindex $txpins $i] [get_ports [format {tx_data[%d]} $i]]
   set_property PACKAGE_PIN [lindex $rxpins $i] [get_ports [format {rx_data[%d]} $i]]
  }
- # CANDIDATE_PIN_MAPPING only. EBAZ connector positions/loads are UNVERIFIED.
+ # CANDIDATE_PIN_MAPPING only. Community revision vs actual boards UNVERIFIED.
  set_property IOSTANDARD LVCMOS33 [get_ports *]
  set ioc [get_cells -hier -quiet -filter {NAME =~ *management/ready_reg || NAME =~ *fault_out_reg || NAME =~ *core/scheduler/event_execute_reg}]
  if {[llength $ioc]>0} {set_property IOB TRUE $ioc}
