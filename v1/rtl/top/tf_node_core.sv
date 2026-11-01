@@ -22,6 +22,11 @@ module tf_node_core #(parameter integer NODE_ID=0,PAYLOAD_W=32,FIFO_DEPTH=16,FRA
  // link_hold is the sole session-reset owner. ref_rst asserts it even if
  // the reference stops; clock_manager also holds ref_rst on work-clock loss.
  tf_reset_sync datapath_reset(.clk(work_clk),.arst(link_hold),.rst(local_work_flush));
+ // Four synchronous local reset branches avoid a single 150MHz reset net
+ // driving every CRC/pipeline register. Safety output masking uses the owner
+ // immediately; payload state clears on the next work edge in each branch.
+ (* DONT_TOUCH="TRUE" *)reg [3:0] work_reset_branch=4'b1111;
+ always @(posedge work_clk)work_reset_branch<={4{local_work_flush}};
  always @(posedge ref_clk or posedge ref_rst)begin
   if(ref_rst)begin link_hold<=1;cfg_pending<=0;config_ref<=0;source_ref<=0;end
   else if(abort_session)begin link_hold<=1;cfg_pending<=0;end
@@ -62,21 +67,21 @@ module tf_node_core #(parameter integer NODE_ID=0,PAYLOAD_W=32,FIFO_DEPTH=16,FRA
  wire [B-1:0] sb,eb;wire sv,sr,ev,er;wire serr,eerr;wire [3:0] sec,eec;
  wire [31:0] sa,srej,ea,erej;wire sf,se,ef,ee;wire [$clog2(FIFO_DEPTH):0] sl,el;
  tf_stream_link #(.PAYLOAD_W(PAYLOAD_W),.DEPTH(FIFO_DEPTH),.COORDINATED_RESET(1)) source_link(.rx_clk(ref_clk),.work_clk(work_clk),
- .rx_flush(ref_flush),.work_flush(local_work_flush),.rx_frame(aframe),.rx_valid(afv),.rx_ready(afr),
+ .rx_flush(ref_flush),.work_flush(work_reset_branch[0]),.rx_frame(aframe),.rx_valid(afv),.rx_ready(afr),
  .session_id(work_session),.out_body(sb),.out_valid(sv),.out_ready(sr),.error(serr),.error_code(sec),
  .accepted_count(sa),.rejected_count(srej),.full(sf),.empty(se),.level(sl));
  tf_stream_link #(.PAYLOAD_W(PAYLOAD_W),.DEPTH(FIFO_DEPTH),.COORDINATED_RESET(1)) external_link(.rx_clk(rx_clk),.work_clk(work_clk),
- .rx_flush(ref_flush),.work_flush(local_work_flush),.rx_frame(rx_frame),.rx_valid(rx_valid),.rx_ready(rx_ready),
+ .rx_flush(ref_flush),.work_flush(work_reset_branch[1]),.rx_frame(rx_frame),.rx_valid(rx_valid),.rx_ready(rx_ready),
  .session_id(work_session),.out_body(eb),.out_valid(ev),.out_ready(er),.error(eerr),.error_code(eec),
  .accepted_count(ea),.rejected_count(erej),.full(ef),.empty(ee),.level(el));
  wire [B-1:0] pb;wire pv,pr,taskready;
  assign sr=taskready&work_source&config_loaded;
  assign er=taskready&~work_source&config_loaded;
- tf_task_pipeline #(.PAYLOAD_W(PAYLOAD_W)) tasks(.clk(work_clk),.rst(local_work_flush),.stage_mask(work_mask),
+ tf_task_pipeline #(.PAYLOAD_W(PAYLOAD_W)) tasks(.clk(work_clk),.rst(work_reset_branch[2]),.stage_mask(work_mask),
  .in_body(work_source?sb:eb),.in_valid((work_source?sv:ev)&config_loaded),.in_ready(taskready),
  .out_body(pb),.out_valid(pv),.out_ready(pr));
  wire raw_tx_valid;
- tf_stream_tx #(.PAYLOAD_W(PAYLOAD_W)) tx(.clk(work_clk),.rst(local_work_flush),
+ tf_stream_tx #(.PAYLOAD_W(PAYLOAD_W)) tx(.clk(work_clk),.rst(work_reset_branch[3]),
  .in_body(pb),.in_valid(pv),.in_ready(pr),.frame(tx_frame),.valid(raw_tx_valid),.ready(tx_ready));
  assign tx_valid=raw_tx_valid&~local_work_flush;
  // Read-domain occupancy alarm, not a raw write-domain full signal. XPM's
