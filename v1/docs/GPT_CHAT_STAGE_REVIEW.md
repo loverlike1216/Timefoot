@@ -1,5 +1,7 @@
 # GPT Chat stage review package
 
+Review PR:[Draft#1](https://github.com/loverlike1216/Timefoot/pull/1), OPEN/DRAFT and not merged. Independent remote checkout03eeddcd0520b110649c226245989eba04a21b77 passed5units plus4node seed1system with identical RTL18-file and CSV hashes; see verification/evidence/clean_checkout/result.json. Evidence delivery9071b564387a8c67d88dadb61007e34502136a74, followed by the clean-directory orchestration fix and evidence-only handoff updates. Consult actual PR head for the final delivery commit.
+
 PROJECT_ID:TIMEFOOT; REPOSITORY:https://github.com/loverlike1216/Timefoot.git; PROJECT_ROOT:E:/Codex_project/Timefoot; BRANCH:codex/v1-rtl-core; COMMIT(RTL):`46f88bcd553a13a9fda55b2599c6740acf6681d0`; ACTIVE_VERSION:v1; STAGE:RTL_CORE_AND_SYSTEM_FRAMEWORK. Delivery commit/PR is recorded in shared/HANDOFF.md and PR metadata after push. No Merge authorized or performed.
 
 Architecture implemented: shared-reference B route, optional manager without AX7020/PS dependency,1–4 identical node slots, explicit stage mapping,64-bit future epoch,32-bit sessions, reference-domain ordered event queue, coherent XPM config/data crossing, CRC/session/sequence/length checks, real arithmetic/flow control, independent clock monitor, abort/relock/fresh-session recovery. All modules are listed in ARCHITECTURE.md; port/register contracts are in interfaces. Board/PHY adapters remain explicitly logical/candidate.

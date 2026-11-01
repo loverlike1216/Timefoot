@@ -4,8 +4,8 @@
   "repository": "https://github.com/loverlike1216/Timefoot.git",
   "workspace": "E:/Codex_project/Timefoot",
   "branch": "codex/v1-rtl-core",
-  "base_commit": "46f88bcd553a13a9fda55b2599c6740acf6681d0",
-  "head_commit": "46f88bcd553a13a9fda55b2599c6740acf6681d0",
+  "base_commit": "03eeddcd0520b110649c226245989eba04a21b77",
+  "head_commit": "03eeddcd0520b110649c226245989eba04a21b77",
   "active_version": "v1",
   "version_status": "ACTIVE",
   "current_stage": "RTL_CORE_AND_SYSTEM_FRAMEWORK",
@@ -19,7 +19,9 @@
     "4seed replay CSV hashes MATCH",
     "Two-Part node/pin routed; manager/framework synthesized",
     "Critical CDC0 and RAM async-control DRC0",
-    "3723historical file hashes MATCH"
+    "3723historical file hashes MATCH",
+    "Clean remote checkout5units+4node systemPASS withRTL/CSVhashesMATCH",
+    "Draft PR1OPEN, not merged"
   ],
   "latest_validation": [
     "closure_system/results.json",
@@ -47,10 +49,12 @@
     "v1/verification/EVIDENCE_INDEX.md",
     "v1/verification/evidence/DELIVERY_AUDIT.json",
     "v1/reports/SIMULATION_REPORT.md",
-    "v1/reports/IMPLEMENTATION_REPORT.md"
+    "v1/reports/IMPLEMENTATION_REPORT.md",
+    "v1/verification/evidence/clean_checkout/result.json"
   ],
   "open_ai_problems": [
     "P-20261101-001"
   ],
-  "created_at": "2026-11-01T03:57:14.839532+00:00"
+  "created_at": "2026-11-01T04:05:16.494791+00:00",
+  "pull_request": "https://github.com/loverlike1216/Timefoot/pull/1"
 }

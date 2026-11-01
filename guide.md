@@ -21,3 +21,5 @@ sources: [AI-interaction-memory/cross-agent/TIMEFOOT_v1_USER_INSTRUCTION.md]
 2026-11-01 validation checkpoint:正式RTL已提交。五项单元测试通过；sys09旧源码12配置、2640帧独立Python核验通过；更严格配置检查及RAM EN复位锥修复后的signoff运行仍在执行。所有旧失败保留，sys04因漏检XPM混合大小写Error被明确废止为验收证据。管脚三输出同2ns预算正STA；完整节点内部STA正，OOC接口仍负STA，需REVISE/独立Review。最后有效结论以v1/reports、verification/evidence和最新shared状态为准。新增关键边界：read-domain fifo_full是容量告警，实际写侧full只在本域控制流控；REQP-1839必须审查，CDC Critical=0不能替代RDC/DRC。
 
 2026-11-01 review checkpoint（取代上段“仍在执行”的临时状态）：当前RTL46f88bc，closure_system12/12、closure_repeat4/4HashMATCH、signoff_unit5/5、独立2640包及VCD时钟/事件测量均通过；3723历史文件全部Hash匹配。closure_node内部setup/hold两Part正，CriticalCDC0，RAM EN异步复位DRC0；完整节点OOC I/O STA仍负，Stage结论REVISE。正式恢复入口shared/CONTEXT_CHECKPOINT与v1/docs/GPT_CHAT_STAGE_REVIEW.md；P-20261101-001等待真实独立Review。当前版本仍v1ACTIVE。普通受授权的RTL细节已自主实施，不将此Problem伪造成ChatGPT Decision或已批准的Scope变更。
+
+交付补充：Draft PR#1已OPEN，未Merge；远端独立checkout03eeddc重跑5units+4node seed1PASS，18RTL及对应CSV Hash匹配。首轮独立checkout发现work/tmp未自动创建，已修复运行脚本，失败日志保留。此修复不改变RTL；证据见clean_checkout/result.json和shared/HANDOFF.md。GitHub Connector创建PR返回403，改用既有已登录gh完成，不改变认证或仓库安全策略。

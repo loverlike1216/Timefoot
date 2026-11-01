@@ -1,0 +1,6 @@
+PASS tb_scheduler_s1
+PASS tb_fifo_s1
+PASS tb_stream_s1
+PASS tb_control_s1
+PASS tb_sync_window_s1
+TOTAL_PASS 5

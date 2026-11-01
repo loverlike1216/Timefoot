@@ -1,0 +1,42 @@
+{
+  "classification": "CLEAN_REMOTE_CHECKOUT_SAME_VIVADO_TOOLCHAIN",
+  "repository": "https://github.com/loverlike1216/Timefoot.git",
+  "checkout_commit": "03eeddcd0520b110649c226245989eba04a21b77",
+  "unit_pass": 5,
+  "system_case": "tb_system_4_s1",
+  "system_pass": 1,
+  "rtl_files_hash_match": 18,
+  "packet_source_event_hash_match": {
+    "system.csv": "db9517dc8646830fd690d974026f3a5f4daccc970daf0e1a7ddf9f9627346234",
+    "system_events.csv": "0c35c61f5682cb4b2fcf1f92eea5a34ff3c61ae92af7d75c700114242f157655",
+    "system_source.csv": "331c00038d58acf219e1c571d0d7f5f769a8154eda3fcfc4db5fba7c4bf921f1"
+  },
+  "unit_trace_hash_match": true,
+  "binary_manifest": {
+    "v1/work/clean_checkout/v1/verification/evidence/clean_system4/tb_system_4_s1/wave.vcd": {
+      "bytes": 465890602,
+      "sha256": "7c995654b189fefd7a7a71eb56475990dde9ca5c2fed49a4e6cac8f13bc3e9d2"
+    },
+    "v1/work/clean_checkout/v1/verification/evidence/clean_unit2/tb_control_s1/wave.vcd": {
+      "bytes": 6230,
+      "sha256": "ac6691762bf6daf60290931be05764e26d078c727aa8cf2a664061f529f676b9"
+    },
+    "v1/work/clean_checkout/v1/verification/evidence/clean_unit2/tb_fifo_s1/wave.vcd": {
+      "bytes": 292680,
+      "sha256": "33352d1ecd4374079a1fce0c08f7ebfe41dbd51d5af7457a0afad61d65820fca"
+    },
+    "v1/work/clean_checkout/v1/verification/evidence/clean_unit2/tb_scheduler_s1/wave.vcd": {
+      "bytes": 22001,
+      "sha256": "073e0963f26c9a5c17d3918aef774a7749431b3a672532a09ac3816e966a0151"
+    },
+    "v1/work/clean_checkout/v1/verification/evidence/clean_unit2/tb_stream_s1/wave.vcd": {
+      "bytes": 3418033,
+      "sha256": "fef2d09c575730c4dff8ce3dba0d7fa2a4821aa7d38adb7c592edfb349a2178b"
+    },
+    "v1/work/clean_checkout/v1/verification/evidence/clean_unit2/tb_sync_window_s1/wave.vcd": {
+      "bytes": 5960,
+      "sha256": "3be5b3b83f57360e480be5400b5f642f42cdf309b7bc6a056841d142ac108c30"
+    }
+  },
+  "status": "PASS"
+}

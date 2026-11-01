@@ -11,3 +11,9 @@ Verification:5units,12system cases with3seeds,2640Python-checked final packets,4
 Failures:full node OOC WNS/WHS remain negative. Internal setup/hold is+0.218/+0.050ns(Z010),+1.056/+0.071ns(Z020); old3-pin failure closed at same2ns budget. Current gate REVISE. P-20261101-001 is OPEN; no fabricated ChatGPT Decision. Dedicated physical/RDC/board signoff is not claimed.
 
 Resume:read guide.md and shared/CONTEXT_CHECKPOINT.*, then the actual open Problem, review package and full-node critical_paths/timing/clock interaction/constraints. Complete interface timing work within v1 after real review, preserving previous evidence. Guide is semantic history; current code/reports override old comments. No observed model/thread-switch event is invented. The final audit validates files currently on disk; it does not assert a before/after platform model-switch hash comparison.
+
+## Observed Git/PR and clean replay
+
+Evidence delivery9071b564387a8c67d88dadb61007e34502136a74 was pushed and verified remotely. Fresh-checkout orchestration fix03eeddcd0520b110649c226245989eba04a21b77 was pushed next. Draft PR:https://github.com/loverlike1216/Timefoot/pull/1, base main, head codex/v1-rtl-core, OPEN/DRAFT, mergedAt=null; no CI status runs were returned. The GitHub connector returned403 for PR creation; authenticated gh CLI succeeded without changing tokens/security settings.
+
+A separate shallow remote clone below v1/work/clean_checkout at03eeddc reran5units and the complete4node seed1system case. All passed;18RTL file hashes, all unit trace hashes and packet/source/event CSV hashes match the canonical checkout. It uses the same installed Vivado toolchain, not a second simulator. Evidence:verification/evidence/clean_checkout/result.json. The initial missing-parent work-directory failure and corrected rerun logs are preserved. Later bookkeeping commits only add evidence/state/scripts for sealing; validated RTL remains46f88bc.

@@ -16,3 +16,12 @@ Failure history and corrections are in v1/docs/FAILURE_ANALYSIS.md. No manual CD
 wide false path, disabled assertion or hidden correct answer was introduced. Fake-implementation
 search found only the explicitly labeled TB physical-channel model and a disabled-slot comment.
 No physical CAD/JTAG/board action. Git/PR/clean checkout evidence is appended when observed.
+
+Observed delivery:git push9071b56, then03eeddc; remote head matched. GitHub connector
+create_pull_request returned403Resource not accessible by integration; existing gh CLI
+created Draft PR#1 (OPEN, mergedAt=null). No CI status runs returned. A separate shallow
+GitHub checkout at03eeddc reran5units+4node seed1, allPASS;18RTL and all corresponding CSV
+hashesMATCH. First clean runner failed missing work parent and was repaired in scripts;
+that log and corrected rerun are preserved. An early sealing call while the system result
+was still pending is retained separately; sealing after actual process completion passed.
+No tool action bypassed user scope/branch protection or merged/deployed anything.

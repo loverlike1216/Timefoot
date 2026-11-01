@@ -1,5 +1,7 @@
 # Simulation and validation report
 
+Additional clean replay:independent shallow GitHub checkout03eeddcd0520b110649c226245989eba04a21b77, same installed XSIM toolchain,5units+4node seed1systemPASS;18RTL source hashes and unit/packet/source/event trace hashes match canonical runs. Actual results/source manifests/raw logs are copied under evidence/clean_checkout. The discovered ignored-work-directory initialization bug was fixed and the original failed log retained. No RTL was changed by that fix.
+
 Project TIMEFOOT/v1, Stage RTL_CORE_AND_SYSTEM_FRAMEWORK. Canonical node/system RTL commit `46f88bcd553a13a9fda55b2599c6740acf6681d0`. Actual Windows/pwsh7.6.5/Python3.10.11/Vivado-XSIM2025.2 Build6299465. Workspace E:/Codex_project/Timefoot. Outcome **PARTIAL**, stage recommendation **REVISE** because complete-node interface STA is still failing.
 
 - Unit:5/5PASS, `signoff_unit/results.json`: scheduler/timebase wrap and cancellations/session/late/duplicate/full; FIFO independent clocks/full/empty/backpressure/read-only and write reset; CRC/session/sequence/length failures; CSR backpressure/atomic time/error/statistics; SYNC setup-window contract acceptance/rejection.

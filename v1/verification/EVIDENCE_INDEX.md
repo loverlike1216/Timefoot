@@ -16,6 +16,8 @@
 |Analytic long-term model|evidence/long_term_model.json|15arithmetic cases; not24h hardware/RTL|
 |Full replay/history/STA/binary audit|evidence/DELIVERY_AUDIT.json|3723historical hashes,4CSV replays, local DCP/VCD hashes|
 |Credential pattern scan|evidence/secret_scan.json|No plaintext matches emitted|
+|Clean remote checkout|evidence/clean_checkout/result.json|5units+4node seed1PASS,18RTL and all corresponding CSV hashesMATCH; same toolchain|
+|GitHub PR snapshot|evidence/github_pr_snapshot.json|Draft#1 OPEN, no merge, observed head/CI snapshot|
 
 ## Preserved attempts
 
