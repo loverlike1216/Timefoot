@@ -89,7 +89,8 @@ module tb_system #(parameter integer N=4);
  initial begin
   if($test$plusargs("SEED17"))seed=17;else if($test$plusargs("SEED2026"))seed=2026;
   rng=seed;fd=$fopen("system.csv","w");ef=$fopen("system_events.csv","w");source_fd=$fopen("system_source.csv","w");
-  #500;arst=0;wr('h00,0);wr('h04,1);repeat(4)@(negedge mc);
+  #500;arst=0;wait(!dut.manager_rst);repeat(2)@(negedge mc);
+  wr('h00,0);wr('h04,1);repeat(4)@(negedge mc);
   if(!configerror||running)$fatal(1,"INVALID_CONFIGURATION_ACCEPTED");
   wr('h00,(1<<N)-1);wr('h10,32'hfffffff0);wr('h14,32'hffffffff);wr('h04,1);wait_run();burst();
   // Reference loss while future work is queued. No event from the old session may execute.
