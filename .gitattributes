@@ -6,4 +6,8 @@
 *.md text eol=lf
 *.json text eol=lf
 *.ps1 text eol=lf
+*.xdc text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+v1/verification/evidence/** -text
 preproject_feasibility/** -text

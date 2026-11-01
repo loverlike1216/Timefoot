@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "same_seed_repeat_runs": 2,
+  "cases_per_run": 16,
+  "total_simulator_executions": 32,
+  "independently_decoded_pipeline_frames_one_run": 1214,
+  "pipeline": [
+    {
+      "case": "tb_pipeline_seed1",
+      "delivered_by_session": {
+        "0": 324,
+        "1": 80
+      },
+      "reported_aborted": 6
+    },
+    {
+      "case": "tb_pipeline_seed17",
+      "delivered_by_session": {
+        "0": 324,
+        "1": 80
+      },
+      "reported_aborted": 6
+    },
+    {
+      "case": "tb_pipeline_seed2026",
+      "delivered_by_session": {
+        "0": 326,
+        "1": 80
+      },
+      "reported_aborted": 4
+    }
+  ],
+  "source_attachments_unchanged": true,
+  "raw_tool_log_byte_identity_claimed": false,
+  "definition": "same-seed event/pipeline CSV bytes and normalized PASS/FAULT/lock lines match; host/date lines excluded"
+}

@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 44, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 27, in main
+    run(args,work,out/(snap+'_elaborate.log'));elaborated.add(snap)
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 8, in run
+    if p.returncode: raise RuntimeError(f'{log}: exit {p.returncode}; {p.stdout[-3000:].decode(errors="replace")}')
+RuntimeError: E:\Codex_project\Timefoot\preproject_feasibility\evidence\simulation_logs\attempt1\tb_sync_1_elaborate.log: exit 1; The system cannot find the path specified.
+
+Vivado Simulator v2025.2
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Running: D:/Vivado/2025.2/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_sync glbl -L unisims_ver --snapshot tb_sync_1 --debug typical --generic_top N 1 
+
+Multi-threading is on. Using 30 slave threads.
+
+ERROR: [XSIM 43-3225] Cannot find design unit work.1 in library work located at xsim.dir/work.
+
+

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "E:\\Codex_project\\ZYNQ\\AX7020\\AX7020开发板原理图V2.0.pdf",
+    "bytes": 329858,
+    "sha256": "e35eb1b654774a6f314de0140f5608d38a1c6be72d1c3e1008f5e288ac83c87e",
+    "pages": 16,
+    "extracted_chars": 348194
+  },
+  {
+    "path": "E:\\Codex_project\\ZYNQ\\AX7020\\3716080086AX7020开发板用户手册V3.0.pdf",
+    "bytes": 2219446,
+    "sha256": "e9cf7c7c914f6d806ce2a5ecd893567d1fb748e747d8cf4ac7588b536aa4717f",
+    "pages": 35,
+    "extracted_chars": 42078
+  },
+  {
+    "path": "E:\\Codex_project\\ZYNQ\\EBAZ4205\\EBAZ4205_硬件说明.md",
+    "bytes": 8890,
+    "sha256": "0eeaf76df7684f79159b20221789a22e06f2ab6a3d707951b8874ae1a606c52d"
+  },
+  {
+    "path": "C:\\Users\\loverlike\\.codex\\attachments\\b9d7eb4f-4e5c-48c2-b4cb-211b82820bd2\\已粘贴的文本.txt",
+    "bytes": 18026,
+    "sha256": "983aa856c3def2b79486f82fa05501ed63e30504f3d00b41fd0d7ec94cb22aba"
+  }
+]

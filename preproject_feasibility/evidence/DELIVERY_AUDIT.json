@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "audited_at": "2026-11-01T02:33:20.789805+08:00",
+  "required_files_checked": 17,
+  "manifest_files": 780,
+  "manifest_sha256": "be1db5070cab829b3f6791da8b52a339acde1b4a34ccd4bb926ac1ae8c4eefb7",
+  "local_markdown_links_checked": 3,
+  "source_attachments_unchanged": true,
+  "python_syntax": "PASS",
+  "secret_pattern_scan": "PASS_SELECTED_PATTERNS_NOT_A_COMPLETE_PRIVACY_CERTIFICATION",
+  "selected_simulations": 38,
+  "full_replay_wrapper": "PASS",
+  "extra_replay_simulations": 38,
+  "wrapper_replay_path": "E:\\Codex_project\\Timefoot\\preproject_feasibility\\.work\\replay_20261101_022717_042",
+  "wrapper_trace_hashes_match_selected": true,
+  "known_failures_preserved": true,
+  "formal_version_started": false,
+  "git_created": false,
+  "hardware_acceptance": "NOT_CHECKED",
+  "cdc_acceptance": "REVISE",
+  "pin_output_sta": "FAIL",
+  "note": "Delivery audit PASS certifies package consistency only; never overrides engineering failures."
+}

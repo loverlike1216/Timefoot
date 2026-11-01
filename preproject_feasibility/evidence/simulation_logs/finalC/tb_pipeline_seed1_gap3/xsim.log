@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Nov  1 02:17:40 2026
+# Process ID         : 59784
+# Current directory  : E:/Codex_project/Timefoot/preproject_feasibility/.work/xsim_finalC
+# Command line       : xsim.exe -log E:/Codex_project/Timefoot/preproject_feasibility/evidence/simulation_logs/finalC/tb_pipeline_seed1_gap3/xsim.log -mode tcl -source {xsim.dir/tb_pipeline/xsim_script.tcl}
+# Log file           : E:/Codex_project/Timefoot/preproject_feasibility/evidence/simulation_logs/finalC/tb_pipeline_seed1_gap3/xsim.log
+# Journal file       : E:/Codex_project/Timefoot/preproject_feasibility/.work/xsim_finalC\xsim.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 30064 MB
+# Total Virtual      : 46839 MB
+# Available Virtual  : 22445 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_pipeline/xsim_script.tcl
+# xsim {tb_pipeline} -testplusarg SEED1 -testplusarg GAP3 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/preproject_feasibility/evidence/simulation_logs/finalC/tb_pipeline_seed1_gap3/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/preproject_feasibility/evidence/simulation_logs/finalC/tb_pipeline_seed1_gap3/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/preproject_feasibility/evidence/waveforms/finalC_tb_pipeline_seed1_gap3.vcd}
+## log_vcd /tb_pipeline/*
+INFO: HDL object /tb_pipeline/expected is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+PASS scheduled_acquisition_start session=0 ticks=11
+Fatal: NO_FULL_EMPTY_BACKPRESSURE_COVERAGE
+Time: 33290 ns  Iteration: 0  Process: /tb_pipeline/Initial73_30  Scope: tb_pipeline  File: E:/Codex_project/Timefoot/preproject_feasibility/simulation/tb/tb_pipeline.sv Line: 80
+$finish called at time : 33290 ns
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 02:17:42 2026...

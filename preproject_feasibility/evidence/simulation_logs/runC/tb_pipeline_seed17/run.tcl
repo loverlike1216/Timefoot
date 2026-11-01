@@ -1,0 +1,5 @@
+open_vcd {E:/Codex_project/Timefoot/preproject_feasibility/evidence/waveforms/runC_tb_pipeline_seed17.vcd}
+log_vcd /tb_pipeline/*
+run all
+close_vcd
+quit

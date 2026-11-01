@@ -27,8 +27,11 @@ module tf_async_fifo #(parameter integer WIDTH=208,DEPTH=16,COORDINATED_RESET=0)
  reg [4:0] wguard=0,rguard=0;
  always @(posedge wr_clk) if(wa||fifo_rst||wb) wguard<=0;else if(wguard!=31)wguard<=wguard+1'b1;
  always @(posedge rd_clk) if(ra||rd_flush||rb) rguard<=0;else if(rguard!=31)rguard<=rguard+1'b1;
- assign wr_online=(wguard==31)&~wa&~fifo_rst&~wb;
- assign rd_online=(rguard==31)&~ra&~rd_flush&~rb;
+ // RAM enable/write controls must not have asynchronous reset in their
+ // combinational cone (REQP-1839). Guards sample reset synchronously; pointer
+ // reset and the session owner discard any transfer at the assertion edge.
+ assign wr_online=(wguard==31)&~fifo_rst&~wb;
+ assign rd_online=(rguard==31)&~rb;
  assign in_ready=wr_online&~full;
  assign out_valid=rd_online&~empty;
  xpm_fifo_async #(.FIFO_MEMORY_TYPE("auto"),.FIFO_WRITE_DEPTH(DEPTH),

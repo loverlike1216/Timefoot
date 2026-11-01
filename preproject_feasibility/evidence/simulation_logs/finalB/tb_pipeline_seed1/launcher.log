@@ -1,0 +1,26 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  1 02:09:38 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_pipeline/xsim_script.tcl
+# xsim {tb_pipeline} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/preproject_feasibility/evidence/simulation_logs/finalB/tb_pipeline_seed1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/preproject_feasibility/evidence/simulation_logs/finalB/tb_pipeline_seed1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/preproject_feasibility/evidence/waveforms/finalB_tb_pipeline_seed1.vcd}
+## log_vcd /tb_pipeline/*
+INFO: HDL object /tb_pipeline/expected is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+PASS pipeline_50_100_150_50 frames=320 stalls=169 full_samples=330 duration_ns=16750.000000
+FAULT link_reset aborted_frames=6 (reported, not silently lost)
+PASS link_reset_session_recovery frames=80
+TEST_PASS tb_pipeline SEED=1
+$finish called at time : 23250 ns : File "E:/Codex_project/Timefoot/preproject_feasibility/simulation/tb/tb_pipeline.sv" Line 76
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 02:09:40 2026...

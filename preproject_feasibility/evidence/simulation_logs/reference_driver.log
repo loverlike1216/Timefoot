@@ -1,0 +1,259 @@
+{
+  "drift_edge_count_crosscheck": "PASS: 1 ms explicit edge enumeration at +/-10,20,50 ppm; <=20 ns quantization",
+  "drift": [
+    {
+      "ppm_each": 10,
+      "duration_s": 1,
+      "independent_pair_error_ns": 20000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 10000
+    },
+    {
+      "ppm_each": 10,
+      "duration_s": 60,
+      "independent_pair_error_ns": 1200000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 600000
+    },
+    {
+      "ppm_each": 10,
+      "duration_s": 3600,
+      "independent_pair_error_ns": 72000000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 36000000
+    },
+    {
+      "ppm_each": 10,
+      "duration_s": 86400,
+      "independent_pair_error_ns": 1728000000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 864000000
+    },
+    {
+      "ppm_each": 20,
+      "duration_s": 1,
+      "independent_pair_error_ns": 40000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 20000
+    },
+    {
+      "ppm_each": 20,
+      "duration_s": 60,
+      "independent_pair_error_ns": 2400000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 1200000
+    },
+    {
+      "ppm_each": 20,
+      "duration_s": 3600,
+      "independent_pair_error_ns": 144000000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 72000000
+    },
+    {
+      "ppm_each": 20,
+      "duration_s": 86400,
+      "independent_pair_error_ns": 3456000000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 1728000000
+    },
+    {
+      "ppm_each": 50,
+      "duration_s": 1,
+      "independent_pair_error_ns": 100000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 50000
+    },
+    {
+      "ppm_each": 50,
+      "duration_s": 60,
+      "independent_pair_error_ns": 6000000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 3000000
+    },
+    {
+      "ppm_each": 50,
+      "duration_s": 3600,
+      "independent_pair_error_ns": 360000000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 180000000
+    },
+    {
+      "ppm_each": 50,
+      "duration_s": 86400,
+      "independent_pair_error_ns": 8640000000,
+      "common_reference_relative_rate_error_ns": 0,
+      "common_reference_absolute_error_vs_ideal_ns": 4320000000
+    }
+  ],
+  "phase_calibration_model": [
+    {
+      "seed": 1,
+      "delay_ns": 0,
+      "estimate_ns": 0.0,
+      "ideal_calibrated_max_abs_ns": 0.049915528205111054,
+      "uncalibrated_ns": 0,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 1,
+      "delay_ns": 2,
+      "estimate_ns": 2.0,
+      "ideal_calibrated_max_abs_ns": 0.0499409758953842,
+      "uncalibrated_ns": 2,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 1,
+      "delay_ns": 5,
+      "estimate_ns": 5.0,
+      "ideal_calibrated_max_abs_ns": 0.049877439778385754,
+      "uncalibrated_ns": 5,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 1,
+      "delay_ns": 10,
+      "estimate_ns": 10.0,
+      "ideal_calibrated_max_abs_ns": 0.049977829414526935,
+      "uncalibrated_ns": 10,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 17,
+      "delay_ns": 0,
+      "estimate_ns": 0.0,
+      "ideal_calibrated_max_abs_ns": 0.04999295766104531,
+      "uncalibrated_ns": 0,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 17,
+      "delay_ns": 2,
+      "estimate_ns": 2.0,
+      "ideal_calibrated_max_abs_ns": 0.049964646649763966,
+      "uncalibrated_ns": 2,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 17,
+      "delay_ns": 5,
+      "estimate_ns": 5.0,
+      "ideal_calibrated_max_abs_ns": 0.04995102173878198,
+      "uncalibrated_ns": 5,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 17,
+      "delay_ns": 10,
+      "estimate_ns": 10.0,
+      "ideal_calibrated_max_abs_ns": 0.049994106520397624,
+      "uncalibrated_ns": 10,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 2026,
+      "delay_ns": 0,
+      "estimate_ns": 0.0,
+      "ideal_calibrated_max_abs_ns": 0.04997860308644897,
+      "uncalibrated_ns": 0,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 2026,
+      "delay_ns": 2,
+      "estimate_ns": 2.0,
+      "ideal_calibrated_max_abs_ns": 0.0499003102237473,
+      "uncalibrated_ns": 2,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 2026,
+      "delay_ns": 5,
+      "estimate_ns": 5.0,
+      "ideal_calibrated_max_abs_ns": 0.04991557623397645,
+      "uncalibrated_ns": 5,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    },
+    {
+      "seed": 2026,
+      "delay_ns": 10,
+      "estimate_ns": 10.0,
+      "ideal_calibrated_max_abs_ns": 0.04995702645027185,
+      "uncalibrated_ns": 10,
+      "scope": "ASSUMED 0.25 ns actuator + assumed +/-50 ps noise, NOT RTL/hardware"
+    }
+  ],
+  "capture_window_counterexample": {
+    "captures_ns": [
+      60,
+      50,
+      60,
+      70
+    ],
+    "spread_ns": 20,
+    "meaning": "same frequency alone does not establish a shared epoch; whole-cycle ambiguity retained"
+  },
+  "logical_clock_servo_model": [
+    {
+      "seed": 1,
+      "path_asymmetry_ns": 0,
+      "max_abs_error_ns": 144.63199045703382,
+      "assumptions": "10 Hz updates; +/-100 ns timestamp noise; 0.5 ppm residual; affine model, not protocol RTL"
+    },
+    {
+      "seed": 1,
+      "path_asymmetry_ns": 400,
+      "max_abs_error_ns": 344.75130337451935,
+      "assumptions": "10 Hz updates; +/-100 ns timestamp noise; 0.5 ppm residual; affine model, not protocol RTL"
+    },
+    {
+      "seed": 17,
+      "path_asymmetry_ns": 0,
+      "max_abs_error_ns": 144.68940101740424,
+      "assumptions": "10 Hz updates; +/-100 ns timestamp noise; 0.5 ppm residual; affine model, not protocol RTL"
+    },
+    {
+      "seed": 17,
+      "path_asymmetry_ns": 400,
+      "max_abs_error_ns": 344.9292932995296,
+      "assumptions": "10 Hz updates; +/-100 ns timestamp noise; 0.5 ppm residual; affine model, not protocol RTL"
+    },
+    {
+      "seed": 2026,
+      "path_asymmetry_ns": 0,
+      "max_abs_error_ns": 144.9312248020915,
+      "assumptions": "10 Hz updates; +/-100 ns timestamp noise; 0.5 ppm residual; affine model, not protocol RTL"
+    },
+    {
+      "seed": 2026,
+      "path_asymmetry_ns": 400,
+      "max_abs_error_ns": 344.80062044749275,
+      "assumptions": "10 Hz updates; +/-100 ns timestamp noise; 0.5 ppm residual; affine model, not protocol RTL"
+    }
+  ],
+  "mmcm_arithmetic": {
+    "input_mhz": 50,
+    "D": 1,
+    "M": 18,
+    "pfd_mhz": 50,
+    "vco_mhz": 900,
+    "dividers": [
+      18,
+      9,
+      6
+    ],
+    "output_mhz": [
+      50,
+      100,
+      150
+    ]
+  },
+  "counter": {
+    "width": 64,
+    "unit_ns": 20,
+    "wrap_seconds": 368934881474.19104,
+    "scheduling_contract": "0 < target-current < 2**63 modulo ticks; events execute on compare edge, timestamp output ticks is target+1"
+  },
+  "status": "PASS_WITH_EXPLICIT_MODEL_ASSUMPTIONS"
+}

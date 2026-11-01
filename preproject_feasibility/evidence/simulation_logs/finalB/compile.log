@@ -1,0 +1,25 @@
+The system cannot find the path specified.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/rtl/async_fifo.sv" into library work
+INFO: [VRFC 10-311] analyzing module async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/rtl/clock_tree.sv" into library work
+INFO: [VRFC 10-311] analyzing module clock_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/rtl/eval_node_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module eval_node_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/rtl/pin_clock_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module pin_clock_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/rtl/sync_node.sv" into library work
+INFO: [VRFC 10-311] analyzing module sync_node
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/rtl/task_stage.sv" into library work
+INFO: [VRFC 10-311] analyzing module task_stage
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/tb/tb_mmcm.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mmcm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/tb/tb_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex_project/Timefoot/preproject_feasibility/simulation/tb/tb_sync.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_sync
+INFO: [VRFC 10-311] analyzing module tb_sync_1
+INFO: [VRFC 10-311] analyzing module tb_sync_2
+INFO: [VRFC 10-311] analyzing module tb_sync_3
+INFO: [VRFC 10-311] analyzing module tb_sync_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/2025.2/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl

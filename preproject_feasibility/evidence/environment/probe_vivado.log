@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Nov  1 01:56:40 2026
+# Process ID         : 59776
+# Current directory  : E:/Codex_project/Timefoot/preproject_feasibility
+# Command line       : vivado.exe -mode batch -source .\simulation\scripts\probe_vivado.tcl -log .\evidence\environment\probe_vivado.log -journal .\evidence\environment\probe_vivado.jou
+# Log file           : E:/Codex_project/Timefoot/preproject_feasibility/./evidence/environment/probe_vivado.log
+# Journal file       : E:/Codex_project/Timefoot/preproject_feasibility\.\evidence\environment\probe_vivado.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 30064 MB
+# Total Virtual      : 46839 MB
+# Available Virtual  : 22754 MB
+#-----------------------------------------------------------
+source {.\simulation\scripts\probe_vivado.tcl}
+# set root [file normalize [file join [file dirname [info script]] ../..]]
+# cd $root
+# set fp [open evidence/environment/vivado_probe.txt w]
+# puts $fp [version]
+# puts $fp "LICENSE_PROOF: synthesis is checked in build stage, not inferred from installation."
+# foreach part {xc7z010clg400-1 xc7z020clg400-2} {
+#   create_project -in_memory -part $part
+#   puts $fp "PART $part: [get_parts $part]"
+#   set f [open evidence/environment/pins_${part}.tsv w]
+#   puts $f "PIN\tFUNCTION\tBANK\tCLOCK_CAPABLE"
+#   foreach p [get_package_pins] {
+#     set name [get_property NAME $p]
+#     set fun [get_property PIN_FUNC $p]
+#     if {[regexp {MRCC|SRCC} $fun] || $name in {N18 U18 H16 J18 K18 U19 E7 E19 K17 H17 L16 U14}} {
+#       puts $f "$name\t$fun\t[get_property BANK $p]\t[get_property IS_CLK_CAPABLE $p]"
+#     }
+#   }
+#   close $f
+#   close_project
+# }
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 537.270 ; gain = 219.266
+ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  1 01:56:50 2026...

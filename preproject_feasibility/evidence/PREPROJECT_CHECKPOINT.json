@@ -1,0 +1,37 @@
+{
+  "evaluation_id": "TIMEFOOT_PREPROJECT_20261101",
+  "created_at": "2026-11-01T02:33:20.789805+08:00",
+  "formal_project_id": "NOT_ASSIGNED",
+  "formal_repository": "NOT_SELECTED",
+  "formal_version": "NOT_STARTED",
+  "project_status": "CONSULTATION_ONLY",
+  "workspace": "E:\\Codex_project\\Timefoot\\preproject_feasibility",
+  "current_stage": "RESEARCH_AND_SIMULATION",
+  "evaluation": "FEASIBLE_WITH_CONSTRAINTS",
+  "validation_summary": "38/38 selected RTL executions PASS; full wrapper extra 38 PASS; 2443 independently decoded packets",
+  "ooc": "routed positive candidate STA; no board acceptance",
+  "cdc": "9 critical per part; REVISE",
+  "pin_output_sta": "FAIL -0.673/-0.304 ns",
+  "physical_hardware": "NOT_CHECKED",
+  "protected": [
+    "source attachments",
+    "all failed evidence",
+    "no formal v1/repository/push/PCB/purchase/board writes"
+  ],
+  "resume_from": [
+    "guide.md",
+    "decision/GPT_CHAT_DECISION_PACKAGE.md",
+    "SIMULATION_REPORT.md",
+    "evidence/EVIDENCE_INDEX.md"
+  ],
+  "next_actions": [
+    "User/ChatGPT review constraints and scope",
+    "Resolve board pin/VCCO/PS facts and measurement resources",
+    "Only after explicit formal approval: confirm repository, project ID, workspace and v1 scope"
+  ],
+  "limitations_ref": [
+    "decision/BLOCKERS.md",
+    "decision/RISK_REGISTER.md"
+  ],
+  "wrapper_replay_path": "E:\\Codex_project\\Timefoot\\preproject_feasibility\\.work\\replay_20261101_022717_042"
+}

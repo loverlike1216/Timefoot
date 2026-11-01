@@ -1,0 +1,70 @@
+{
+  "devices": [
+    {
+      "part": "xc7z010clg400-1",
+      "target_basis": "requested_candidate",
+      "ooc_timing": {
+        "wns": 0.236,
+        "tns": 0.0,
+        "setup_fail": 0,
+        "whs": 0.104,
+        "ths": 0.0,
+        "hold_fail": 0
+      },
+      "pin_probe_timing": {
+        "wns": -0.673,
+        "tns": -0.673,
+        "setup_fail": 1,
+        "whs": 0.167,
+        "ths": 0.0,
+        "hold_fail": 0
+      },
+      "resources": {
+        "Slice LUTs": 601,
+        "Slice Registers": 1365,
+        "Block RAM Tile": 0,
+        "MMCME2_ADV": 1,
+        "PLLE2_ADV": 0,
+        "BUFGCTRL": 4
+      },
+      "critical_cdc": 9,
+      "cdc_status": "REVISE",
+      "board_sta_status": "NOT_VERIFIED",
+      "pin_probe_sta_status": "FAIL"
+    },
+    {
+      "part": "xc7z020clg400-2",
+      "target_basis": "manual_candidate_not_physical_identification",
+      "ooc_timing": {
+        "wns": 0.604,
+        "tns": 0.0,
+        "setup_fail": 0,
+        "whs": 0.101,
+        "ths": 0.0,
+        "hold_fail": 0
+      },
+      "pin_probe_timing": {
+        "wns": -0.304,
+        "tns": -0.304,
+        "setup_fail": 1,
+        "whs": 0.185,
+        "ths": 0.0,
+        "hold_fail": 0
+      },
+      "resources": {
+        "Slice LUTs": 601,
+        "Slice Registers": 1365,
+        "Block RAM Tile": 0,
+        "MMCME2_ADV": 1,
+        "PLLE2_ADV": 0,
+        "BUFGCTRL": 4
+      },
+      "critical_cdc": 9,
+      "cdc_status": "REVISE",
+      "board_sta_status": "NOT_VERIFIED",
+      "pin_probe_sta_status": "FAIL"
+    }
+  ],
+  "crosschecked_frames": 2443,
+  "pipeline_cases": 6
+}
