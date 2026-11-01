@@ -1,0 +1,15 @@
+# Reproducible tool work areas; historical files stay on disk.
+v1/work/
+**/__pycache__/
+*.pyc
+.Xil/
+preproject_feasibility/.work/
+preproject_feasibility/.Xil/
+# Original third-party document extracts are local read-only source material.
+preproject_feasibility/research/source_extracts/
+# Generated binaries/waves remain locally indexed by hashes.
+*.dcp
+*.wdb
+*.vcd
+*.backup.log
+*.backup.jou
