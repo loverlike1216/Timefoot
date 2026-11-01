@@ -1,0 +1,23 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  1 02:21:12 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mmcm/xsim_script.tcl
+# xsim {tb_mmcm} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/preproject_feasibility/evidence/simulation_logs/finalF/tb_mmcm_seed1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/preproject_feasibility/evidence/simulation_logs/finalF/tb_mmcm_seed1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/preproject_feasibility/evidence/waveforms/finalF_tb_mmcm_seed1.vcd}
+## log_vcd /tb_mmcm/*
+## run all
+PRIMITIVE_LOCK time=1590100
+TEST_PASS tb_mmcm counts=100/200/300 real_UNISIM_parameter_model_only
+$finish called at time : 5390100 ps : File "E:/Codex_project/Timefoot/preproject_feasibility/simulation/tb/tb_mmcm.sv" Line 14
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 02:21:14 2026...

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "lmk00304",
+    "url": "https://www.ti.com/lit/ds/symlink/lmk00304.pdf",
+    "sha256": "0e8ba3d15a7f8248b906d715bef07c70ffddbeb9e6de03d40b91b8a2fdc27666",
+    "pages": 41,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "sn65lvds105",
+    "url": "https://www.ti.com/lit/ds/symlink/sn65lvds105.pdf",
+    "sha256": "4f692df78fe69a729977727dd6232bb9f1418d726061f70b1bceb9824ebc0478",
+    "pages": 42,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "sn65lvdt2",
+    "url": "https://www.ti.com/lit/ds/symlink/sn65lvdt2.pdf",
+    "sha256": "2830b1f2b732d16f46bd45a1626e1aa25b308bb4220a5f476d780deff15d4dce",
+    "pages": 44,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "lmk1c1104",
+    "url": "https://www.ti.com/lit/ds/symlink/lmk1c1104.pdf",
+    "sha256": "4403ce872cf979483288c8194b5036dd0369a55ed9b8a40614fc22c29467b0fd",
+    "pages": 27,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "ebaz_community",
+    "url": "https://raw.githubusercontent.com/xjtuecho/EBAZ4205/master/HW/ebaz4205/EBAZ4205-SCH.pdf",
+    "sha256": "b41903a171b84f6d7869e1f43f74e6ca21ca1ccf0acaf54f8b3f9cd4c880c304",
+    "pages": 1,
+    "status": "READ_TEXT"
+  },
+  {
+    "name": "tps62162",
+    "url": "https://www.ti.com/lit/ds/symlink/tps62162.pdf",
+    "local_exists": true,
+    "sha256": "abc824ca04ee985ede3a513172ccdd2a42c8e1fdcfc3af5acdbe2c1af31aaa72",
+    "status": "LOCAL_DOWNLOADED_AND_OFFICIAL_WEB_READ"
+  },
+  {
+    "name": "ase",
+    "url": "https://www.abracon.com/Oscillators/ASEseries.pdf",
+    "status": "OFFICIAL_WEB_READ_LOCAL_DOWNLOAD_403",
+    "sha256": null
+  },
+  {
+    "name": "ebaz_community_xdc",
+    "url": "https://raw.githubusercontent.com/xjtuecho/EBAZ4205/master/Development/EBAZ4205.xdc",
+    "sha256": "1463e04ee64aeb3cfcc0b3d0a6ece8152a72832ba0273897baac4ccf93a0f41a",
+    "status": "CONDITIONAL_COMMUNITY_SOURCE_NOT_ACTUAL_BOARD"
+  },
+  {
+    "name": "AX7020开发板原理图V2.0.pdf",
+    "path": "E:/Codex_project/ZYNQ/AX7020/AX7020开发板原理图V2.0.pdf",
+    "sha256": "e35eb1b654774a6f314de0140f5608d38a1c6be72d1c3e1008f5e288ac83c87e",
+    "status": "USER_SOURCE_READ_ONLY"
+  },
+  {
+    "name": "3716080086AX7020开发板用户手册V3.0.pdf",
+    "path": "E:/Codex_project/ZYNQ/AX7020/3716080086AX7020开发板用户手册V3.0.pdf",
+    "sha256": "e9cf7c7c914f6d806ce2a5ecd893567d1fb748e747d8cf4ac7588b536aa4717f",
+    "status": "USER_SOURCE_READ_ONLY"
+  },
+  {
+    "name": "EBAZ4205_硬件说明.md",
+    "path": "E:/Codex_project/ZYNQ/EBAZ4205/EBAZ4205_硬件说明.md",
+    "sha256": "0eeaf76df7684f79159b20221789a22e06f2ab6a3d707951b8874ae1a606c52d",
+    "status": "USER_SOURCE_READ_ONLY"
+  }
+]

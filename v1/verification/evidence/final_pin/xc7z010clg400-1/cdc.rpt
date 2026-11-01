@@ -1,0 +1,42 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 11:36:02 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_cdc -details -file E:/Codex_project/Timefoot/v1/verification/evidence/final_pin/xc7z010clg400-1/cdc.rpt
+| Design       : tf_pin_timing_top
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID     Severity  Count  Description
+-----  --------  -----  ------------------------------------------
+CDC-3  Info          3  1-bit synchronized with ASYNC_REG property
+
+Source Clock: c0
+Destination Clock: reference50
+CDC Type: User Ignored
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -------------  -------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      4  False Path  a_reg[7]/C     s2/u_bit/syncstages_ff_reg[0]/D
+
+Source Clock: c1
+Destination Clock: reference50
+CDC Type: User Ignored
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -------------  -------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      4  False Path  b_reg[7]/C     s1/u_bit/syncstages_ff_reg[0]/D
+
+Source Clock: c2
+Destination Clock: reference50
+CDC Type: User Ignored
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -------------  -------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      4  False Path  d_reg[7]/C     s0/u_bit/syncstages_ff_reg[0]/D
+

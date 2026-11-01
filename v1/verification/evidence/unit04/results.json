@@ -1,0 +1,26 @@
+[
+  {
+    "case": "tb_scheduler_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "scheduler.csv": "50de0247c1eca9b984ac22a7eeff3f1d88f814242599563d3cff96164361f05e"
+    }
+  },
+  {
+    "case": "tb_fifo_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "fifo.csv": "38a8e3f318d5779d9f79dccddf1eb0c028e876f672aa940a48b2158110fb4290"
+    }
+  },
+  {
+    "case": "tb_stream_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "stream.csv": "a1b2fd501dc53fccebc361bd4f5a8d8d5162e1b9224b621f9d3977e007e0bc8a"
+    }
+  }
+]

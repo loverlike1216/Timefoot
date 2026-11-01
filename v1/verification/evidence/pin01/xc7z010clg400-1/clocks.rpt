@@ -1,0 +1,73 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 10:56:24 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_clocks -file E:/Codex_project/Timefoot/v1/verification/evidence/pin01/xc7z010clg400-1/clocks.rpt
+| Design       : tf_pin_timing_top
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock        Period(ns)  Waveform(ns)    Attributes  Sources
+reference50  20.000      {0.000 10.000}  P           {ref_in}
+c0           20.000      {0.000 10.000}  P,G,A       {mmcm/CLKOUT0}
+c1           10.000      {0.000 5.000}   P,G,A       {mmcm/CLKOUT1}
+c2           6.667       {0.000 3.333}   P,G,A       {mmcm/CLKOUT2}
+fb           20.000      {0.000 10.000}  P,G,A       {mmcm/CLKFBOUT}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : c0
+Master Source       : mmcm/CLKIN1
+Master Clock        : reference50
+Multiply By         : 1
+Generated Sources   : {mmcm/CLKOUT0}
+
+Generated Clock     : c1
+Master Source       : mmcm/CLKIN1
+Master Clock        : reference50
+Multiply By         : 2
+Generated Sources   : {mmcm/CLKOUT1}
+
+Generated Clock     : c2
+Master Source       : mmcm/CLKIN1
+Master Clock        : reference50
+Multiply By         : 3
+Generated Sources   : {mmcm/CLKOUT2}
+
+Generated Clock     : fb
+Master Source       : mmcm/CLKIN1
+Master Clock        : reference50
+Multiply By         : 1
+Generated Sources   : {mmcm/CLKFBOUT}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+

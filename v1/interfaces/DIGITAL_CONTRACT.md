@@ -1,0 +1,31 @@
+# TIMEFOOT v1 digital interfaces
+
+Status: IMPLEMENTED, candidate adapter/board timing. Parameters verified at PAYLOAD_W=32, FIFO_DEPTH=16, FRAMES=40 (system TB); source default burst64. Node ID, width, depth, work divider and burst are compile-time parameters. Other legal XPM configurations need their own validation; no blanket parameter-space PASS is claimed.
+
+## Clocks and synchronization
+
+Reference50 uses 20ns periods. MMCME2_BASE VCO=50*18=900MHz; output divisors18/9/6 yield50/100/150MHz. Each node uses one MMCM and feedback/output BUFGs. An independent50MHz monitor observes a heartbeat toggled every16 reference cycles, with a96-monitor-cycle watchdog. Status crosses via XPM_SINGLE; reset crosses via three-stage XPM_ASYNC_RST. Timeout requests registered MMCM reset. Return of heartbeat releases that reset; re-lock and a fresh session are required. Source-to-safety latency includes heartbeat, synchronizers, watchdog and manager propagation; it is not instantaneous fault detection.
+
+The controller launches SYNC at the reference falling edge. The adapter must guarantee the SAME following rising edge at every enabled node: setup>=1ns in the digital boundary TB, qualified relative arrival <=8.5ns after launch for a nominal10ns half period. The system TB adds ref offsets0/0.6/1.2/1.8ns and marker delays2/2.7/3.4/4.1ns. These are test parameters, not measured board skew. `marker_qualified` is an explicit adapter/calibration contract input; the RTL does not measure physical phase. A low value invalidates time, latches protocol error and blocks preparation. Do not connect arbitrary asynchronous SYNC and call it deterministic.
+
+Epoch/session/map are staged and acknowledged >=1024 manager ticks before the marker. Nodes apply the exact staged epoch at that common edge. The controller waits for applied acknowledgements before READY/RUN. Time increases modulo2^64 during each valid session. Epoch changes occur only outside RUN with a new session. Membership changes abort the old session and quiesce ALL nodes; late join never resumes an old epoch. Registered `event_execute` corresponds to the timestamp visible after that edge. The simulation event-edge spread follows modeled ref skew (<=3ns assertion); it is not nanosecond hardware validation.
+
+Control/event buses are reference-synchronous logical ports with a forwarded-reference adapter timing requirement. The optional manager has no AX7020/PS dependency. Cross-board control transport, clock-tree fanout, electrical level and packet PHY remain adapter work. Status acknowledgements enter the manager through single-bit synchronizers. Multi-bit work configuration uses a coherent FIFO bridge.
+
+## Events
+
+Event fields: ID32, session32, target64, valid/ready. Queue depth8, ordered nondecreasing target time; duplicate live IDs rejected. Legal horizon is the modulo64 half range, with minimum4 ticks lead. `event_done` and execute pulse on exact target; errors:1wrong session,2duplicate,3late/horizon/order,4missed target. Cancellation marks a tombstone, cancel-all/invalid time/not-RUN aborts queued events. Backpressure holds submit until space exists; invalid requests are consumed with an error. Simultaneous request and dequeue are supported. Aggregate rejected count can count at most one per cycle; per-request flags/code are authoritative when two different rejection causes coincide.
+
+## Packet and data path
+
+MSB-first body: session32 | sequence32 | source_timestamp64 | length16 | payloadW. CRC32 appends at LSB. At W=32 body=176bits, frame=208bits (26bytes). Length is payload bytes4; sequence begins0 each new session. CRC is CRC-32/BZIP2, polynomial04C11DB7, initFFFFFFFF, non-reflected, finalxorFFFFFFFF; `123456789` check=FC891918. Payload length must be a positive whole number of bytes. No framing/preamble/encoding/cable link is invented.
+
+Ready/valid transfers occur on the declared sender/receiver clock. Data must remain stable while valid&&!ready. The RTL CRC engine processes one bit/clock and holds the result under backpressure. Receive CRC/session/sequence/length errors are latched; bad and following packets are rejected until a fresh session. This policy is abort-and-resynchronize, with no automatic retransmission. Correct traffic has no authorized silent drops. Sample payload is **defined synthetic RTL input**17*sequence+3, not ADC hardware data. Source timestamp is captured from the actual RTL reference-domain timebase at sample creation. Three modulo-W operations: p*3+7, xor5A5AA5A5, add source timestamp low32; CRC is regenerated after processing.
+
+Explicit mappings:1node111;2nodes001/110;3nodes001/010/100;4nodes000/001/010/100. Slot0 is the source, and active slots form a prefix chain. A smaller membership requires an explicit new map plus START; arbitrary missing nodes are not auto-remapped. Configuration validation enforces nonempty prefix/source0, every stage exactly once and nondecreasing stage ownership. Invalid configuration leaves the active session unchanged and raises configuration_error. The default maps and tested transitions are verified.
+
+## Reset, FIFO and observability
+
+Default FIFO depth16 uses XPM_FWFT; read occupancy may include prefetch storage (observed17), so it is not just physical RAM fill. `tf_async_fifo.full` is true write-domain full, used locally for flow control. Node-top `fifo_full` is an explicitly different **read-domain capacity alarm**(read count>=16); it is diagnostic and delayed, never used as write acceptance. `fifo_level`/`delivered_count` are work-clock-domain outputs; sample_count is reference-domain. Manager CSR statistics are local reference-domain values.
+
+General FIFO mode synchronizes an independent read-flush LEVEL into the write domain, then registers the aggregate request before distribution. Hold flush >=8 slower-endpoint cycles; clocks must eventually run to complete reset. Coordinated mode is used only when both flushes derive from the same `link_hold` owner. It must never be used with unrelated endpoint resets. Startup holds reset63 write clocks, and each endpoint waits local busy plus31 clocks before accepting data. No copied busy synchronizers or multi-clock combinational reset OR are used. FIFO reset memory does not need clearing because pointers/valid state and decoder session validation isolate old data.

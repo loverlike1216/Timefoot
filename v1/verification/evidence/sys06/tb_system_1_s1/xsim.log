@@ -1,0 +1,347 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Nov  1 11:21:32 2026
+# Process ID         : 70260
+# Current directory  : E:/Codex_project/Timefoot/v1/work/sys06
+# Command line       : xsim.exe -log E:/Codex_project/Timefoot/v1/verification/evidence/sys06/tb_system_1_s1/xsim.log -mode tcl -source {xsim.dir/tb_system_1/xsim_script.tcl}
+# Log file           : E:/Codex_project/Timefoot/v1/verification/evidence/sys06/tb_system_1_s1/xsim.log
+# Journal file       : E:/Codex_project/Timefoot/v1/work/sys06\xsim.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 30064 MB
+# Total Virtual      : 46839 MB
+# Available Virtual  : 18440 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_system_1/xsim_script.tcl
+# xsim {tb_system_1} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/sys06/tb_system_1_s1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/sys06/tb_system_1_s1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/sys06/tb_system_1_s1/wave.vcd}
+## log_vcd /tb_system_1/*
+WARNING: [Simtcl 6-216] No such HDL Object /tb_system_1/*
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_1.t.dut.slot[0].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_1/t/dut/slot[0].present.node/core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_192  Scope: tb_system_1.t.dut.slot[0].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_1/t/dut/slot[0].present.node/core/config_bridge/u_bridge/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_292  Scope: tb_system_1.t.dut.slot[0].present.node.core.config_bridge.u_bridge.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_1.t.dut.slot[0].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_353  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_447  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_system_1.t.dut.slot[0].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_system_1/t/dut/slot[0].present.node/core/external_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_353  Scope: tb_system_1.t.dut.slot[0].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_system_1/t/dut/slot[0].present.node/core/external_link/fifo/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_447  Scope: tb_system_1.t.dut.slot[0].present.node.core.external_link.fifo.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+
+Time: 30 ns Started: 10 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/error_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 30000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 30 ns  Iteration: 1  Process: /tb_system_1/t/dut/slot[0].present.node/core/error_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/error_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.error_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 176330 ns Started: 176310 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 176330000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 176330 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 179910 ns Started: 179890 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 179910000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 179910 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 183470 ns Started: 183450 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 183470000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 183470 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 187030 ns Started: 187010 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 187030000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 187030 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 190590 ns Started: 190570 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 190590000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 190590 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 194170 ns Started: 194150 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 194170000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 194170 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 197850 ns Started: 197830 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 197850000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 197850 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 201410 ns Started: 201390 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 201410000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 201410 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 204970 ns Started: 204950 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 204970000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 204970 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 208670 ns Started: 208650 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 208670000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 208670 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 212490 ns Started: 212470 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 212490000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 212490 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 216050 ns Started: 216030 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 216050000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 216050 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 219650 ns Started: 219630 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 219650000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 219650 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 223230 ns Started: 223210 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 223230000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 223230 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 226910 ns Started: 226890 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 226910000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 226910 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 230530 ns Started: 230510 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 230530000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 230530 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 234190 ns Started: 234170 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 234190000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 234190 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 237750 ns Started: 237730 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 237750000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 237750 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+PASS phase=0 nodes=1 session=1 frames=40 stalls=7068 max_fifo=17
+Warning: [Unisim MMCME2_ADV-21] Input CLKIN1 is stopped at time            317854784. Reset is required when input clock returns. Instance tb_system_1.t.dut.slot[0].present.node.clocks.mmcm.mmcm_adv_1 
+
+Time: 499430 ns Started: 499410 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 499430000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 499430 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 502990 ns Started: 502970 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 502990000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 502990 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 506550 ns Started: 506530 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 506550000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 506550 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 510150 ns Started: 510130 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 510150000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 510150 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 513750 ns Started: 513730 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 513750000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 513750 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 517310 ns Started: 517290 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 517310000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 517310 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 520870 ns Started: 520850 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 520870000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 520870 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 524430 ns Started: 524410 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 524430000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 524430 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 528150 ns Started: 528130 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 528150000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 528150 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 531890 ns Started: 531870 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 531890000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 531890 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 535490 ns Started: 535470 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 535490000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 535490 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 539070 ns Started: 539050 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 539070000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 539070 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 542650 ns Started: 542630 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 542650000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 542650 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 546210 ns Started: 546190 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 546210000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 546210 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 549910 ns Started: 549890 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 549910000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 549910 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 553570 ns Started: 553550 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 553570000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 553570 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 557210 ns Started: 557190 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 557210000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 557210 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 561030 ns Started: 561010 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 561030000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 561030 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+PASS phase=1 nodes=1 session=2 frames=40 stalls=14222 max_fifo=17
+
+Time: 819250 ns Started: 819230 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 819250000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 819250 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 823190 ns Started: 823170 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 823190000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 823190 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 826750 ns Started: 826730 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 826750000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 826750 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 830330 ns Started: 830310 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 830330000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 830330 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 833930 ns Started: 833910 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 833930000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 833930 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 837570 ns Started: 837550 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 837570000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 837570 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 841250 ns Started: 841230 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 841250000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 841250 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 844830 ns Started: 844810 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 844830000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 844830 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 848430 ns Started: 848410 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 848430000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 848430 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 852130 ns Started: 852110 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 852130000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 852130 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 855810 ns Started: 855790 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 855810000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 855810 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 859450 ns Started: 859430 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 859450000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 859450 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 863090 ns Started: 863070 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 863090000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 863090 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 866650 ns Started: 866630 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 866650000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 866650 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 870210 ns Started: 870190 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 870210000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 870210 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 873810 ns Started: 873790 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 873810000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 873810 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 877370 ns Started: 877350 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 877370000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 877370 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 880970 ns Started: 880950 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 880970000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 880970 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+PASS phase=2 nodes=1 session=3 frames=40 stalls=21298 max_fifo=17
+
+Time: 1135770 ns Started: 1135750 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1135770000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1135770 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1139330 ns Started: 1139310 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1139330000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1139330 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1142950 ns Started: 1142930 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1142950000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1142950 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1146690 ns Started: 1146670 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1146690000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1146690 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1150270 ns Started: 1150250 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1150270000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1150270 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1153870 ns Started: 1153850 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1153870000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1153870 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1157510 ns Started: 1157490 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1157510000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1157510 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1161090 ns Started: 1161070 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1161090000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1161090 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1164750 ns Started: 1164730 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1164750000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1164750 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1168370 ns Started: 1168350 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1168370000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1168370 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1171930 ns Started: 1171910 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1171930000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1171930 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1175530 ns Started: 1175510 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1175530000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1175530 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1179110 ns Started: 1179090 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1179110000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1179110 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1182970 ns Started: 1182950 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1182970000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1182970 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1186530 ns Started: 1186510 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1186530000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1186530 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1190210 ns Started: 1190190 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1190210000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1190210 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1193770 ns Started: 1193750 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1193770000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1193770 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+
+Time: 1197430 ns Started: 1197410 ns Scope: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:267
+Error: [XPM_CDC_SINGLE S-1] Input data at 1197430000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 1197430 ns  Iteration: 4  Process: /tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit//tb_system_1/t/dut/slot[0].present.node/core/source_full_status/u_bit  Scope: tb_system_1.t.dut.slot[0].present.node.core.source_full_status.u_bit  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 270
+PASS phase=3 nodes=1 session=4 frames=40 stalls=28384 max_fifo=17
+TEST_PASS tb_system nodes=1 seed=1 outputs=160 recoveries=3 max_fifo=17
+$finish called at time : 1277380 ns : File "E:/Codex_project/Timefoot/v1/tb/tb_system.sv" Line 107
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 229.555 ; gain = 0.000
+## close_vcd
+## quit
+INFO: xsimkernel Simulation Memory Usage: 15396 KB (Peak: 15396 KB), Simulation CPU Usage: 10374 ms
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 11:21:44 2026...

@@ -1,0 +1,25 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  1 10:46:51 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_scheduler/xsim_script.tcl
+# xsim {tb_scheduler} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/unit03/tb_scheduler_s1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/unit03/tb_scheduler_s1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/unit03/tb_scheduler_s1/wave.vcd}
+## log_vcd /tb_scheduler/*
+## run all
+PASS scheduler_queue_cancel_wrap_exact_timestamp
+PASS session_late_duplicate_and_abort
+PASS unqualified_capture_window_rejected
+TEST_PASS tb_scheduler
+$finish called at time : 2321 ns : File "E:/Codex_project/Timefoot/v1/tb/tb_scheduler.sv" Line 47
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 10:46:53 2026...

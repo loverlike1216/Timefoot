@@ -1,0 +1,17 @@
+PASS tb_sync_1_seed1
+PASS tb_sync_1_seed17
+PASS tb_sync_1_seed2026
+PASS tb_sync_2_seed1
+PASS tb_sync_2_seed17
+PASS tb_sync_2_seed2026
+PASS tb_sync_3_seed1
+PASS tb_sync_3_seed17
+PASS tb_sync_3_seed2026
+PASS tb_sync_4_seed1
+PASS tb_sync_4_seed17
+PASS tb_sync_4_seed2026
+PASS tb_pipeline_seed1
+PASS tb_pipeline_seed17
+PASS tb_pipeline_seed2026
+PASS tb_mmcm_seed1
+TOTAL_PASS 16

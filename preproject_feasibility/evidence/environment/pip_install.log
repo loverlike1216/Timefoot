@@ -1,0 +1,8 @@
+Collecting pymupdf==1.26.7
+  Downloading pymupdf-1.26.7-cp310-abi3-win_amd64.whl (18.4 MB)
+     ---------------------------------------- 18.4/18.4 MB 3.7 MB/s eta 0:00:00
+Installing collected packages: pymupdf
+Successfully installed pymupdf-1.26.7
+
+[notice] A new release of pip is available: 23.0.1 -> 26.2.2
+[notice] To update, run: E:\Codex_project\Timefoot\preproject_feasibility\.work\venv\Scripts\python.exe -m pip install --upgrade pip

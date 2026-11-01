@@ -1,0 +1,34 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 10:47:02 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_clock_interaction -file E:/Codex_project/Timefoot/v1/verification/evidence/impl02/xc7z010clg400-1/clock_interaction.rpt
+| Design       : tf_node_top
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                            WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock                  
+From Clock    To Clock      Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints                  
+------------  ------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  ---------------------------  
+monitor50     monitor50     rise - rise    13.70     0.00            0           32            20.00  Clean                Partial False Path           
+monitor50     reference50                                            0            6                   Ignored              False Path                   
+monitor50     wraw                                                   0            3                   Ignored              False Path                   
+reference50   monitor50                                              0            1                   Ignored              False Path                   
+reference50   reference50   rise - rise     5.29     0.00            0         6103            20.00  Clean                Partial False Path           
+reference50   rx100                                                  0            3                   Ignored              False Path                   
+reference50   wraw          rise - rise    -1.33    -1.33            1           71             6.67  Clean                Partial False Path           
+rx100         rx100         rise - rise     1.84     0.00            0          381            10.00  Clean                Timed                        
+rx100         wraw          rise - rise    -4.19    -4.19            1           12             3.33  No Common Clock      Partial False Path (unsafe)  
+wraw          reference50   rise - rise   998.54     0.00            0           30          1000.00  Ignored              Max Delay Datapath Only      
+wraw          rx100         rise - rise   998.59     0.00            0           14          1000.00  Ignored              Max Delay Datapath Only      
+wraw          wraw          rise - rise    -1.44  -143.25          304         6799             6.67  Clean                Partial False Path           
+
+

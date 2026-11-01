@@ -1,0 +1,12 @@
+[
+  {
+    "case": "tb_sdr_system_4x8_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "sdr.csv": "e0dec3f73a3447516898c6fa999e84b0f6bcff832ab90a4c4e734c90e6c539f1",
+      "sdr_events.csv": "77b29411eeb58893c3c6429eef51fa2185a88959f900153e2334073cee8349c3",
+      "sdr_source.csv": "320ebda996ab3262d21fc7ef8895dae6d360f6187872fcce07e38ca07cc6adda"
+    }
+  }
+]

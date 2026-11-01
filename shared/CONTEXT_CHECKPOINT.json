@@ -1,0 +1,87 @@
+{
+  "checkpoint_id": "TF-CP-20261101-PREPCB-FINAL",
+  "project_id": "TIMEFOOT",
+  "project_name": "Timefoot",
+  "repository": "https://github.com/loverlike1216/Timefoot.git",
+  "workspace": "E:/Codex_project/Timefoot",
+  "branch": "codex/v1-rtl-core",
+  "base_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+  "head_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
+  "head_commit_context": "Observed pushed evidence HEAD before this final documentation/sync record; validated source remains45aa523",
+  "active_version": "v1",
+  "version_status": "ACTIVE",
+  "current_stage": "INTERFACE_TIMING_CLOSURE_AND_PRE_PCB_READINESS",
+  "created_at": "2026-11-01T07:41:46.060265+00:00",
+  "checkpoint_reason": "Completed major digital pre-PCB stage and clean replay",
+  "status": "VALID_WITH_LIMITATIONS",
+  "completed": [
+    "Full frame-credit adapter and serial coherent management",
+    "XPM order root-cause and corrected constraints",
+    "4 complete physical routed profiles positive STA/CDC/DRC classified",
+    "Functional/golden/repeat/phase and clean remote replay",
+    "14 docs and single-file independent review package",
+    "3723 historical file hashes unchanged"
+  ],
+  "next_actions": [
+    "Actual independent GPT Review",
+    "Resolve P-002 phase/board/SI qualification before separately authorized hardware stage"
+  ],
+  "active_decisions": [
+    "D-TF-005",
+    "D-TF-006",
+    "D-TF-007"
+  ],
+  "blockers": [],
+  "critical_issues": [],
+  "hardware_gates": [
+    "HW-PHASE-001",
+    "HW-REV-001",
+    "HW-SI-001",
+    "BOM freeze"
+  ],
+  "latest_validation": [
+    "v1/verification/evidence/prepcb_analysis/stage_audit.json",
+    "v1/verification/evidence/prepcb_clean/result.json"
+  ],
+  "known_limitations": [
+    "Dedicated RDC/second RTL simulator not run",
+    "No board/electrical/24h hardware evidence",
+    "PS7 startup not integrated",
+    "Vendor warnings and trace-navigation limits documented",
+    "Reference-stopped CSR waits for reference recovery; host reads async fault_out and enforces timeout"
+  ],
+  "do_not_change": [
+    "preproject_feasibility bytes/history",
+    "v1 identity and B architecture",
+    "Acceptance/physical evidence boundary",
+    "No v2/Merge/CAD/procurement/deploy"
+  ],
+  "invariants": [
+    "Marker qualified only with valid clock/phase/session",
+    "No old-session execution after recovery",
+    "CRC/session/sequence and explicit flow control",
+    "Generated logs stay in PROJECT_ROOT"
+  ],
+  "open_ai_problems": [
+    "P-20261101-002"
+  ],
+  "resume_from": "Read guide/shared then GPT_CHAT_FINAL_REVIEW and stage_audit; no source optimization loop unless reviewer finds new issue",
+  "evidence_refs": [
+    "v1/verification/EVIDENCE_INDEX.md",
+    "v1/docs/pre_pcb_readiness/GPT_CHAT_FINAL_REVIEW.md"
+  ],
+  "independent_review": "PENDING",
+  "stage_readiness": "PCB_PRE_DESIGN_READY_WITH_LIMITATIONS",
+  "architecture_ref": "v1/docs/pre_pcb_readiness/SYSTEM_ARCHITECTURE.md",
+  "current_plan_position": "Digital stage done; independent review and hardware qualification conditions next",
+  "chat_source_name": "USER_PROVIDED_PRE_PCB_INSTRUCTION",
+  "provenance": [
+    "actual source commit45aa523",
+    "stage_audit.json",
+    "prepcb_clean/result.json",
+    "actual user attachment/Decision",
+    "raw routed reports and XSIM logs"
+  ],
+  "remote_delivery_verified_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
+  "final_sync_time": "2026-11-01T07:51:19.289890+00:00"
+}

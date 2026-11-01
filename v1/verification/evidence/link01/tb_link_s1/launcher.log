@@ -1,0 +1,72 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  1 14:28:42 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_link/xsim_script.tcl
+# xsim {tb_link} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/link01/tb_link_s1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/link01/tb_link_s1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/link01/tb_link_s1/wave.vcd}
+## log_vcd /tb_link/*
+WARNING: [Simtcl 6-216] No such HDL Object /tb_link/*
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_link.t.tx.frames.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_link/t/tx/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_70  Scope: tb_link.t.tx.frames.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_link/t/tx/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_170  Scope: tb_link.t.tx.frames.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+
+Time: 3333 ps Started: 3333 ps Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:449
+Error: [XPM_CDC_GRAY S-2] Input data may be lost and may not be correctly synchronized.  src_in_bin at 3333 is not incrementing or decrementing by one.  This violates the usage guidance for this module.  Please refer to the XPM_CDC documentation in the libraries guide. NOTE: If this assertion occurred after a system reset, then it can be safely ignored.
+Time: 3333 ps  Iteration: 2  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 453
+
+Time: 3170 ns Started: 3150 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3170000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3170 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3190 ns Started: 3170 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3190000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3190 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3210 ns Started: 3190 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3210000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3210 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3230 ns Started: 3210 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3230000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3230 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3250 ns Started: 3230 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3250000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3250 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3270 ns Started: 3250 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3270000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3270 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3290 ns Started: 3270 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3290000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3290 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3310 ns Started: 3290 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3310000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3310 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3330 ns Started: 3310 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3330000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3330 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+
+Time: 3350 ns Started: 3330 ns Scope: /tb_link/t/tx/ledger File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line:440
+Error: [XPM_CDC_GRAY S-1] Input data at 3350000 is not stable long enough to be sampled twice by the destination clock. Data in source domain may not transfer to destination clock domain.
+Time: 3350 ns  Iteration: 0  Process: /tb_link/t/tx/ledger//tb_link/t/tx/ledger  Scope: tb_link.t.tx.ledger  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv Line: 443
+Fatal: LINK_TX_STALL_STABILITY
+Time: 60520 ns  Iteration: 0  Process: /tb_link/t/Always22_211  Scope: tb_link.t  File: E:/Codex_project/Timefoot/v1/tb/tb_link.sv Line: 24
+$finish called at time : 60520 ns
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 14:28:45 2026...

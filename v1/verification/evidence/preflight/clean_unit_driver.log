@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\v1\work\clean_checkout\v1\scripts\run_sim.py", line 43, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\v1\work\clean_checkout\v1\scripts\run_sim.py", line 16, in main
+    work.mkdir(exist_ok=False);out.mkdir(exist_ok=False)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'E:\\Codex_project\\Timefoot\\v1\\work\\clean_checkout\\v1\\work\\clean_unit'

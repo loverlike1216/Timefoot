@@ -1,0 +1,1297 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 14:40:57 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing -delay_type max -max_paths 20 -file E:/Codex_project/Timefoot/v1/verification/evidence/adapter01/xc7z010clg400-1/setup_paths.rpt
+| Design       : tf_physical_node_top
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -3.463ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.759ns  (logic 1.719ns (45.741%)  route 2.040ns (54.259%))
+  Logic Levels:           3  (IBUF=1 LUT4=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.226ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.876ns = ( 24.876 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 r  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.481    27.369    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/rd_en
+    SLICE_X41Y67         LUT4 (Prop_lut4_I2_O)        0.124    27.493 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_sdpram.xpm_memory_base_inst_i_2_replica/O
+                         net (fo=1, routed)           0.644    28.137    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/E[0]_repN_alias
+    RAMB36_X2Y12         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.518    24.876    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clkb
+    RAMB36_X2Y12         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/CLKARDCLK
+                         clock pessimism              0.276    25.152    
+                         clock uncertainty           -0.035    25.117    
+    RAMB36_X2Y12         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    24.674    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1
+  -------------------------------------------------------------------
+                         required time                         24.674    
+                         arrival time                         -28.137    
+  -------------------------------------------------------------------
+                         slack                                 -3.463    
+
+Slack (VIOLATED) :        -3.397ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/pads_reg[4]/CE
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.654ns  (logic 1.595ns (43.657%)  route 2.059ns (56.343%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.204ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.898ns = ( 24.898 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.939    26.789    fl/tx_ready_IBUF
+    SLICE_X42Y67         LUT4 (Prop_lut4_I0_O)        0.124    26.913 r  fl/pads[5]_i_1/O
+                         net (fo=6, routed)           1.120    28.032    transmitter/E[0]
+    OLOGIC_X0Y88         FDRE                                         r  transmitter/pads_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.540    24.898    transmitter/ref_clk
+    OLOGIC_X0Y88         FDRE                                         r  transmitter/pads_reg[4]/C
+                         clock pessimism              0.276    25.174    
+                         clock uncertainty           -0.035    25.139    
+    OLOGIC_X0Y88         FDRE (Setup_fdre_C_CE)      -0.504    24.635    transmitter/pads_reg[4]
+  -------------------------------------------------------------------
+                         required time                         24.635    
+                         arrival time                         -28.032    
+  -------------------------------------------------------------------
+                         slack                                 -3.397    
+
+Slack (VIOLATED) :        -3.382ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/REGCEAREGCE
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.761ns  (logic 1.719ns (45.716%)  route 2.042ns (54.284%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.226ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.876ns = ( 24.876 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 r  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.323    27.211    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_en
+    SLICE_X41Y67         LUT3 (Prop_lut3_I2_O)        0.124    27.335 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst_i_3/O
+                         net (fo=3, routed)           0.804    28.139    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/regceb
+    RAMB36_X2Y12         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/REGCEAREGCE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.518    24.876    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clkb
+    RAMB36_X2Y12         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/CLKARDCLK
+                         clock pessimism              0.276    25.152    
+                         clock uncertainty           -0.035    25.117    
+    RAMB36_X2Y12         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_REGCEAREGCE)
+                                                     -0.360    24.757    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1
+  -------------------------------------------------------------------
+                         required time                         24.757    
+                         arrival time                         -28.139    
+  -------------------------------------------------------------------
+                         slack                                 -3.382    
+
+Slack (VIOLATED) :        -3.342ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.626ns  (logic 1.719ns (47.414%)  route 1.907ns (52.586%))
+  Logic Levels:           3  (IBUF=1 LUT4=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.238ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.864ns = ( 24.864 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 r  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.358    27.246    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/rd_en
+    SLICE_X40Y68         LUT4 (Prop_lut4_I2_O)        0.124    27.370 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_sdpram.xpm_memory_base_inst_i_2_replica_2/O
+                         net (fo=1, routed)           0.634    28.004    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/E[0]_repN_2_alias
+    RAMB36_X2Y14         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.506    24.864    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clkb
+    RAMB36_X2Y14         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/CLKARDCLK
+                         clock pessimism              0.276    25.140    
+                         clock uncertainty           -0.035    25.105    
+    RAMB36_X2Y14         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    24.662    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2
+  -------------------------------------------------------------------
+                         required time                         24.662    
+                         arrival time                         -28.004    
+  -------------------------------------------------------------------
+                         slack                                 -3.342    
+
+Slack (VIOLATED) :        -3.266ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/REGCEAREGCE
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.633ns  (logic 1.719ns (47.323%)  route 1.914ns (52.677%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.238ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.864ns = ( 24.864 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 r  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.323    27.211    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_en
+    SLICE_X41Y67         LUT3 (Prop_lut3_I2_O)        0.124    27.335 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst_i_3/O
+                         net (fo=3, routed)           0.676    28.011    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/regceb
+    RAMB36_X2Y14         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/REGCEAREGCE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.506    24.864    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clkb
+    RAMB36_X2Y14         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/CLKARDCLK
+                         clock pessimism              0.276    25.140    
+                         clock uncertainty           -0.035    25.105    
+    RAMB36_X2Y14         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_REGCEAREGCE)
+                                                     -0.360    24.745    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2
+  -------------------------------------------------------------------
+                         required time                         24.745    
+                         arrival time                         -28.011    
+  -------------------------------------------------------------------
+                         slack                                 -3.266    
+
+Slack (VIOLATED) :        -3.206ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/REGCEAREGCE
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.579ns  (logic 1.719ns (48.045%)  route 1.859ns (51.955%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.232ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.870ns = ( 24.870 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 r  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.323    27.211    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_en
+    SLICE_X41Y67         LUT3 (Prop_lut3_I2_O)        0.124    27.335 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst_i_3/O
+                         net (fo=3, routed)           0.621    27.956    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/regceb
+    RAMB36_X2Y13         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/REGCEAREGCE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.512    24.870    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clkb
+    RAMB36_X2Y13         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/CLKARDCLK
+                         clock pessimism              0.276    25.146    
+                         clock uncertainty           -0.035    25.111    
+    RAMB36_X2Y13         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_REGCEAREGCE)
+                                                     -0.360    24.751    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0
+  -------------------------------------------------------------------
+                         required time                         24.751    
+                         arrival time                         -27.956    
+  -------------------------------------------------------------------
+                         slack                                 -3.206    
+
+Slack (VIOLATED) :        -3.152ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.442ns  (logic 1.719ns (49.950%)  route 1.723ns (50.049%))
+  Logic Levels:           3  (IBUF=1 LUT4=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.232ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.870ns = ( 24.870 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 r  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.362    27.251    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/rd_en
+    SLICE_X39Y67         LUT4 (Prop_lut4_I2_O)        0.124    27.375 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_sdpram.xpm_memory_base_inst_i_2_replica_3/O
+                         net (fo=1, routed)           0.445    27.820    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/E[0]_repN_3_alias
+    RAMB36_X2Y13         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.512    24.870    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clkb
+    RAMB36_X2Y13         RAMB36E1                                     r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/CLKARDCLK
+                         clock pessimism              0.276    25.146    
+                         clock uncertainty           -0.035    25.111    
+    RAMB36_X2Y13         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    24.668    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0
+  -------------------------------------------------------------------
+                         required time                         24.668    
+                         arrival time                         -27.820    
+  -------------------------------------------------------------------
+                         slack                                 -3.152    
+
+Slack (VIOLATED) :        -3.081ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.892ns  (logic 1.843ns (47.358%)  route 2.049ns (52.642%))
+  Logic Levels:           4  (IBUF=1 LUT5=1 LUT6=2)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.184ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.918ns = ( 24.918 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 r  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.512    27.401    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/rd_en
+    SLICE_X42Y66         LUT6 (Prop_lut6_I2_O)        0.124    27.525 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i[1]_i_2/O
+                         net (fo=1, routed)           0.622    28.146    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i[1]_i_2_n_0
+    SLICE_X37Y60         LUT5 (Prop_lut5_I0_O)        0.124    28.270 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i[1]_i_1/O
+                         net (fo=1, routed)           0.000    28.270    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i[1]_i_1_n_0
+    SLICE_X37Y60         FDRE                                         r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.560    24.918    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/rd_clk
+    SLICE_X37Y60         FDRE                                         r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i_reg[1]/C
+                         clock pessimism              0.276    25.194    
+                         clock uncertainty           -0.035    25.159    
+    SLICE_X37Y60         FDRE (Setup_fdre_C_D)        0.031    25.190    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i_reg[1]
+  -------------------------------------------------------------------
+                         required time                         25.190    
+                         arrival time                         -28.270    
+  -------------------------------------------------------------------
+                         slack                                 -3.081    
+
+Slack (VIOLATED) :        -3.015ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/pads_reg[5]/CE
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.272ns  (logic 1.595ns (48.755%)  route 1.677ns (51.245%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.204ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.898ns = ( 24.898 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.939    26.789    fl/tx_ready_IBUF
+    SLICE_X42Y67         LUT4 (Prop_lut4_I0_O)        0.124    26.913 r  fl/pads[5]_i_1/O
+                         net (fo=6, routed)           0.737    27.650    transmitter/E[0]
+    OLOGIC_X0Y61         FDRE                                         r  transmitter/pads_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.540    24.898    transmitter/ref_clk
+    OLOGIC_X0Y61         FDRE                                         r  transmitter/pads_reg[5]/C
+                         clock pessimism              0.276    25.174    
+                         clock uncertainty           -0.035    25.139    
+    OLOGIC_X0Y61         FDRE (Setup_fdre_C_CE)      -0.504    24.635    transmitter/pads_reg[5]
+  -------------------------------------------------------------------
+                         required time                         24.635    
+                         arrival time                         -27.650    
+  -------------------------------------------------------------------
+                         slack                                 -3.015    
+
+Slack (VIOLATED) :        -3.007ns  (required time - arrival time)
+  Source:                 receiver/pin_ready_reg/C
+                            (rising edge-triggered cell FDRE clocked by rx50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            rx_ready
+                            (output port clocked by rx50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             rx50
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (rx50 fall@10.000ns - rx50 rise@0.000ns)
+  Data Path Delay:        5.585ns  (logic 4.034ns (72.242%)  route 1.550ns (27.758%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           2.000ns
+  Clock Path Skew:        -5.387ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 10.000 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.387ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock rx50 rise edge)       0.000     0.000 r  
+    J18                                               0.000     0.000 r  rx_clock (IN)
+                         net (fo=0)                   0.000     0.000    rx_clock
+    J18                  IBUF (Prop_ibuf_I_O)         1.479     1.479 r  rx_clock_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.555    rx_clock_IBUF
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     3.656 r  bx/O
+                         net (fo=926, routed)         1.731     5.387    receiver/CLK
+    SLICE_X42Y67         FDRE                                         r  receiver/pin_ready_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.518     5.905 r  receiver/pin_ready_reg/Q
+                         net (fo=4, routed)           1.550     7.455    rx_ready_OBUF
+    G18                  OBUF (Prop_obuf_I_O)         3.516    10.971 r  rx_ready_OBUF_inst/O
+                         net (fo=0)                   0.000    10.971    rx_ready
+    G18                                                               r  rx_ready (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock rx50 fall edge)      10.000    10.000 f  
+                         clock pessimism              0.000    10.000    
+                         clock uncertainty           -0.035     9.965    
+                         output delay                -2.000     7.965    
+  -------------------------------------------------------------------
+                         required time                          7.965    
+                         arrival time                         -10.971    
+  -------------------------------------------------------------------
+                         slack                                 -3.007    
+
+Slack (VIOLATED) :        -2.997ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/pads_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.246ns  (logic 1.595ns (49.144%)  route 1.651ns (50.856%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.212ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.890ns = ( 24.890 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.939    26.789    fl/tx_ready_IBUF
+    SLICE_X42Y67         LUT4 (Prop_lut4_I0_O)        0.124    26.913 r  fl/pads[5]_i_1/O
+                         net (fo=6, routed)           0.712    27.624    transmitter/E[0]
+    OLOGIC_X0Y70         FDRE                                         r  transmitter/pads_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.532    24.890    transmitter/ref_clk
+    OLOGIC_X0Y70         FDRE                                         r  transmitter/pads_reg[1]/C
+                         clock pessimism              0.276    25.166    
+                         clock uncertainty           -0.035    25.131    
+    OLOGIC_X0Y70         FDRE (Setup_fdre_C_CE)      -0.504    24.627    transmitter/pads_reg[1]
+  -------------------------------------------------------------------
+                         required time                         24.627    
+                         arrival time                         -27.624    
+  -------------------------------------------------------------------
+                         slack                                 -2.997    
+
+Slack (VIOLATED) :        -2.926ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.733ns  (logic 1.843ns (49.381%)  route 1.890ns (50.619%))
+  Logic Levels:           4  (IBUF=1 LUT6=3)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.187ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 24.915 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 f  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 f  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 f  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.664    27.552    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/rd_en
+    SLICE_X39Y64         LUT6 (Prop_lut6_I2_O)        0.124    27.676 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe[3]_i_2/O
+                         net (fo=2, routed)           0.311    27.987    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe[3]_i_2_n_0
+    SLICE_X37Y63         LUT6 (Prop_lut6_I2_O)        0.124    28.111 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe[3]_i_1/O
+                         net (fo=1, routed)           0.000    28.111    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/diff_pntr_pe[3]
+    SLICE_X37Y63         FDRE                                         r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.557    24.915    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_clk
+    SLICE_X37Y63         FDRE                                         r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[3]/C
+                         clock pessimism              0.276    25.191    
+                         clock uncertainty           -0.035    25.156    
+    SLICE_X37Y63         FDRE (Setup_fdre_C_D)        0.029    25.185    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[3]
+  -------------------------------------------------------------------
+                         required time                         25.185    
+                         arrival time                         -28.111    
+  -------------------------------------------------------------------
+                         slack                                 -2.926    
+
+Slack (VIOLATED) :        -2.921ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.730ns  (logic 1.843ns (49.421%)  route 1.887ns (50.579%))
+  Logic Levels:           4  (IBUF=1 LUT5=1 LUT6=2)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.187ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 24.915 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 f  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 f  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 f  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.664    27.552    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/rd_en
+    SLICE_X39Y64         LUT6 (Prop_lut6_I2_O)        0.124    27.676 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe[3]_i_2/O
+                         net (fo=2, routed)           0.308    27.984    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe[3]_i_2_n_0
+    SLICE_X37Y63         LUT5 (Prop_lut5_I0_O)        0.124    28.108 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe[2]_i_1/O
+                         net (fo=1, routed)           0.000    28.108    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/diff_pntr_pe[2]
+    SLICE_X37Y63         FDRE                                         r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.557    24.915    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_clk
+    SLICE_X37Y63         FDRE                                         r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[2]/C
+                         clock pessimism              0.276    25.191    
+                         clock uncertainty           -0.035    25.156    
+    SLICE_X37Y63         FDRE (Setup_fdre_C_D)        0.031    25.187    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[2]
+  -------------------------------------------------------------------
+                         required time                         25.187    
+                         arrival time                         -28.108    
+  -------------------------------------------------------------------
+                         slack                                 -2.921    
+
+Slack (VIOLATED) :        -2.909ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/pads_reg[3]/CE
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.163ns  (logic 1.595ns (50.440%)  route 1.568ns (49.560%))
+  Logic Levels:           2  (IBUF=1 LUT4=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.207ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.895ns = ( 24.895 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.939    26.789    fl/tx_ready_IBUF
+    SLICE_X42Y67         LUT4 (Prop_lut4_I0_O)        0.124    26.913 r  fl/pads[5]_i_1/O
+                         net (fo=6, routed)           0.628    27.541    transmitter/E[0]
+    OLOGIC_X0Y64         FDRE                                         r  transmitter/pads_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.537    24.895    transmitter/ref_clk
+    OLOGIC_X0Y64         FDRE                                         r  transmitter/pads_reg[3]/C
+                         clock pessimism              0.276    25.171    
+                         clock uncertainty           -0.035    25.136    
+    OLOGIC_X0Y64         FDRE (Setup_fdre_C_CE)      -0.504    24.632    transmitter/pads_reg[3]
+  -------------------------------------------------------------------
+                         required time                         24.632    
+                         arrival time                         -27.541    
+  -------------------------------------------------------------------
+                         slack                                 -2.909    
+
+Slack (VIOLATED) :        -2.903ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.ram_empty_i_reg/D
+                            (rising edge-triggered cell FDSE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.708ns  (logic 1.843ns (49.718%)  route 1.864ns (50.282%))
+  Logic Levels:           4  (IBUF=1 LUT4=1 LUT6=2)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.189ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.913ns = ( 24.913 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           0.915    26.764    transmitter/frames/tx_ready_IBUF
+    SLICE_X41Y67         LUT6 (Prop_lut6_I4_O)        0.124    26.888 r  transmitter/frames/u_fifo_i_2__3_comp/O
+                         net (fo=17, routed)          0.485    27.373    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/rd_en
+    SLICE_X41Y67         LUT4 (Prop_lut4_I2_O)        0.124    27.497 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/gen_sdpram.xpm_memory_base_inst_i_2_replica_1/O
+                         net (fo=7, routed)           0.464    27.961    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wpr_gray_reg/E[0]_repN_1_alias
+    SLICE_X39Y66         LUT6 (Prop_lut6_I0_O)        0.124    28.085 r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wpr_gray_reg/gen_pf_ic_rc.ram_empty_i_i_1/O
+                         net (fo=1, routed)           0.000    28.085    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/ram_empty_i0
+    SLICE_X39Y66         FDSE                                         r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.ram_empty_i_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.555    24.913    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rd_clk
+    SLICE_X39Y66         FDSE                                         r  transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.ram_empty_i_reg/C
+                         clock pessimism              0.276    25.189    
+                         clock uncertainty           -0.035    25.154    
+    SLICE_X39Y66         FDSE (Setup_fdse_C_D)        0.029    25.183    transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.ram_empty_i_reg
+  -------------------------------------------------------------------
+                         required time                         25.183    
+                         arrival time                         -28.085    
+  -------------------------------------------------------------------
+                         slack                                 -2.903    
+
+Slack (VIOLATED) :        -2.895ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/beat_reg[1]/R
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.149ns  (logic 1.595ns (50.656%)  route 1.554ns (49.344%))
+  Logic Levels:           2  (IBUF=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.186ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 24.916 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           1.206    27.055    transmitter/frames/tx_ready_IBUF
+    SLICE_X42Y64         LUT6 (Prop_lut6_I4_O)        0.124    27.179 r  transmitter/frames/beat[5]_i_1/O
+                         net (fo=5, routed)           0.348    27.527    transmitter/frames_n_10
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.558    24.916    transmitter/ref_clk
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[1]/C
+                         clock pessimism              0.276    25.192    
+                         clock uncertainty           -0.035    25.157    
+    SLICE_X42Y63         FDRE (Setup_fdre_C_R)       -0.524    24.633    transmitter/beat_reg[1]
+  -------------------------------------------------------------------
+                         required time                         24.633    
+                         arrival time                         -27.527    
+  -------------------------------------------------------------------
+                         slack                                 -2.895    
+
+Slack (VIOLATED) :        -2.895ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/beat_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.149ns  (logic 1.595ns (50.656%)  route 1.554ns (49.344%))
+  Logic Levels:           2  (IBUF=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.186ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 24.916 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           1.206    27.055    transmitter/frames/tx_ready_IBUF
+    SLICE_X42Y64         LUT6 (Prop_lut6_I4_O)        0.124    27.179 r  transmitter/frames/beat[5]_i_1/O
+                         net (fo=5, routed)           0.348    27.527    transmitter/frames_n_10
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.558    24.916    transmitter/ref_clk
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[2]/C
+                         clock pessimism              0.276    25.192    
+                         clock uncertainty           -0.035    25.157    
+    SLICE_X42Y63         FDRE (Setup_fdre_C_R)       -0.524    24.633    transmitter/beat_reg[2]
+  -------------------------------------------------------------------
+                         required time                         24.633    
+                         arrival time                         -27.527    
+  -------------------------------------------------------------------
+                         slack                                 -2.895    
+
+Slack (VIOLATED) :        -2.895ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/beat_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.149ns  (logic 1.595ns (50.656%)  route 1.554ns (49.344%))
+  Logic Levels:           2  (IBUF=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.186ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 24.916 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           1.206    27.055    transmitter/frames/tx_ready_IBUF
+    SLICE_X42Y64         LUT6 (Prop_lut6_I4_O)        0.124    27.179 r  transmitter/frames/beat[5]_i_1/O
+                         net (fo=5, routed)           0.348    27.527    transmitter/frames_n_10
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.558    24.916    transmitter/ref_clk
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[3]/C
+                         clock pessimism              0.276    25.192    
+                         clock uncertainty           -0.035    25.157    
+    SLICE_X42Y63         FDRE (Setup_fdre_C_R)       -0.524    24.633    transmitter/beat_reg[3]
+  -------------------------------------------------------------------
+                         required time                         24.633    
+                         arrival time                         -27.527    
+  -------------------------------------------------------------------
+                         slack                                 -2.895    
+
+Slack (VIOLATED) :        -2.895ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/beat_reg[4]/R
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.149ns  (logic 1.595ns (50.656%)  route 1.554ns (49.344%))
+  Logic Levels:           2  (IBUF=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.186ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 24.916 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           1.206    27.055    transmitter/frames/tx_ready_IBUF
+    SLICE_X42Y64         LUT6 (Prop_lut6_I4_O)        0.124    27.179 r  transmitter/frames/beat[5]_i_1/O
+                         net (fo=5, routed)           0.348    27.527    transmitter/frames_n_10
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.558    24.916    transmitter/ref_clk
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[4]/C
+                         clock pessimism              0.276    25.192    
+                         clock uncertainty           -0.035    25.157    
+    SLICE_X42Y63         FDRE (Setup_fdre_C_R)       -0.524    24.633    transmitter/beat_reg[4]
+  -------------------------------------------------------------------
+                         required time                         24.633    
+                         arrival time                         -27.527    
+  -------------------------------------------------------------------
+                         slack                                 -2.895    
+
+Slack (VIOLATED) :        -2.895ns  (required time - arrival time)
+  Source:                 tx_ready
+                            (input port clocked by tx50  {rise@10.000ns fall@20.000ns period=20.000ns})
+  Destination:            transmitter/beat_reg[5]/R
+                            (rising edge-triggered cell FDRE clocked by reference50  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             reference50
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (reference50 rise@20.000ns - tx50 rise@10.000ns)
+  Data Path Delay:        3.149ns  (logic 1.595ns (50.656%)  route 1.554ns (49.344%))
+  Logic Levels:           2  (IBUF=1 LUT6=1)
+  Input Delay:            5.000ns
+  Clock Path Skew:        -4.186ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 24.916 - 20.000 ) 
+    Source Clock Delay      (SCD):    9.378ns = ( 19.378 - 10.000 ) 
+    Clock Pessimism Removal (CPR):    0.276ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock tx50 rise edge)      10.000    10.000 r  
+    H16                                               0.000    10.000 f  ref_in (IN)
+                         net (fo=0)                   0.000    10.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.457    11.457 f  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           2.076    13.533    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    13.634 f  br/O
+                         net (fo=3623, routed)        1.759    15.394    transmitter/clkout/ref_clk
+    OLOGIC_X0Y87         ODDR (Prop_oddr_C_Q)         0.472    15.866 r  transmitter/clkout/forward_oddr/Q
+                         net (fo=1, routed)           0.001    15.867    tx_clock_OBUF
+    F17                  OBUF (Prop_obuf_I_O)         3.511    19.378 r  tx_clock_OBUF_inst/O
+                         net (fo=0)                   0.000    19.378    tx_clock
+  -------------------------------------------------------------------    -------------------
+                         input delay                  5.000    24.378    
+    G17                                               0.000    24.378 r  tx_ready (IN)
+                         net (fo=0)                   0.000    24.378    tx_ready
+    G17                  IBUF (Prop_ibuf_I_O)         1.471    25.849 r  tx_ready_IBUF_inst/O
+                         net (fo=8, routed)           1.206    27.055    transmitter/frames/tx_ready_IBUF
+    SLICE_X42Y64         LUT6 (Prop_lut6_I4_O)        0.124    27.179 r  transmitter/frames/beat[5]_i_1/O
+                         net (fo=5, routed)           0.348    27.527    transmitter/frames_n_10
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock reference50 rise edge)
+                                                     20.000    20.000 r  
+    H16                                               0.000    20.000 r  ref_in (IN)
+                         net (fo=0)                   0.000    20.000    ref_in
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  ref_in_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    ref_in_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  br/O
+                         net (fo=3623, routed)        1.558    24.916    transmitter/ref_clk
+    SLICE_X42Y63         FDRE                                         r  transmitter/beat_reg[5]/C
+                         clock pessimism              0.276    25.192    
+                         clock uncertainty           -0.035    25.157    
+    SLICE_X42Y63         FDRE (Setup_fdre_C_R)       -0.524    24.633    transmitter/beat_reg[5]
+  -------------------------------------------------------------------
+                         required time                         24.633    
+                         arrival time                         -27.527    
+  -------------------------------------------------------------------
+                         slack                                 -2.895    
+
+
+
+

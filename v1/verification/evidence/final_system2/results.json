@@ -1,0 +1,122 @@
+[
+  {
+    "case": "tb_system_1_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "system.csv": "b88738f02b3a8a4d81cc50e881198499e51d7257c2427a106e76e5fedb065331",
+      "system_events.csv": "3377bde93de57ff8d4977f949434635b8d955f90993a7710e15140c4b89161c6",
+      "system_source.csv": "dbd470ae73c26cb728aa9aea21f1744adc9d5189fd0e4b899f6e81fe0f36c6e5"
+    }
+  },
+  {
+    "case": "tb_system_1_s17",
+    "status": "PASS",
+    "seed": 17,
+    "trace_sha256": {
+      "system.csv": "907b6c0dc7dcdfc7cfbaacb92d39f5716a4351e4c2108f9a7e209bdd3fb180cd",
+      "system_events.csv": "3377bde93de57ff8d4977f949434635b8d955f90993a7710e15140c4b89161c6",
+      "system_source.csv": "0a05b25e884468492d099073140f860e2ed569bd7126427799f34da9ab69d1c1"
+    }
+  },
+  {
+    "case": "tb_system_1_s2026",
+    "status": "PASS",
+    "seed": 2026,
+    "trace_sha256": {
+      "system.csv": "6ba4925830061bb9aaf8befa47945b7a9f5f26017d5504e85546a9ac49a8bcd8",
+      "system_events.csv": "3377bde93de57ff8d4977f949434635b8d955f90993a7710e15140c4b89161c6",
+      "system_source.csv": "eb4f72e70014685690b2f1b6b83d6fe7bc3b17522098bd8026c772f7c2907c75"
+    }
+  },
+  {
+    "case": "tb_system_2_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "system.csv": "ba8a21d24fd57119f3aeec840c88a9c72068a2087766c1820495d95a28ebe50c",
+      "system_events.csv": "39caa52b9f4f7eda4e52c5c726d154e72c13a5dc7bf64ce59c669c36235ad193",
+      "system_source.csv": "e247cddca1285b2f1b5e27cd546ea7cdcb2c6b8b6634a6967e865cd68085daed"
+    }
+  },
+  {
+    "case": "tb_system_2_s17",
+    "status": "PASS",
+    "seed": 17,
+    "trace_sha256": {
+      "system.csv": "1b7b07d973fc7ae03671898d2fb319fa539e3abec1ea23cf75382a34f46d4eae",
+      "system_events.csv": "b1dc40b3e204fb91f34e3e9e4b38adb223e77ed2dba3a2e41bfa05e1f9551665",
+      "system_source.csv": "1aef8ba689958f40b85c21aefddb963dd52aae78716773c3292e8be5c1215f86"
+    }
+  },
+  {
+    "case": "tb_system_2_s2026",
+    "status": "PASS",
+    "seed": 2026,
+    "trace_sha256": {
+      "system.csv": "64f598a2d99db4bbc7c2601a58d23a6c08d20e1785e4c3174db55a329e37770d",
+      "system_events.csv": "befffb624beb6df387e30581f282dabab1b18df7e9a13e7f55727eab58b064c5",
+      "system_source.csv": "a019ab1d43c03c331c341b5f1667a18c648fd332a27b5f622dbe374eb50cf28c"
+    }
+  },
+  {
+    "case": "tb_system_3_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "system.csv": "1de15c6a2fdb1eb02aa6a3ce4bf793899aa2aca3845c0e61c52efd9af1f4ecda",
+      "system_events.csv": "88c90fcf98cfc541490a6df510deec8f45b6f16a84b56f8713e59f47530e5bff",
+      "system_source.csv": "acf8dd436c39e8ca677bde478ba3a9a60b05faecc1ea7302c1475eaf1e8b7dc0"
+    }
+  },
+  {
+    "case": "tb_system_3_s17",
+    "status": "PASS",
+    "seed": 17,
+    "trace_sha256": {
+      "system.csv": "56e271df23924896804c9c6a8e391cbccf1367f5ec3c62a7a6e2c23c5950410d",
+      "system_events.csv": "13298b91eeb64f5e37fac69adbb320fa8211f5cb3a66090ef401e96b6f49f435",
+      "system_source.csv": "d93fd160183d80af0561f78cec4316c1a7c8c047cb034075f240662431819973"
+    }
+  },
+  {
+    "case": "tb_system_3_s2026",
+    "status": "PASS",
+    "seed": 2026,
+    "trace_sha256": {
+      "system.csv": "a39327b1f5f1683ea0d93f1f0bbb0cdecbccca5e1f08324ef708efb9b7e3c570",
+      "system_events.csv": "94ffd9094f7bfcb05c22da6e6dd2b49c98b88db26f60998e22109a669dfd3ff1",
+      "system_source.csv": "192e8d4aac4d029d66b2c98737c5f0b185d398767b8ee1fa4edeee698a829a58"
+    }
+  },
+  {
+    "case": "tb_system_4_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "system.csv": "db9517dc8646830fd690d974026f3a5f4daccc970daf0e1a7ddf9f9627346234",
+      "system_events.csv": "0c35c61f5682cb4b2fcf1f92eea5a34ff3c61ae92af7d75c700114242f157655",
+      "system_source.csv": "331c00038d58acf219e1c571d0d7f5f769a8154eda3fcfc4db5fba7c4bf921f1"
+    }
+  },
+  {
+    "case": "tb_system_4_s17",
+    "status": "PASS",
+    "seed": 17,
+    "trace_sha256": {
+      "system.csv": "26b0f7f3796719b53e7c303b51a27459376becf3f11f10fff596c1ba76f34146",
+      "system_events.csv": "d6c12d7bc40a8af83fc61a6221695cc58d23dc25e2d2221afa8bcdb32bd00c08",
+      "system_source.csv": "535d226aa34737ede831aeb63528553214eecc1806ac3b84f1f1d93e2b4a3bc4"
+    }
+  },
+  {
+    "case": "tb_system_4_s2026",
+    "status": "PASS",
+    "seed": 2026,
+    "trace_sha256": {
+      "system.csv": "ae48de37d1685bb761e1d492bc6bbbfbdfe39239670ebafc8c3d7dd3c3bfc194",
+      "system_events.csv": "a4702e04d82903bf1de36e6415af3e0ed3e4fa51c5715bf08a8d29e149d0e4b5",
+      "system_source.csv": "1cdc41beb94ccc29566f45359465189d37d9cdff950a02adac220cd057163f6f"
+    }
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "seed": 20261101,
+  "cases": [
+    {
+      "top": "tb_phase_0",
+      "phase_ps": 2983,
+      "lanes": 4,
+      "status": "PASS",
+      "trace_sha256": "a8965c8f1993302cb216471f9944992269db91c3f505f7faabebfbffae1a2ab3"
+    },
+    {
+      "top": "tb_phase_1",
+      "phase_ps": 3794,
+      "lanes": 4,
+      "status": "PASS",
+      "trace_sha256": "a8965c8f1993302cb216471f9944992269db91c3f505f7faabebfbffae1a2ab3"
+    },
+    {
+      "top": "tb_phase_2",
+      "phase_ps": 12914,
+      "lanes": 4,
+      "status": "PASS",
+      "trace_sha256": "a8965c8f1993302cb216471f9944992269db91c3f505f7faabebfbffae1a2ab3"
+    },
+    {
+      "top": "tb_phase_3",
+      "phase_ps": 1958,
+      "lanes": 8,
+      "status": "PASS",
+      "trace_sha256": "a8965c8f1993302cb216471f9944992269db91c3f505f7faabebfbffae1a2ab3"
+    },
+    {
+      "top": "tb_phase_4",
+      "phase_ps": 1423,
+      "lanes": 8,
+      "status": "PASS",
+      "trace_sha256": "a8965c8f1993302cb216471f9944992269db91c3f505f7faabebfbffae1a2ab3"
+    },
+    {
+      "top": "tb_phase_5",
+      "phase_ps": 1653,
+      "lanes": 8,
+      "status": "PASS",
+      "trace_sha256": "a8965c8f1993302cb216471f9944992269db91c3f505f7faabebfbffae1a2ab3"
+    }
+  ],
+  "testbench_sha256": "95740066742e0412f7f307d0ef8924247ff3f346f48f40c1bb38df11c54473dc",
+  "rtl_sha256": {
+    "v1/rtl/cdc/tf_async_fifo.sv": "05295fc025f1cd389081649aa201c1125727c78b37cf89b5e93de14087425f57",
+    "v1/rtl/cdc/tf_bit_sync.sv": "befe99c10b41a8034e5c9b547c248c6c765d40832bf88e141590dc3c2f21ad7b",
+    "v1/rtl/cdc/tf_cdc_bridge.sv": "8d6b438066e9202c90276c1929bf462c2d3eb2a5adc985e9b1bfe833a6a06cf1",
+    "v1/rtl/cdc/tf_reset_sync.sv": "2a1c9fc3589c6557601dcb5571ee1eef2708ad33d75f6740a5fb7c87d8ac2609",
+    "v1/rtl/cdc/tf_status_snapshot.sv": "181d424d985d1cd1a77c301e8add4f280287f66f783034f30cc67f6c26b7f6b0",
+    "v1/rtl/clock/tf_clock_manager.sv": "71a747bf7212fb1cc65faa0ae30a2076e196a8752b88a4c1f5b25363a0803e6d",
+    "v1/rtl/control/tf_control_interface.sv": "68f152fbfd6edb60b3b1f3300868374528f3719738a9eda35d8b8a596ce4d42f",
+    "v1/rtl/control/tf_management_serial.sv": "f07013c27755ab6a866e60019974bd6a75ced2b4007754c3ef963c6966d6e23c",
+    "v1/rtl/control/tf_node_registers.sv": "4f03fbc4a69d559e05b65c2fc0244d92ffba19117d569524d2b487cf2d307172",
+    "v1/rtl/link/tf_link_clock_forward.sv": "9dd2cdbf81f405d49a54762a4179d1bec4bafc83ababbdfb9fa2870294608506",
+    "v1/rtl/link/tf_link_rx.sv": "e786ff636d629a3addf668a52dab2e7a83994cf76d43028f4b3c2161b4dcdd5b",
+    "v1/rtl/link/tf_link_tx.sv": "676eb1da112735e4faaf682f199af9d2d584fc1e60e85fb20acc439065a728ce",
+    "v1/rtl/scheduler/tf_event_scheduler.sv": "a444cbc2943f7226dc516583ac6aa00d5e386ac36e1a6c9db652d5f1375c121b",
+    "v1/rtl/stream/tf_crc_engine.sv": "6e303a0d1fff152703fe5a36053aa63986444011d9f045362a770dd2b5ebc75c",
+    "v1/rtl/stream/tf_data_source.sv": "49098bad60d5ed7951c33d04322763446eb65e5f383275e87e9749e43c6f1074",
+    "v1/rtl/stream/tf_stream_link.sv": "2e2148b6757a565b53fbc2793d80361eacf76ef7d93b054bbcb25312190d5946",
+    "v1/rtl/stream/tf_stream_tx.sv": "05b94f43f08283b8859f6985df0cd5b6040a48a0eec259e77091a844896dd885",
+    "v1/rtl/stream/tf_task_pipeline.sv": "cbc83b3fd74ca041c5d047ae8ecb0136b2ccab6fa3213d85ab6c6909773d3ff4",
+    "v1/rtl/sync/tf_sync_controller.sv": "3813fef82e428b6055095c865a00daa050752a889254787cbae4947bc2a556ac",
+    "v1/rtl/timebase/tf_timebase.sv": "29b0805aeb6f010f2f7b34bb0685d8bed2329d482ebc9bc24a2432cb014fdffe",
+    "v1/rtl/top/tf_node_core.sv": "2a32ec76d3f425a69ba92a735447bc418494f66169c9fd5b61d41cbaf0812c63",
+    "v1/rtl/top/tf_node_top.sv": "7dfcd3a235f34836ab2ab2093f903d127b354bdbcab29b64130742f23052a7f5",
+    "v1/rtl/top/tf_physical_node_top.sv": "ff1c411f8620927e3663e8dbbbabc8a758a320490cf4d3eff0fa97ed2580bbe0",
+    "v1/rtl/top/tf_pin_timing_top.sv": "6f602592233e0b1d9b60ef597ed2e59159862b1543ddc41a1dea8eb1a98b8b41",
+    "v1/rtl/top/tf_system_top.sv": "c7e16bb7d50d83073d2781add64c5839bd57114b57e2e27a321b972ddfc3c3be"
+  }
+}

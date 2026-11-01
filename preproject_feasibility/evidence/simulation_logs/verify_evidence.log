@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "same_seed_repeat_runs": 2,
+  "cases_per_run": 19,
+  "total_simulator_executions": 38,
+  "independently_decoded_pipeline_frames_one_run": 2443,
+  "pipeline": [
+    {
+      "case": "tb_pipeline_seed1_gap0",
+      "delivered_by_session": {
+        "0": 325,
+        "1": 80
+      },
+      "reported_aborted": 5
+    },
+    {
+      "case": "tb_pipeline_seed1_gap3",
+      "delivered_by_session": {
+        "0": 328,
+        "1": 80
+      },
+      "reported_aborted": 2
+    },
+    {
+      "case": "tb_pipeline_seed17_gap0",
+      "delivered_by_session": {
+        "0": 326,
+        "1": 80
+      },
+      "reported_aborted": 4
+    },
+    {
+      "case": "tb_pipeline_seed17_gap3",
+      "delivered_by_session": {
+        "0": 329,
+        "1": 80
+      },
+      "reported_aborted": 1
+    },
+    {
+      "case": "tb_pipeline_seed2026_gap0",
+      "delivered_by_session": {
+        "0": 326,
+        "1": 80
+      },
+      "reported_aborted": 4
+    },
+    {
+      "case": "tb_pipeline_seed2026_gap3",
+      "delivered_by_session": {
+        "0": 329,
+        "1": 80
+      },
+      "reported_aborted": 1
+    }
+  ],
+  "source_attachments_unchanged": true,
+  "raw_tool_log_byte_identity_claimed": false,
+  "definition": "same-seed event/pipeline CSV bytes and normalized PASS/FAULT/lock lines match; host/date lines excluded"
+}

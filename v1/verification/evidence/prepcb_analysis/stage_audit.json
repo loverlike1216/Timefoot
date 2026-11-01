@@ -1,0 +1,383 @@
+{
+  "project_id": "TIMEFOOT",
+  "version": "v1",
+  "validated_source_commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+  "suites": {
+    "prepcb_unit03": {
+      "cases": 5,
+      "status": "PASS",
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+      "source_tree_sha256": "e2b9d1ffaa8c73ed3eb7970b3ae1bb8c18e04a54833cd712cdafa20f420098c0"
+    },
+    "prepcb_link03": {
+      "cases": 6,
+      "status": "PASS",
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+      "source_tree_sha256": "e2b9d1ffaa8c73ed3eb7970b3ae1bb8c18e04a54833cd712cdafa20f420098c0"
+    },
+    "prepcb_physical03": {
+      "cases": 1,
+      "status": "PASS",
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+      "source_tree_sha256": "e2b9d1ffaa8c73ed3eb7970b3ae1bb8c18e04a54833cd712cdafa20f420098c0"
+    },
+    "prepcb_legacy03": {
+      "cases": 12,
+      "status": "PASS",
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+      "source_tree_sha256": "e2b9d1ffaa8c73ed3eb7970b3ae1bb8c18e04a54833cd712cdafa20f420098c0"
+    },
+    "prepcb_system03": {
+      "cases": 12,
+      "status": "PASS",
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+      "source_tree_sha256": "e2b9d1ffaa8c73ed3eb7970b3ae1bb8c18e04a54833cd712cdafa20f420098c0"
+    },
+    "prepcb_repeat03": {
+      "cases": 4,
+      "status": "PASS",
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+      "source_tree_sha256": "e2b9d1ffaa8c73ed3eb7970b3ae1bb8c18e04a54833cd712cdafa20f420098c0"
+    },
+    "prepcb_8bit03": {
+      "cases": 1,
+      "status": "PASS",
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+      "source_tree_sha256": "e2b9d1ffaa8c73ed3eb7970b3ae1bb8c18e04a54833cd712cdafa20f420098c0"
+    }
+  },
+  "replay": [
+    {
+      "nodes": 1,
+      "seed": 1,
+      "status": "HASH_MATCH",
+      "trace_sha256": {
+        "sdr.csv": "92d2dc8da8ea64b140eed0c14d0e39d7962a328fb0ce697815a4085bc5f52935",
+        "sdr_events.csv": "3377bde93de57ff8d4977f949434635b8d955f90993a7710e15140c4b89161c6",
+        "sdr_source.csv": "50de105aaca220a3c8c2058bfe5088d78b1cd27ce9672d43c0a17d84269c6d5e"
+      }
+    },
+    {
+      "nodes": 2,
+      "seed": 1,
+      "status": "HASH_MATCH",
+      "trace_sha256": {
+        "sdr.csv": "f8bfa7015b478ef02d913eaf5a477fe8b9108040a667c756d0ebf258e2a40b41",
+        "sdr_events.csv": "d12368c7899410304be0dacbd98b36552dbe8183264f3c65cd12b3c89f66eaeb",
+        "sdr_source.csv": "de14195229f1710b4cb4d031f5e19a0f0c009a9fe5742b74bc84b131199a189f"
+      }
+    },
+    {
+      "nodes": 3,
+      "seed": 1,
+      "status": "HASH_MATCH",
+      "trace_sha256": {
+        "sdr.csv": "6b7597f28de9a1d1620af076236d2ba2efec4ee59c9418a098565f8b8fec4ee8",
+        "sdr_events.csv": "d3ac8178e15ca9a38049597550a543b0c22b2de165c08480139301f87f2660f2",
+        "sdr_source.csv": "de14195229f1710b4cb4d031f5e19a0f0c009a9fe5742b74bc84b131199a189f"
+      }
+    },
+    {
+      "nodes": 4,
+      "seed": 1,
+      "status": "HASH_MATCH",
+      "trace_sha256": {
+        "sdr.csv": "e9d96f10e6fac77120d7439a6b1b13b3fd2afce48ef6284e4b24e736b0a5cca4",
+        "sdr_events.csv": "67bf3799b1fb01c2e10d4eb836bba9050309d17220040896e23f06ed3f186a2d",
+        "sdr_source.csv": "c81cebca52fab8a944530b0bf433a6adb1ea6eb40db8b8b104046cffbffa18c3"
+      }
+    }
+  ],
+  "builds": [
+    {
+      "tag": "prepcb_impl4_03",
+      "part": "xc7z010clg400-1",
+      "wns_ns": 0.468,
+      "whs_ns": 0.009,
+      "wpws_ns": 2.833,
+      "critical_cdc": 0,
+      "coverage": {
+        "no_clock": "0",
+        "constant_clock": "0",
+        "pulse_width_clock": "0",
+        "unconstrained_internal_endpoints": "0",
+        "no_input_delay": "0",
+        "no_output_delay": "1",
+        "multiple_clock": "0",
+        "generated_clocks": "0",
+        "loops": "0",
+        "partial_input_delay": "0",
+        "partial_output_delay": "0",
+        "latch_loops": "0"
+      },
+      "route_errors": 0,
+      "gray_constraint_lines": 48,
+      "gray_constraint_values_ns": [
+        6.667,
+        20.0,
+        40.0
+      ],
+      "bus_skew_max_ns": 1.274,
+      "bus_skew_min_slack_ns": 5.568,
+      "drc_rules": [
+        [
+          "RTSTAT-10",
+          "Warning"
+        ],
+        [
+          "ZPS7-1",
+          "Warning"
+        ]
+      ],
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0"
+    },
+    {
+      "tag": "prepcb_impl4_03",
+      "part": "xc7z020clg400-2",
+      "wns_ns": 0.925,
+      "whs_ns": 0.028,
+      "wpws_ns": 2.833,
+      "critical_cdc": 0,
+      "coverage": {
+        "no_clock": "0",
+        "constant_clock": "0",
+        "pulse_width_clock": "0",
+        "unconstrained_internal_endpoints": "0",
+        "no_input_delay": "0",
+        "no_output_delay": "1",
+        "multiple_clock": "0",
+        "generated_clocks": "0",
+        "loops": "0",
+        "partial_input_delay": "0",
+        "partial_output_delay": "0",
+        "latch_loops": "0"
+      },
+      "route_errors": 0,
+      "gray_constraint_lines": 48,
+      "gray_constraint_values_ns": [
+        6.667,
+        20.0,
+        40.0
+      ],
+      "bus_skew_max_ns": 1.113,
+      "bus_skew_min_slack_ns": 5.765,
+      "drc_rules": [
+        [
+          "RTSTAT-10",
+          "Warning"
+        ],
+        [
+          "ZPS7-1",
+          "Warning"
+        ]
+      ],
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0"
+    },
+    {
+      "tag": "prepcb_impl8_03",
+      "part": "xc7z010clg400-1",
+      "wns_ns": 0.313,
+      "whs_ns": 0.016,
+      "wpws_ns": 2.833,
+      "critical_cdc": 0,
+      "coverage": {
+        "no_clock": "0",
+        "constant_clock": "0",
+        "pulse_width_clock": "0",
+        "unconstrained_internal_endpoints": "0",
+        "no_input_delay": "0",
+        "no_output_delay": "1",
+        "multiple_clock": "0",
+        "generated_clocks": "0",
+        "loops": "0",
+        "partial_input_delay": "0",
+        "partial_output_delay": "0",
+        "latch_loops": "0"
+      },
+      "route_errors": 0,
+      "gray_constraint_lines": 48,
+      "gray_constraint_values_ns": [
+        6.667,
+        20.0,
+        40.0
+      ],
+      "bus_skew_max_ns": 1.279,
+      "bus_skew_min_slack_ns": 5.519,
+      "drc_rules": [
+        [
+          "RTSTAT-10",
+          "Warning"
+        ],
+        [
+          "ZPS7-1",
+          "Warning"
+        ]
+      ],
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0"
+    },
+    {
+      "tag": "prepcb_impl8_03",
+      "part": "xc7z020clg400-2",
+      "wns_ns": 0.752,
+      "whs_ns": 0.036,
+      "wpws_ns": 2.833,
+      "critical_cdc": 0,
+      "coverage": {
+        "no_clock": "0",
+        "constant_clock": "0",
+        "pulse_width_clock": "0",
+        "unconstrained_internal_endpoints": "0",
+        "no_input_delay": "0",
+        "no_output_delay": "1",
+        "multiple_clock": "0",
+        "generated_clocks": "0",
+        "loops": "0",
+        "partial_input_delay": "0",
+        "partial_output_delay": "0",
+        "latch_loops": "0"
+      },
+      "route_errors": 0,
+      "gray_constraint_lines": 48,
+      "gray_constraint_values_ns": [
+        6.667,
+        20.0,
+        40.0
+      ],
+      "bus_skew_max_ns": 1.18,
+      "bus_skew_min_slack_ns": 5.734,
+      "drc_rules": [
+        [
+          "RTSTAT-10",
+          "Warning"
+        ],
+        [
+          "ZPS7-1",
+          "Warning"
+        ]
+      ],
+      "commit": "45aa523ddb4151157672df1ee3c5bb483be3edb0"
+    }
+  ],
+  "history": {
+    "files": 3723,
+    "mismatch": 0,
+    "added": 0,
+    "status": "HASH_MATCH"
+  },
+  "golden": {
+    "sdr_packets": 2640,
+    "legacy_packets": 2640
+  },
+  "phase_sweep_cases": 6,
+  "vcd_clock_measurements": [
+    {
+      "nodes": 1,
+      "periods": [
+        {
+          "node": 0,
+          "period_min_ps": 20000,
+          "period_max_ps": 20000,
+          "edges": 250
+        }
+      ],
+      "first_event_offsets_ps": [
+        0
+      ],
+      "event_skew_ps": 0,
+      "status": "PASS"
+    },
+    {
+      "nodes": 2,
+      "periods": [
+        {
+          "node": 0,
+          "period_min_ps": 20000,
+          "period_max_ps": 20000,
+          "edges": 250
+        },
+        {
+          "node": 1,
+          "period_min_ps": 10000,
+          "period_max_ps": 10000,
+          "edges": 500
+        }
+      ],
+      "first_event_offsets_ps": [
+        0,
+        600
+      ],
+      "event_skew_ps": 600,
+      "status": "PASS"
+    },
+    {
+      "nodes": 3,
+      "periods": [
+        {
+          "node": 0,
+          "period_min_ps": 20000,
+          "period_max_ps": 20000,
+          "edges": 250
+        },
+        {
+          "node": 1,
+          "period_min_ps": 10000,
+          "period_max_ps": 10000,
+          "edges": 500
+        },
+        {
+          "node": 2,
+          "period_min_ps": 6666,
+          "period_max_ps": 6667,
+          "edges": 750
+        }
+      ],
+      "first_event_offsets_ps": [
+        0,
+        600,
+        1200
+      ],
+      "event_skew_ps": 1200,
+      "status": "PASS"
+    },
+    {
+      "nodes": 4,
+      "periods": [
+        {
+          "node": 0,
+          "period_min_ps": 20000,
+          "period_max_ps": 20000,
+          "edges": 250
+        },
+        {
+          "node": 1,
+          "period_min_ps": 10000,
+          "period_max_ps": 10000,
+          "edges": 500
+        },
+        {
+          "node": 2,
+          "period_min_ps": 6666,
+          "period_max_ps": 6667,
+          "edges": 750
+        },
+        {
+          "node": 3,
+          "period_min_ps": 20000,
+          "period_max_ps": 20000,
+          "edges": 250
+        }
+      ],
+      "first_event_offsets_ps": [
+        0,
+        600,
+        1200,
+        1800
+      ],
+      "event_skew_ps": 1800,
+      "status": "PASS"
+    }
+  ],
+  "hardware": "NOT_HARDWARE_VERIFIED",
+  "independent_chatgpt_review": "PENDING",
+  "limitation": "Vendor XPM CDC15 warnings, TIMING18 edge/async classification, PS7 warning, board SI/phase qualification remain explicit"
+}

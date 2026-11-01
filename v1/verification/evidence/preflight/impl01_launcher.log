@@ -1,0 +1,109 @@
+The system cannot find the path specified.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  1 10:42:31 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source {.\v1\scripts\implement.tcl}
+# set root [file normalize [file join [file dirname [info script]] ../..]]
+# set tag [lindex $argv 0]
+# if {$tag eq ""} {set tag "impl01"}
+# set mode [lindex $argv 1]
+# if {$mode eq ""} {set mode "node"}
+# set out "$root/v1/verification/evidence/$tag"
+# file mkdir $out
+# set work "$root/v1/work/$tag"
+# file mkdir $work
+# cd $work
+# set_param general.maxThreads 4
+# set files [glob -nocomplain $root/v1/rtl/*/*.sv]
+# foreach {part pin} {xc7z010clg400-1 H16 xc7z020clg400-2 U14} {
+#  set od "$out/$part"
+#  file mkdir $od
+#  create_project -in_memory -part $part
+#  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+#  read_verilog -sv $files
+#  if {$mode eq "pin"} {
+#   synth_design -top tf_pin_timing_top -part $part
+#   set_property PACKAGE_PIN $pin [get_ports ref_in]
+#   foreach {port ball} {q[0] W13 q[1] V12 q[2] L19} {set_property PACKAGE_PIN $ball [get_ports $port]}
+#   set_property IOSTANDARD LVCMOS33 [get_ports *]
+#   create_clock -name reference50 -period 20.0 [get_ports ref_in]
+#   set_output_delay 2.0 -clock reference50 [get_ports q*]
+#  } else {
+#   synth_design -top tf_node_top -part $part -mode out_of_context
+#   create_clock -name reference50 -period 20.0 [get_ports ref_in]
+#   create_clock -name monitor50 -period 20.0 [get_ports monitor_in]
+#   create_clock -name rx100 -period 10.0 [get_ports rx_clock]
+#   # Generated work clock is derived from the real MMCM; do not redefine it as a primary.
+#   set wc [get_clocks -of_objects [get_pins clocks/bw/O]]
+#   set rc [get_clocks reference50]
+#   set_input_delay 2.0 -clock $rc [get_ports {abort_session prepare_valid prepare_session[*] prepare_epoch[*] prepare_stage_mask[*] prepare_source sync_marker run_enable event_id[*] event_session[*] event_target[*] event_valid cancel_all cancel_valid cancel_id[*]}]
+#   set_input_delay 2.0 -clock rx100 [get_ports {rx_frame[*] rx_valid}]
+#   set_input_delay 2.0 -clock $wc [get_ports tx_ready]
+#   set_input_delay 2.0 -clock monitor50 [get_ports arst]
+#   set_output_delay 2.0 -clock $rc [get_ports {timestamp[*] session_id[*] prepared applied time_valid event_execute node_fault clock_ready event_ready executed_id[*] executed_timestamp[*] sample_count[*]}]
+#   set_output_delay 2.0 -clock monitor50 [get_ports reference_fault]
+#   set_output_delay 2.0 -clock rx100 [get_ports rx_ready]
+#   set_output_delay 2.0 -clock $wc [get_ports {tx_frame[*] tx_valid fifo_full fifo_level[*] delivered_count[*]}]
+#   # Only vendor-scoped XPM constraints are used for asynchronous crossings.
+#   # No blanket set_clock_groups/set_false_path is added here.
+#  }
+#  report_utilization -file "$od/utilization_synth.rpt"
+#  report_cdc -details -file "$od/cdc_synth.rpt"
+#  opt_design
+#  place_design
+#  phys_opt_design
+#  route_design
+#  report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -file "$od/timing.rpt"
+#  report_timing -max_paths 10 -delay_type max -file "$od/critical_paths.rpt"
+#  report_cdc -details -file "$od/cdc.rpt"
+#  report_drc -file "$od/drc.rpt"
+#  report_clock_interaction -file "$od/clock_interaction.rpt"
+#  report_methodology -file "$od/methodology.rpt"
+#  report_utilization -file "$od/utilization.rpt"
+#  report_route_status -file "$od/route.rpt"
+#  report_clocks -file "$od/clocks.rpt"
+#  check_timing -verbose -file "$od/constraint_coverage.rpt"
+#  write_xdc -force "$od/effective.xdc"
+#  write_checkpoint -force "$od/routed.dcp"
+#  set f [open "$od/reset_inventory.tsv" w]
+#  puts $f "REGISTER\tCLOCK\tASYNC_CONTROL_NET"
+#  foreach c [get_cells -hier -filter {IS_SEQUENTIAL==1}] {
+#   set cp [get_pins -quiet -of_objects $c -filter {REF_PIN_NAME==C}]
+#   set ap [get_pins -quiet -of_objects $c -filter {REF_PIN_NAME==CLR || REF_PIN_NAME==PRE}]
+#   puts $f "$c\t[get_clocks -quiet -of_objects $cp]\t[get_nets -quiet -of_objects $ap]"
+#  }
+#  close $f
+#  close_project
+# }
+Command: synth_design -top tf_node_top -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 66360
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1297.457 ; gain = 543.520
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2716] syntax error near 'checker' [E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv:18]
+ERROR: [Synth 8-10307] SystemVerilog keyword 'checker' used in incorrect context [E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv:18]
+INFO: [Synth 8-10285] module 'tf_stream_link' is ignored due to previous errors [E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv:38]
+INFO: [Synth 8-9084] Verilog file 'E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv' ignored due to errors
+ERROR: [Synth 8-12188] Failed to read verilog 'E:/Codex_project/Timefoot/v1/rtl/stream/tf_stream_link.sv'
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1413.613 ; gain = 659.676
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+8 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.613 ; gain = 871.969
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  1 10:42:52 2026...

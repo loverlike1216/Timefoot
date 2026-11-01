@@ -1,0 +1,82 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 43, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 32, in main
+    txt=run([BIN/'xsim.bat',snap,'-tclbatch',tcl,'-testplusarg',f'SEED={seed}','-log',case/'xsim.log'],work,case/'launcher.log')
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 8, in run
+    if p.returncode: raise RuntimeError(f'{log}: exit {p.returncode}; {p.stdout[-3000:].decode(errors="replace")}')
+RuntimeError: E:\Codex_project\Timefoot\preproject_feasibility\evidence\simulation_logs\attempt2\tb_sync_1_seed1\launcher.log: exit 1; lution flow during scheduling the processes
+
+    --downgrade_error2info : Downgrade severity level of HDL messages from Error to Info.
+
+    --downgrade_error2warning : Downgrade severity level of HDL messages from Error to Warning.
+
+    --downgrade_fatal2info : Downgrade severity level of HDL messages from Fatal to Info.
+
+    --downgrade_fatal2warning : Downgrade severity level of HDL messages from Fatal to Warning.
+
+    --downgrade_severity : Downgrade severity level of HDL messages. Choices are:error2warning|error2info|fatal2warning|fatal2info
+
+    --f                  : Take command line options from a file
+
+    --file               : Take command line options from a file
+
+    --g                  : Run with interactive GUI
+
+    --gui                : Run with interactive GUI
+
+    --h                  : Print help message and exit
+
+    --help               : Print help message and exit
+
+    --ieeewarnings       : Enable warnings from VHDL IEEE functions
+
+    --ignore_assertions  : Ignore System Verilog Concurrent Assertions.
+
+    --ignore_coverage    : Ignore System Verilog Functional Coverage.
+
+    --ignore_feature     : Ignore effect of specific HDL feature or construct. Choices are: assertion
+
+    --log                : Specify the log file name
+
+    --maxdeltaid         : Specify the maximum delta number. Will report error if it exceeds maximum simulation loops at the same time
+
+    --maxlogsize         : Set the maximum size a log file can reach in MB. The default setting is unlimited
+
+    --nolog              : Suppress log file generation
+
+    --nosignalhandlers   : Run with no signal handlers to avoid conflict with security software.
+
+    --onerror            : Specify behavior upon simulation run-time error: quit|stop
+
+    --onfinish           : Specify behavior at end of simulation: quit|stop
+
+    --protoinst          : Specify a .protoinst file for protocol analysis
+
+    --runall             : Run simulation till end i.e. do 'run all;quit'
+
+    --stats              : Display memory and cpu stats upon exiting
+
+    --sv_seed            : seed for sv constraint random
+
+    --t                  : Specify the TCL file for batch mode execution
+
+    --tclbatch           : Specify the TCL file for batch mode execution
+
+    --tempDir            : Specify the temporary directory name
+
+    --testplusarg        : Specify plus args to be used by $test$plusargs and $value$plusargs system functions
+
+    --tl                 : Enable printing of file name and line number of statements being executed.
+
+    --tp                 : Enable printing of hierarchical names of process being executed.
+
+    --version            : Print the simulator version and quit.
+
+    --view               : Open a wave configuration file. This switch should be used together with -gui switch
+
+    --wdb                : Specify the waveform database output file.
+
+    --xsimdir            : Location of xsim.dir directory. Default location is "." i.e. current run directory.
+
+

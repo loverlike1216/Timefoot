@@ -1,0 +1,228 @@
+[
+  {
+    "case": "tb_sync_1_seed1",
+    "testbench": "tb_sync_1",
+    "nodes": 1,
+    "seed": 1,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "ebad1afd7c10ef6ebc9584644daa3bd083bca7774391422a880f5792d36f3524"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_1_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_sync_1_seed17",
+    "testbench": "tb_sync_1",
+    "nodes": 1,
+    "seed": 17,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "ebad1afd7c10ef6ebc9584644daa3bd083bca7774391422a880f5792d36f3524"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_1_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_sync_1_seed2026",
+    "testbench": "tb_sync_1",
+    "nodes": 1,
+    "seed": 2026,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "ebad1afd7c10ef6ebc9584644daa3bd083bca7774391422a880f5792d36f3524"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_1_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_sync_2_seed1",
+    "testbench": "tb_sync_2",
+    "nodes": 2,
+    "seed": 1,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "d514e4293ab8e1665bf82c0752f9869b86766ca37de5e372ced6e685264a1bcb"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_2_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_sync_2_seed17",
+    "testbench": "tb_sync_2",
+    "nodes": 2,
+    "seed": 17,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "d514e4293ab8e1665bf82c0752f9869b86766ca37de5e372ced6e685264a1bcb"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_2_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_sync_2_seed2026",
+    "testbench": "tb_sync_2",
+    "nodes": 2,
+    "seed": 2026,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "d514e4293ab8e1665bf82c0752f9869b86766ca37de5e372ced6e685264a1bcb"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_2_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_sync_3_seed1",
+    "testbench": "tb_sync_3",
+    "nodes": 3,
+    "seed": 1,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "a0210d4ab925429080ac8af51d6eea7d4c500b6af69bbf98f625e6559a843272"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_3_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_sync_3_seed17",
+    "testbench": "tb_sync_3",
+    "nodes": 3,
+    "seed": 17,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "a0210d4ab925429080ac8af51d6eea7d4c500b6af69bbf98f625e6559a843272"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_3_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_sync_3_seed2026",
+    "testbench": "tb_sync_3",
+    "nodes": 3,
+    "seed": 2026,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "a0210d4ab925429080ac8af51d6eea7d4c500b6af69bbf98f625e6559a843272"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_3_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_sync_4_seed1",
+    "testbench": "tb_sync_4",
+    "nodes": 4,
+    "seed": 1,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "8c2900699380a5a54f0e56180c58691ed8933c6623b36e8e874ed0e6bb98dfc0"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_4_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_sync_4_seed17",
+    "testbench": "tb_sync_4",
+    "nodes": 4,
+    "seed": 17,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "8c2900699380a5a54f0e56180c58691ed8933c6623b36e8e874ed0e6bb98dfc0"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_4_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_sync_4_seed2026",
+    "testbench": "tb_sync_4",
+    "nodes": 4,
+    "seed": 2026,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "8c2900699380a5a54f0e56180c58691ed8933c6623b36e8e874ed0e6bb98dfc0"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_sync_4_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed1_gap0",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 1,
+    "source_gap": 0,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "9d3724e9af1bfce9924dd6af3ebf9070cc73e461c7f8b9530ca1ed2617103bbd"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_pipeline_seed1_gap0\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed1_gap3",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 1,
+    "source_gap": 3,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "1b0c2d21b6bc139a210f5d551a01f63a190339ca6f714d6c5283e953a9c5fac0"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_pipeline_seed1_gap3\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed17_gap0",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 17,
+    "source_gap": 0,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "46b46b6e2e2d31444ecfd596346d7970f46daa1588219c70ecee31e0d90776e9"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_pipeline_seed17_gap0\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed17_gap3",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 17,
+    "source_gap": 3,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "9d849760caca308cae7c51896cadf439b965e383d9114fbc4b7af8f0633589fd"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_pipeline_seed17_gap3\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed2026_gap0",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 2026,
+    "source_gap": 0,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "b1d52a16dc3a365bab91d547aa36644c4f706b8ab9a629fafcea2585e8c8536d"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_pipeline_seed2026_gap0\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed2026_gap3",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 2026,
+    "source_gap": 3,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "5b3d2e7ce60489b59b5d2a59d5daa68389d35efde94292dd931996c29be8acb8"
+    },
+    "log": "evidence\\simulation_logs\\finalE\\tb_pipeline_seed2026_gap3\\xsim.log"
+  },
+  {
+    "case": "tb_mmcm_seed1",
+    "testbench": "tb_mmcm",
+    "nodes": null,
+    "seed": 1,
+    "source_gap": null,
+    "status": "PASS",
+    "trace_sha256": {},
+    "log": "evidence\\simulation_logs\\finalE\\tb_mmcm_seed1\\xsim.log"
+  }
+]

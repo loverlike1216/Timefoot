@@ -1,0 +1,13 @@
++====================+===================+======================+
+| Launch Setup Clock | Launch Hold Clock | Pin                  |
++====================+===================+======================+
+| work100            | work100           | s/out_data_reg[92]/D |
+| work100            | work100           | s/out_data_reg[69]/D |
+| work100            | work100           | s/out_data_reg[99]/D |
+| work100            | work100           | s/out_data_reg[86]/D |
+| work100            | work100           | s/out_data_reg[98]/D |
+| work100            | work100           | s/out_data_reg[91]/D |
+| work100            | work100           | s/out_data_reg[80]/D |
+| work100            | work100           | s/out_data_reg[2]/D  |
+| work100            | work100           | s/out_data_reg[51]/D |
++--------------------+-------------------+----------------------+

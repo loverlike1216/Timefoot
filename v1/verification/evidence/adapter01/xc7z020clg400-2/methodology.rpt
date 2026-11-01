@@ -1,0 +1,501 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Nov  1 14:43:38 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_methodology -file E:/Codex_project/Timefoot/v1/verification/evidence/adapter01/xc7z020clg400-2/methodology.rpt
+| Design       : tf_physical_node_top
+| Device       : xc7z020clg400-2
+| Speed File   : -2
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: tf_physical_node_top
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 93
++-----------+----------+-------------------------------+--------+
+| Rule      | Severity | Description                   | Checks |
++-----------+----------+-------------------------------+--------+
+| TIMING-16 | Warning  | Large setup violation         | 79     |
+| TIMING-18 | Warning  | Missing input or output delay | 14     |
++-----------+----------+-------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.093 ns between tx_ready (clocked by tx50) and transmitter/active_reg/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.385 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i_reg[0]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.390 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.452 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.469 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[0]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.486 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[0]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.500 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[0]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.501 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[1]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.600 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/guf.underflow_i_reg/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.604 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[1]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.604 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[2]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.604 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[3]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.604 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[4]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.604 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[5]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.618 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/count_value_i_reg[1]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.634 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/count_value_i_reg[0]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.643 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[12]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.643 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[13]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.643 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[14]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.643 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[15]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -1.735 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[2]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -1.738 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.gpe_ic.diff_pntr_pe_reg[3]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -1.751 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[10]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -1.751 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[11]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -1.751 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[8]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -1.751 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[9]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -1.757 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[1]/R (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -1.757 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[2]/R (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -1.757 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[3]/R (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -1.757 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[4]/R (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -1.757 ns between tx_ready (clocked by tx50) and transmitter/beat_reg[5]/R (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -1.761 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[20]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -1.761 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[21]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -1.761 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[22]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -1.761 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[23]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -1.761 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[4]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -1.761 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[5]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -1.761 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[6]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -1.761 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[7]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -1.785 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[16]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -1.785 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[17]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -1.785 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[18]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -1.785 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[19]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -1.789 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[24]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -1.789 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[25]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -1.789 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[26]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -1.789 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[27]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -1.790 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_pf_ic_rc.ram_empty_i_reg/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -1.817 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_fwft.rdpp1_inst/count_value_i_reg[1]/D (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -1.870 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[0]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -1.870 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[1]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -1.870 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[2]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -1.870 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[3]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -1.883 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[28]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -1.883 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[29]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -1.883 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[30]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -1.883 ns between tx_ready (clocked by tx50) and transmitter/wire_sent_reg[31]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -1.923 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/count_value_i_reg[3]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -1.923 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/count_value_i_reg[4]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -1.923 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[0]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -1.923 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[1]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -1.936 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/count_value_i_reg[2]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -2.021 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/count_value_i_reg[0]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -2.021 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/count_value_i_reg[1]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -2.021 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[2]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -2.021 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[3]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -2.050 ns between tx_ready (clocked by tx50) and transmitter/pads_reg[0]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -2.050 ns between tx_ready (clocked by tx50) and transmitter/pads_reg[1]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -2.087 ns between tx_ready (clocked by tx50) and transmitter/pads_reg[2]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -2.098 ns between tx_ready (clocked by tx50) and transmitter/pads_reg[3]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -2.189 ns between tx_ready (clocked by tx50) and transmitter/pads_reg[5]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -2.257 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/REGCEAREGCE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -2.312 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/REGCEAREGCE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -2.321 ns between tx_ready (clocked by tx50) and transmitter/pads_reg[4]/CE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -2.390 ns between receiver/pin_ready_reg/C (clocked by rx50) and rx_ready (clocked by rx50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -2.393 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/REGCEAREGCE (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -2.398 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2/ENARDEN (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -2.430 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/ENARDEN (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -2.539 ns between tx_ready (clocked by tx50) and transmitter/frames/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/ENARDEN (clocked by reference50). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on arst relative to the rising and/or falling clock edge(s) of control25, monitor50, reference50, rx50.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on control_cs_n relative to the rising and/or falling clock edge(s) of control25.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on control_mosi relative to the rising and/or falling clock edge(s) of control25.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on marker_qualified relative to the rising and/or falling clock edge(s) of reference50.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on rx_data[0] relative to the rising and/or falling clock edge(s) of rx50.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on rx_data[1] relative to the rising and/or falling clock edge(s) of rx50.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on rx_data[2] relative to the rising and/or falling clock edge(s) of rx50.
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on rx_data[3] relative to the rising and/or falling clock edge(s) of rx50.
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on rx_sof relative to the rising and/or falling clock edge(s) of rx50.
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on rx_valid relative to the rising and/or falling clock edge(s) of rx50.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on sync_marker relative to the rising and/or falling clock edge(s) of reference50.
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on control_miso relative to the rising and/or falling clock edge(s) of control25.
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on control_ready relative to the rising and/or falling clock edge(s) of control25.
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on rx_ready relative to the rising and/or falling clock edge(s) of rx50.
+Related violations: <none>
+
+

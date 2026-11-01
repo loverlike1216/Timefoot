@@ -1,0 +1,10 @@
+[
+  {
+    "case": "tb_physical_node_s1",
+    "status": "PASS",
+    "seed": 1,
+    "trace_sha256": {
+      "physical.csv": "fd183ab9a6822ac0a97f4b3325dd3783b21d65b9dba96002970d3a3d187e9f32"
+    }
+  }
+]

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 43, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 33, in main
+    if 'TEST_PASS' not in txt or 'Fatal:' in txt or 'FATAL' in txt: raise RuntimeError(f'No PASS: {name}')
+RuntimeError: No PASS: tb_sync_1_seed1

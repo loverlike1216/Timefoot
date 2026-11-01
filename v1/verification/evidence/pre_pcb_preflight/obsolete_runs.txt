@@ -1,0 +1,3 @@
+Status: ABORTED_SUPERSEDED_SOURCE_RESOURCE_LIMIT
+Runs: prepcb_impl4, prepcb_impl4_02
+Reason: superseded source/pin maps; 3 concurrent Vivado runs exhausted 16GB RAM. Preserve logs and partial reports. Only prepcb_impl4_03 is the canonical frozen-source run. XSIM system02 encountered EXCEPTION_ACCESS_VIOLATION under memory pressure; not treated as RTL PASS or FAIL. Final runs use fewer implementation processes.

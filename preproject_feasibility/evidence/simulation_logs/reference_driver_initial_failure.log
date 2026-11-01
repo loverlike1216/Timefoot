@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\reference_model\experiments.py", line 40, in <module>
+    assert max(captures)-min(captures)==30
+AssertionError

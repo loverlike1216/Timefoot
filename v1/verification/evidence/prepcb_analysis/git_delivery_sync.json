@@ -1,0 +1,11 @@
+{
+  "delivery_evidence_commit": "18a6594f4091d52431cf36aa8d93017994b0e37a",
+  "validated_source": "45aa523ddb4151157672df1ee3c5bb483be3edb0",
+  "remote_push": "VERIFIED",
+  "pr_description": "UPDATED_AND_READ_BACK",
+  "pr_state": "OPEN_DRAFT_NOT_MERGED",
+  "main": "1c39215f98494ba152c5cdf77312af485fe1ae01",
+  "ci": "NO_CHECKS_OBSERVED",
+  "network_fallback": "PROCESS_ONLY_DIRECT_GITHUB_API_AFTER_PROXY_EOF_AND_CONNECTOR403",
+  "timestamp": "2026-11-01T07:51:19.289890+00:00"
+}

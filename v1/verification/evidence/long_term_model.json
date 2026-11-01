@@ -1,0 +1,205 @@
+{
+  "classification": "ACCELERATED_ANALYTIC_MODEL_NOT_HARDWARE",
+  "rows": [
+    {
+      "common_ppm": -100,
+      "seconds": 1,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "-0.0001",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": -100,
+      "seconds": 3600,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "-0.36",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": -100,
+      "seconds": 86400,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "-8.64",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": -50,
+      "seconds": 1,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "-0.00005",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": -50,
+      "seconds": 3600,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "-0.18",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": -50,
+      "seconds": 86400,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "-4.32",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 0,
+      "seconds": 1,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "0",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 0,
+      "seconds": 3600,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "0",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 0,
+      "seconds": 86400,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "0",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 50,
+      "seconds": 1,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "0.00005",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 50,
+      "seconds": 3600,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "0.18",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 50,
+      "seconds": 86400,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "4.32",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 100,
+      "seconds": 1,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "0.0001",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 100,
+      "seconds": 3600,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "0.36",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    },
+    {
+      "common_ppm": 100,
+      "seconds": 86400,
+      "same_index_edge_count_delta": 0,
+      "common_time_error_s": "8.64",
+      "assumed_path_skew_ns": [
+        0,
+        0.6,
+        1.2,
+        1.8
+      ],
+      "event_skew_ns": 1.8
+    }
+  ],
+  "independent_oscillator_counterexample_100ppm_24h_s": "8.64",
+  "limits": [
+    "No oscillator phase noise, metastability, board/cable drift, temperature or calibration measurement",
+    "Alignment requires the qualified marker and no missed reference edge; integer counting is not physical precision"
+  ]
+}

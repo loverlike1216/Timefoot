@@ -1,0 +1,176 @@
+[
+  {
+    "case": "tb_sync_1_seed1",
+    "testbench": "tb_sync_1",
+    "nodes": 1,
+    "seed": 1,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "ebad1afd7c10ef6ebc9584644daa3bd083bca7774391422a880f5792d36f3524"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_1_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_sync_1_seed17",
+    "testbench": "tb_sync_1",
+    "nodes": 1,
+    "seed": 17,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "ebad1afd7c10ef6ebc9584644daa3bd083bca7774391422a880f5792d36f3524"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_1_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_sync_1_seed2026",
+    "testbench": "tb_sync_1",
+    "nodes": 1,
+    "seed": 2026,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "ebad1afd7c10ef6ebc9584644daa3bd083bca7774391422a880f5792d36f3524"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_1_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_sync_2_seed1",
+    "testbench": "tb_sync_2",
+    "nodes": 2,
+    "seed": 1,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "d514e4293ab8e1665bf82c0752f9869b86766ca37de5e372ced6e685264a1bcb"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_2_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_sync_2_seed17",
+    "testbench": "tb_sync_2",
+    "nodes": 2,
+    "seed": 17,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "d514e4293ab8e1665bf82c0752f9869b86766ca37de5e372ced6e685264a1bcb"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_2_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_sync_2_seed2026",
+    "testbench": "tb_sync_2",
+    "nodes": 2,
+    "seed": 2026,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "d514e4293ab8e1665bf82c0752f9869b86766ca37de5e372ced6e685264a1bcb"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_2_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_sync_3_seed1",
+    "testbench": "tb_sync_3",
+    "nodes": 3,
+    "seed": 1,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "a0210d4ab925429080ac8af51d6eea7d4c500b6af69bbf98f625e6559a843272"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_3_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_sync_3_seed17",
+    "testbench": "tb_sync_3",
+    "nodes": 3,
+    "seed": 17,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "a0210d4ab925429080ac8af51d6eea7d4c500b6af69bbf98f625e6559a843272"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_3_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_sync_3_seed2026",
+    "testbench": "tb_sync_3",
+    "nodes": 3,
+    "seed": 2026,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "a0210d4ab925429080ac8af51d6eea7d4c500b6af69bbf98f625e6559a843272"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_3_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_sync_4_seed1",
+    "testbench": "tb_sync_4",
+    "nodes": 4,
+    "seed": 1,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "8c2900699380a5a54f0e56180c58691ed8933c6623b36e8e874ed0e6bb98dfc0"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_4_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_sync_4_seed17",
+    "testbench": "tb_sync_4",
+    "nodes": 4,
+    "seed": 17,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "8c2900699380a5a54f0e56180c58691ed8933c6623b36e8e874ed0e6bb98dfc0"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_4_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_sync_4_seed2026",
+    "testbench": "tb_sync_4",
+    "nodes": 4,
+    "seed": 2026,
+    "status": "PASS",
+    "trace_sha256": {
+      "event_trace.csv": "8c2900699380a5a54f0e56180c58691ed8933c6623b36e8e874ed0e6bb98dfc0"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_sync_4_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed1",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 1,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "a418aee0857711f1f28ae0975c1ddcecc35ac16e747aa5f63ebe69292da0a617"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_pipeline_seed1\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed17",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 17,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "333dddec01c5ec363ca0d45a0f8e8f55f5bfed6f4677df979facfb51997c66c0"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_pipeline_seed17\\xsim.log"
+  },
+  {
+    "case": "tb_pipeline_seed2026",
+    "testbench": "tb_pipeline",
+    "nodes": null,
+    "seed": 2026,
+    "status": "PASS",
+    "trace_sha256": {
+      "pipeline_trace.csv": "7f33a2482015340096b0218dc031c75d3f08eebb1ef0bc017ffda79ed20b7b8e"
+    },
+    "log": "evidence\\simulation_logs\\finalA\\tb_pipeline_seed2026\\xsim.log"
+  },
+  {
+    "case": "tb_mmcm_seed1",
+    "testbench": "tb_mmcm",
+    "nodes": null,
+    "seed": 1,
+    "status": "PASS",
+    "trace_sha256": {},
+    "log": "evidence\\simulation_logs\\finalA\\tb_mmcm_seed1\\xsim.log"
+  }
+]

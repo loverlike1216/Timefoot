@@ -1,0 +1,5 @@
+PASS tb_sdr_system_1_s1
+PASS tb_sdr_system_2_s1
+PASS tb_sdr_system_3_s1
+PASS tb_sdr_system_4_s1
+TOTAL_PASS 4

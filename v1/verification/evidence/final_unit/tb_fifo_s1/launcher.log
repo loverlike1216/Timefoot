@@ -1,0 +1,29 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  1 11:34:02 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_fifo/xsim_script.tcl
+# xsim {tb_fifo} -testplusarg SEED1 -autoloadwcfg -tclbatch {E:/Codex_project/Timefoot/v1/verification/evidence/final_unit/tb_fifo_s1/run.tcl}
+Time resolution is 1 ps
+source E:/Codex_project/Timefoot/v1/verification/evidence/final_unit/tb_fifo_s1/run.tcl
+## open_vcd {E:/Codex_project/Timefoot/v1/verification/evidence/final_unit/tb_fifo_s1/wave.vcd}
+## log_vcd /tb_fifo/*
+INFO: HDL object /tb_fifo/expected is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_fifo.dut.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_fifo/dut/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial310_47  Scope: tb_fifo.dut.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_fifo/dut/u_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_147  Scope: tb_fifo.dut.u_fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\Vivado\2025.2\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+PASS async_fifo_order_full_empty_backpressure max=17 stalls=259
+PASS reader_only_reset_flushes_both_endpoints
+TEST_PASS tb_fifo
+$finish called at time : 11243 ns : File "E:/Codex_project/Timefoot/v1/tb/tb_fifo.sv" Line 34
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 11:34:04 2026...

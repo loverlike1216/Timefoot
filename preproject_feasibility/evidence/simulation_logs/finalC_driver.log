@@ -1,0 +1,19 @@
+PASS tb_sync_1_seed1
+PASS tb_sync_1_seed17
+PASS tb_sync_1_seed2026
+PASS tb_sync_2_seed1
+PASS tb_sync_2_seed17
+PASS tb_sync_2_seed2026
+PASS tb_sync_3_seed1
+PASS tb_sync_3_seed17
+PASS tb_sync_3_seed2026
+PASS tb_sync_4_seed1
+PASS tb_sync_4_seed17
+PASS tb_sync_4_seed2026
+PASS tb_pipeline_seed1_gap0
+Traceback (most recent call last):
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 46, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\Timefoot\preproject_feasibility\simulation\scripts\run_xsim.py", line 36, in main
+    if 'TEST_PASS' not in txt or 'Fatal:' in txt or 'FATAL' in txt: raise RuntimeError(f'No PASS: {name}')
+RuntimeError: No PASS: tb_pipeline_seed1_gap3
