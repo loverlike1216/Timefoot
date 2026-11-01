@@ -19,6 +19,7 @@ All run directories are additive. No failed test, threshold, historical output o
 | final_system | Invalid-mask stimulus was sent before manager reset deasserted, so the write was correctly ignored | TB waits for synchronized manager reset release before register traffic |
 | final_node | REQP-1839 found async-reset signals in RAM enable/write cones | Synchronous guards now own RAM enable. signoff_node removed all20 such warnings |
 | signoff_node Z010 | Guard fix changed placement; one150MHz synchronous reset distribution path failed setup by0.146ns | Four local synchronous reset branches reduce fanout. closure_node is the authoritative rerun; no frequency or output-budget relaxation |
+| clean checkout first attempt | Git correctly omits ignored work/tmp directories; runner mkdir assumed the parent already existed | Runners now create their own work/tmp parents. Failed clean_unit_driver.log retained; clean_unit2/clean_system4 rerun from updated remote checkout |
 
 Startup FIFO reset is held for 63 write clocks to survive GSR/model initialization and ensure one uninterrupted reset episode. Independent flush requests must be held >=8 cycles of the slower endpoint. Data is inhibited until local busy and the 31-cycle release guard clear. A stopped endpoint cannot resume an old session: system recovery asserts the session owner, then requires fresh preparation/epoch/RUN.
 

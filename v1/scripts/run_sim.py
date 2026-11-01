@@ -13,9 +13,10 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--tag',required=True);ap.add_argument('--suite',default='unit');a=ap.parse_args()
     assert re.fullmatch('[A-Za-z0-9_-]+',a.tag)
     work=ROOT/'v1/work'/a.tag;out=ROOT/'v1/verification/evidence'/a.tag
-    work.mkdir(exist_ok=False);out.mkdir(exist_ok=False)
+    work.mkdir(parents=True,exist_ok=False);out.mkdir(parents=True,exist_ok=False)
     capture(out/'source_manifest.json')
     os.environ['TMP']=str(ROOT/'v1/work/tmp');os.environ['TEMP']=os.environ['TMP']
+    Path(os.environ['TMP']).mkdir(exist_ok=True)
     sources=sorted((ROOT/'v1/rtl').rglob('*.sv'))+sorted((ROOT/'v1/tb').glob('*.sv'))
     sources+=[BIN.parent/'data/verilog/src/glbl.v']
     command([BIN/'xvlog.bat','--sv',*sources],work,out/'compile.log')

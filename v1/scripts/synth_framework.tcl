@@ -2,6 +2,7 @@ set root [file normalize [file join [file dirname [info script]] ../..]]
 set tag [lindex $argv 0]
 set od "$root/v1/verification/evidence/$tag"
 file mkdir $od
+file mkdir "$root/v1/work"
 cd "$root/v1/work"
 set_param general.maxThreads 4
 foreach part {xc7z010clg400-1 xc7z020clg400-2} {
